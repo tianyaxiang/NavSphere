@@ -6,10 +6,10 @@ pages_build_output_dir = ".vercel/output/static"
 
 
 [env.production.vars]
-GITHUB_ID = "Ov23lig3bTXpZHrPO1c8"
-GITHUB_OWNER = "tianyaxiang"
+GITHUB_ID = "Ov23liMWN5c9lKFRgg4n"
+GITHUB_OWNER = "Versior"
 GITHUB_REPO = "NavSphere"
 GITHUB_BRANCH = "main"
-NEXTAUTH_URL = "https://dh.leti.ltd/api/auth"
-NEXT_PUBLIC_API_URL="https://dh.leti.ltd"
+NEXTAUTH_URL = "https://daohang.20000424.xyz/"
+NEXT_PUBLIC_API_URL="https://daohang.20000424.xyz/"
 
