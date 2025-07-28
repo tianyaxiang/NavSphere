@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
         {/* Google Analytics */}
-        <Script
+        {/* <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-QG9PGG4K13"
         />
@@ -42,7 +42,7 @@ export default function RootLayout({
               gtag('config', 'G-QG9PGG4K13');
             `,
           }}
-        />
+        /> */}
       </head>
       <body suppressHydrationWarning>
         <ThemeProvider
