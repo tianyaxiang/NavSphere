@@ -6,14 +6,6 @@
       "icon": "Star",
       "items": [
         {
-          "id": "1753751367672",
-          "title": "终极导航",
-          "href": "https://www.zjnav.com/",
-          "description": "",
-          "icon": "",
-          "enabled": true
-        },
-        {
           "id": "1753751387841",
           "title": "AI工具集导航",
           "href": "https://ai-bot.cn/",
@@ -228,6 +220,14 @@
               "id": "1753751351001",
               "title": "办公人导航",
               "href": "https://www.bgrdh.com/",
+              "description": "",
+              "icon": "",
+              "enabled": true
+            },
+            {
+              "id": "1753751367672",
+              "title": "终极导航",
+              "href": "https://www.zjnav.com/",
               "description": "",
               "icon": "",
               "enabled": true
