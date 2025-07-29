@@ -76,6 +76,14 @@
           "description": "Beautiful Screenshots and Mockups\nCusomizable, eye-catching presentation for any content",
           "icon": "/assets/img_1741747241014.png",
           "enabled": true
+        },
+        {
+          "id": "site_1753750636814_3z1l9dnok",
+          "title": "豆包",
+          "href": "https://www.doubao.com/",
+          "description": "",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": [],
