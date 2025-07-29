@@ -172,6 +172,14 @@
           "description": "",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1753751612769",
+          "title": "柒夜导航",
+          "href": "https://nav.qinight.com/",
+          "description": "",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": [],
