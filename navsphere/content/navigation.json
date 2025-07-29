@@ -6,14 +6,6 @@
       "icon": "Star",
       "items": [
         {
-          "id": "1753751316297",
-          "title": "小雅的分类alist",
-          "href": "http://dycxy.top:5678/",
-          "description": "",
-          "icon": "",
-          "enabled": true
-        },
-        {
           "id": "1753751351001",
           "title": "办公人导航",
           "href": "https://www.bgrdh.com/",
@@ -219,6 +211,14 @@
               "id": "1753751296984",
               "title": "MoonTV",
               "href": "https://moon.dycxy.top/",
+              "description": "",
+              "icon": "",
+              "enabled": true
+            },
+            {
+              "id": "1753751316297",
+              "title": "小雅的分类alist",
+              "href": "http://dycxy.top:5678/",
               "description": "",
               "icon": "",
               "enabled": true
