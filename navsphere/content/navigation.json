@@ -222,6 +222,14 @@
           "description": "",
           "enabled": true,
           "items": []
+        },
+        {
+          "id": "0fdece12-b295-489f-b64c-847ce7c1fb92",
+          "title": "优质导航",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ],
       "description": "",
