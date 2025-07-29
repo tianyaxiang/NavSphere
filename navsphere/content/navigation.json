@@ -14,14 +14,6 @@
           "enabled": true
         },
         {
-          "id": "1_4",
-          "title": "Google AdSense",
-          "href": "https://www.google.com/adsense/",
-          "description": "Google AdSense广告服务。",
-          "icon": "/assets/images/logos/gads.ico",
-          "enabled": true
-        },
-        {
           "id": "1_5",
           "title": "Producthunt",
           "href": "https://www.producthunt.com/",
