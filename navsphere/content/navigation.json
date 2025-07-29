@@ -116,6 +116,14 @@
           "description": "",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1753751445714",
+          "title": "AI聚合网",
+          "href": "https://www.aijhw.com/",
+          "description": "",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": [],
