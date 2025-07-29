@@ -30,14 +30,6 @@
               "enabled": true
             },
             {
-              "id": "1753751387841",
-              "title": "AI工具集导航",
-              "href": "https://ai-bot.cn/",
-              "description": "",
-              "icon": "",
-              "enabled": true
-            },
-            {
               "id": "1753751445714",
               "title": "AI聚合网",
               "href": "https://www.aijhw.com/",
@@ -171,6 +163,14 @@
               "id": "1753751612769",
               "title": "柒夜导航",
               "href": "https://nav.qinight.com/",
+              "description": "",
+              "icon": "",
+              "enabled": true
+            },
+            {
+              "id": "1753751387841",
+              "title": "AI工具集导航",
+              "href": "https://ai-bot.cn/",
               "description": "",
               "icon": "",
               "enabled": true
