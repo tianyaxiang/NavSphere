@@ -44,6 +44,14 @@
               "description": "",
               "icon": "",
               "enabled": true
+            },
+            {
+              "id": "site_1753795269045_64etstjyc",
+              "title": "yandex俄罗斯搜索",
+              "href": "https://yandex.com/search/?text=",
+              "description": "",
+              "icon": "",
+              "enabled": true
             }
           ]
         },
