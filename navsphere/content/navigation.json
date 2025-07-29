@@ -6,14 +6,6 @@
       "icon": "Star",
       "items": [
         {
-          "id": "1753751635130",
-          "title": "不死鸟分享",
-          "href": "https://iui.su/",
-          "description": "",
-          "icon": "",
-          "enabled": true
-        },
-        {
           "id": "1753751655393",
           "title": "小鱼儿系统",
           "href": "https://www.yrxitong.com/",
@@ -240,7 +232,16 @@
           "icon": "FolderOpen",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "1753751635130",
+              "title": "不死鸟分享",
+              "href": "https://iui.su/",
+              "description": "",
+              "icon": "",
+              "enabled": true
+            }
+          ]
         }
       ],
       "description": "",
