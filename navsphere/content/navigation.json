@@ -30,6 +30,14 @@
           "enabled": true
         },
         {
+          "id": "1753751674220",
+          "title": "盘搜——基于TG",
+          "href": "https://pansou.jkai.de/",
+          "description": "",
+          "icon": "",
+          "enabled": true
+        },
+        {
           "id": "1753751262433",
           "title": "LibreTV",
           "href": "https://litv.dycxy.top/",
@@ -153,14 +161,6 @@
           "id": "1753751655393",
           "title": "小鱼儿系统",
           "href": "https://www.yrxitong.com/",
-          "description": "",
-          "icon": "",
-          "enabled": true
-        },
-        {
-          "id": "1753751674220",
-          "title": "盘搜——基于TG",
-          "href": "https://pansou.jkai.de/",
           "description": "",
           "icon": "",
           "enabled": true
