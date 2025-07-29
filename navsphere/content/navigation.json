@@ -36,6 +36,14 @@
               "description": "",
               "icon": "",
               "enabled": true
+            },
+            {
+              "id": "site_1753795225424_n4ofhbxrs",
+              "title": "bing必应",
+              "href": "https://cn.bing.com/search?q=",
+              "description": "",
+              "icon": "",
+              "enabled": true
             }
           ]
         },
