@@ -164,6 +164,14 @@
           "description": "",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1753751596041",
+          "title": "迷路导航",
+          "href": "https://www.hifawn.com/",
+          "description": "",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": [],
