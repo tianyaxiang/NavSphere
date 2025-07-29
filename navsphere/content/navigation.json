@@ -14,14 +14,6 @@
           "enabled": true
         },
         {
-          "id": "1_5",
-          "title": "Producthunt",
-          "href": "https://www.producthunt.com/",
-          "description": "发现新鲜有趣的产品",
-          "icon": "/assets/images/logos/producthunt.png",
-          "enabled": true
-        },
-        {
           "id": "1_6",
           "title": "Leonardo.AI",
           "href": "https://app.leonardo.ai/",
