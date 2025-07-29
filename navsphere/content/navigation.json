@@ -8,8 +8,8 @@
       "subCategories": [
         {
           "id": "5a590302-3546-47c6-ae7d-cac0e9008e89",
-          "title": "AI",
-          "icon": "Folder",
+          "title": "搜索",
+          "icon": "FolderOpen",
           "description": "",
           "enabled": true,
           "items": [
