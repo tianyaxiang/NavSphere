@@ -22,14 +22,6 @@
           "enabled": true
         },
         {
-          "id": "1_7",
-          "title": "Tensor.art",
-          "href": "https://tensor.art/",
-          "description": "Tensor.art是一个免费的在线图像生成和模型托管平台。",
-          "icon": "/assets/images/logos/tensorart.ico",
-          "enabled": true
-        },
-        {
           "id": "1735119857233",
           "title": "截图美化工具",
           "href": "https://shots.so/",
@@ -203,6 +195,14 @@
           "href": "https://app.leonardo.ai/",
           "description": "Leonardo.AI是一个人工智能绘图社区和工具。它基于Stable Diffusion人工智能模型,深度集成了其各种插件,提供强大的图片生成和创作功能。",
           "icon": "/assets/images/logos/leonardo.ico",
+          "enabled": true
+        },
+        {
+          "id": "1_7",
+          "title": "Tensor.art",
+          "href": "https://tensor.art/",
+          "description": "Tensor.art是一个免费的在线图像生成和模型托管平台。",
+          "icon": "/assets/images/logos/tensorart.ico",
           "enabled": true
         }
       ],
