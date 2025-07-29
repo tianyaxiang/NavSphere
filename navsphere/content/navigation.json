@@ -76,6 +76,14 @@
           "description": "",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1753751296984",
+          "title": "MoonTV",
+          "href": "https://moon.dycxy.top/",
+          "description": "",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": [],
