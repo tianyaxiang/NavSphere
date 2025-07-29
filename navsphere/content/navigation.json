@@ -214,6 +214,14 @@
           "description": "",
           "enabled": true,
           "items": []
+        },
+        {
+          "id": "d48e3035-4bd8-4752-b716-e0d6e0835035",
+          "title": "龙哥自建",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ],
       "description": "",
