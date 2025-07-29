@@ -14,14 +14,6 @@
           "enabled": true
         },
         {
-          "id": "1753751554417",
-          "title": "阿虚同学的储物间",
-          "href": "http://axutongxue.cn/",
-          "description": "",
-          "icon": "",
-          "enabled": true
-        },
-        {
           "id": "1753751612769",
           "title": "柒夜导航",
           "href": "https://nav.qinight.com/",
@@ -228,6 +220,14 @@
               "id": "1753751571105",
               "title": "缙哥哥导航",
               "href": "https://www.dujin.org/navs",
+              "description": "",
+              "icon": "",
+              "enabled": true
+            },
+            {
+              "id": "1753751554417",
+              "title": "阿虚同学的储物间",
+              "href": "http://axutongxue.cn/",
               "description": "",
               "icon": "",
               "enabled": true
