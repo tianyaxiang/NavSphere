@@ -233,6 +233,14 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "e7a15a58-39f6-4521-9f65-d9c9a21c6a9d",
+          "title": "其他",
+          "icon": "FolderOpen",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ],
       "description": "",
