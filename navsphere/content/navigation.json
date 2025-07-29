@@ -28,6 +28,14 @@
               "description": "",
               "icon": "",
               "enabled": true
+            },
+            {
+              "id": "site_1753795196197_lgd5s0az4",
+              "title": "百度",
+              "href": "https://www.baidu.com/s?word=",
+              "description": "",
+              "icon": "",
+              "enabled": true
             }
           ]
         },
