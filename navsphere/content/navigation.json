@@ -196,6 +196,14 @@
           "description": "",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1753751674220",
+          "title": "盘搜——基于TG",
+          "href": "https://pansou.jkai.de/",
+          "description": "",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": [],
