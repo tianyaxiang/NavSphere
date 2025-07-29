@@ -6,6 +6,14 @@
       "icon": "Star",
       "items": [
         {
+          "id": "1753751237762",
+          "title": "今日热点",
+          "href": "https://60s.lylme.com/",
+          "description": "",
+          "icon": "",
+          "enabled": true
+        },
+        {
           "id": "site_1753750636814_3z1l9dnok",
           "title": "豆包",
           "href": "https://www.doubao.com/",
@@ -17,14 +25,6 @@
           "id": "site_1753750697102_uocl9382d",
           "title": "问小白",
           "href": "https://www.wenxiaobai.com/",
-          "description": "",
-          "icon": "",
-          "enabled": true
-        },
-        {
-          "id": "1753751237762",
-          "title": "今日热点",
-          "href": "https://60s.lylme.com/",
           "description": "",
           "icon": "",
           "enabled": true
