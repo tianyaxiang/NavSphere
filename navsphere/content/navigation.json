@@ -156,6 +156,14 @@
           "description": "",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1753751571105",
+          "title": "缙哥哥导航",
+          "href": "https://www.dujin.org/navs",
+          "description": "",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": [],
