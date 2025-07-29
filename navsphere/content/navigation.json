@@ -4,16 +4,7 @@
       "id": "1",
       "title": "常用推荐",
       "icon": "Star",
-      "items": [
-        {
-          "id": "1741747111596",
-          "title": "PostSpark",
-          "href": "https://postspark.app/",
-          "description": "Beautiful Screenshots and Mockups\nCusomizable, eye-catching presentation for any content",
-          "icon": "/assets/img_1741747241014.png",
-          "enabled": true
-        }
-      ],
+      "items": [],
       "subCategories": [
         {
           "id": "5a590302-3546-47c6-ae7d-cac0e9008e89",
@@ -239,6 +230,14 @@
               "href": "https://shots.so/",
               "description": "截图美化，套上不同设备的壳，浏览器、iPhone、iPad、MacBook，Apple Watch",
               "icon": "/assets/images/logos/shots.webp",
+              "enabled": true
+            },
+            {
+              "id": "1741747111596",
+              "title": "PostSpark",
+              "href": "https://postspark.app/",
+              "description": "Beautiful Screenshots and Mockups\nCusomizable, eye-catching presentation for any content",
+              "icon": "/assets/img_1741747241014.png",
               "enabled": true
             }
           ]
