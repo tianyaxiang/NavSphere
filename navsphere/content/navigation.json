@@ -188,6 +188,14 @@
           "description": "",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1753751655393",
+          "title": "小鱼儿系统",
+          "href": "https://www.yrxitong.com/",
+          "description": "",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": [],
