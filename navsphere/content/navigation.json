@@ -6,14 +6,6 @@
       "icon": "Star",
       "items": [
         {
-          "id": "site_1753750636814_3z1l9dnok",
-          "title": "豆包",
-          "href": "https://www.doubao.com/",
-          "description": "",
-          "icon": "",
-          "enabled": true
-        },
-        {
           "id": "site_1753750697102_uocl9382d",
           "title": "问小白",
           "href": "https://www.wenxiaobai.com/",
@@ -205,7 +197,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1753750636814_3z1l9dnok",
+              "title": "豆包",
+              "href": "https://www.doubao.com/",
+              "description": "",
+              "icon": "",
+              "enabled": true
+            }
+          ]
         },
         {
           "id": "d48e3035-4bd8-4752-b716-e0d6e0835035",
