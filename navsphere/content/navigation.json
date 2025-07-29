@@ -6,14 +6,6 @@
       "icon": "Star",
       "items": [
         {
-          "id": "1753751262433",
-          "title": "LibreTV",
-          "href": "https://litv.dycxy.top/",
-          "description": "",
-          "icon": "",
-          "enabled": true
-        },
-        {
           "id": "1753751296984",
           "title": "MoonTV",
           "href": "https://moon.dycxy.top/",
@@ -219,6 +211,14 @@
               "id": "1753751674220",
               "title": "盘搜——基于TG",
               "href": "https://pansou.jkai.de/",
+              "description": "",
+              "icon": "",
+              "enabled": true
+            },
+            {
+              "id": "1753751262433",
+              "title": "LibreTV",
+              "href": "https://litv.dycxy.top/",
               "description": "",
               "icon": "",
               "enabled": true
