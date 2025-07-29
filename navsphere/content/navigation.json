@@ -207,14 +207,6 @@
               "description": "Cloudflare以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。",
               "icon": "/assets/images/logos/cloudflar.ico",
               "enabled": true
-            },
-            {
-              "id": "1741747111596",
-              "title": "PostSpark",
-              "href": "https://postspark.app/",
-              "description": "Beautiful Screenshots and Mockups\nCusomizable, eye-catching presentation for any content",
-              "icon": "/assets/img_1741747241014.png",
-              "enabled": true
             }
           ]
         }
