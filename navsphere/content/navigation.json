@@ -132,6 +132,14 @@
           "description": "",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1753751509393",
+          "title": "风向标导航",
+          "href": "https://yydsys.cc/",
+          "description": "",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": [],
