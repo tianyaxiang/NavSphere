@@ -124,6 +124,14 @@
           "description": "",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1753751483049",
+          "title": "爱达杂货铺",
+          "href": "https://adzhp.cc/",
+          "description": "",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": [],
