@@ -1,5 +1,5 @@
-export const dynamic = 'force-dynamic'
-export const revalidate = 3600 // Revalidate every hour
+export const runtime = 'edge'
+
 
 import { NavigationContent } from '@/components/navigation-content'
 import { headers } from 'next/headers'
