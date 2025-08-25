@@ -12,9 +12,15 @@
   <a href="https://github.com/tianyaxiang/NavSphere/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/tianyaxiang/NavSphere?style=flat-square"></a>
 </p>
 
+<p align="center">
+  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere&env=GITHUB_ID,GITHUB_SECRET,GITHUB_OWNER,GITHUB_REPO,GITHUB_BRANCH,NEXTAUTH_URL,NEXT_PUBLIC_API_URL&envDescription=GitHub%20OAuth%20%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE&envLink=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere%23%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE&project-name=navsphere&repository-name=navsphere">
+    <img src="https://vercel.com/button" alt="Deploy with Vercel"/>
+  </a>
+</p>
+
 ## 📖 项目简介
 
-NavSphere 是一个基于 Next.js 14 构建的现代化导航管理平台，专为个人和团队打造的书签管理和导航门户解决方案。通过 GitHub 作为数据存储后端，提供安全、可靠的导航数据管理体验。
+NavSphere 是一个基于 Next.js 14 构建的现代化导航管理平台，专为个人和团队打造的书签管理和导航门户解决方案。通过 GitHub 作为数据存储后端，提供安全、可靠的导航数据管理体验。<a href="https://mp.weixin.qq.com/s/90LUmKilfLZfc5L63Ej3Sg" target="_blank">[手把手快速部署教程]</a>
 
 <p align="center">
   <img src="doc/n.png" alt="NavSphere Logo" />
@@ -38,20 +44,26 @@ NavSphere 是一个基于 Next.js 14 构建的现代化导航管理平台，专�
 
 ## 🛠️ 技术架构
 
-| 技术栈 | 版本 | 用途 |
-|--------|------|------|
-| **Next.js** | 14.0.4 | React 全栈框架 |
-| **React** | 18.2.0 | 用户界面库 |
-| **TypeScript** | 5.1.6 | 类型安全的 JavaScript |
-| **Tailwind CSS** | 3.3.3 | 原子化 CSS 框架 |
-| **NextAuth.js** | 5.0.0-beta.25 | 身份认证解决方案 |
-| **Radix UI** | Latest | 无障碍 UI 组件库 |
-| **Lucide React** | 0.462.0 | 现代图标库 |
-| **React Query** | 5.61.5 | 数据获取和状态管理 |
-| **React Hook Form** | 7.53.2 | 表单处理 |
-| **Zod** | 3.22.4 | 数据验证 |
+| 技术栈              | 版本          | 用途                  |
+| ------------------- | ------------- | --------------------- |
+| **Next.js**         | 15.4.6        | React 全栈框架        |
+| **React**           | 18.2.0        | 用户界面库            |
+| **TypeScript**      | 5.1.6         | 类型安全的 JavaScript |
+| **Tailwind CSS**    | 4.1.12        | 原子化 CSS 框架       |
+| **NextAuth.js**     | 5.0.0-beta.25 | 身份认证解决方案      |
+| **Radix UI**        | Latest        | 无障碍 UI 组件库      |
+| **Lucide React**    | 0.462.0       | 现代图标库            |
+| **React Query**     | 5.62.2        | 数据获取和状态管理    |
+| **React Hook Form** | 7.53.2        | 表单处理              |
+| **Zod**             | 3.22.4        | 数据验证              |
 
 ## 🚀 快速开始
+
+### 一键部署
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere&env=GITHUB_ID,GITHUB_SECRET,GITHUB_OWNER,GITHUB_REPO,GITHUB_BRANCH,NEXTAUTH_URL,NEXT_PUBLIC_API_URL&envDescription=GitHub%20OAuth%20%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE&envLink=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere%23%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE&project-name=navsphere&repository-name=navsphere)
+
+点击上方按钮即可一键部署到 Vercel，部署完成后需要配置环境变量。
 
 ### 环境要求
 
@@ -103,8 +115,8 @@ GITHUB_REPO=your-repo-name
 GITHUB_BRANCH=main
 
 # NextAuth 配置
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your-nextauth-secret
+NEXTAUTH_URL=http://localhost:3000/api/auth
+NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
 
 ### GitHub OAuth App 设置
@@ -137,7 +149,61 @@ NEXTAUTH_SECRET=your-nextauth-secret
    - `site.json` - 站点配置
    - `resources.json` - 资源数据
 
+### 部署前准备清单
+
+在使用一键部署功能前，请确保完成以下准备工作：
+
+- [ ] 创建 GitHub OAuth App 并获取 Client ID 和 Secret
+- [ ] 创建用于存储数据的 GitHub 仓库
+- [ ] 记录你的 GitHub 用户名和数据仓库名称
+- [ ] 准备好你的 Vercel 项目域名（用于配置 NEXTAUTH_URL 和 NEXT_PUBLIC_API_URL）
+
 ## 🚀 部署指南
+
+### Vercel 部署 (推荐)
+
+#### 方式一：一键部署
+
+1. **点击部署按钮**
+   
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere&env=GITHUB_ID,GITHUB_SECRET,GITHUB_OWNER,GITHUB_REPO,GITHUB_BRANCH,NEXTAUTH_URL,NEXT_PUBLIC_API_URL&envDescription=GitHub%20OAuth%20%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE&envLink=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere%23%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE&project-name=navsphere&repository-name=navsphere)
+
+2. **配置环境变量**
+   
+   在部署过程中，Vercel 会要求你配置以下环境变量：
+   ```env
+   GITHUB_ID=your-github-client-id
+   GITHUB_SECRET=your-github-client-secret
+   GITHUB_OWNER=your-github-username
+   GITHUB_REPO=your-data-repo-name
+   GITHUB_BRANCH=main
+   NEXTAUTH_URL=https://your-project-name.vercel.app/api/auth
+   NEXT_PUBLIC_API_URL=https://your-project-name.vercel.app
+   ```
+
+3. **更新 OAuth 回调地址**
+   
+   部署完成后，需要在 GitHub OAuth App 设置中更新回调地址：
+   ```
+   https://your-project-name.vercel.app/api/auth/callback/github
+   ```
+
+#### 方式二：手动部署
+
+1. **Fork 项目到你的 GitHub**
+
+2. **连接 Vercel**
+   - 访问 [Vercel Dashboard](https://vercel.com/dashboard)
+   - 点击 "New Project"
+   - 选择你 Fork 的仓库
+
+3. **配置环境变量**
+   
+   在 Vercel 项目设置中添加环境变量（同上）
+
+4. **部署**
+   
+   Vercel 会自动检测 Next.js 项目并进行部署
 
 ### Cloudflare Pages 部署
 
@@ -146,30 +212,94 @@ NEXTAUTH_SECRET=your-nextauth-secret
    - 连接 GitHub 仓库
 
 2. **构建设置**
+   
+   在 Cloudflare Pages 项目设置中配置：
    ```bash
    # 构建命令
-   pnpm install && pnpm build
+   npx @cloudflare/next-on-pages@1
    
    # 输出目录
-   .next
+   .vercel/output/static
+   
+   # Node.js 版本
+   18.17.0
    ```
 
 3. **环境变量配置**
+   
+   在 Cloudflare Pages 环境变量中添加：
    ```env
    GITHUB_ID=your-github-client-id
    GITHUB_SECRET=your-github-client-secret
    GITHUB_OWNER=your-github-username
    GITHUB_REPO=your-repo-name
    GITHUB_BRANCH=main
-   NEXTAUTH_URL=https://your-domain.pages.dev
-   NEXTAUTH_SECRET=your-production-secret
+   NEXTAUTH_URL=https://your-domain.pages.dev/api/auth
+   NEXT_PUBLIC_API_URL=https://your-domain.pages.dev
    ```
+
+4. **兼容性设置**
+   
+   项目已包含 `wrangler.toml` 配置文件，确保 Cloudflare Pages 兼容性。
+
+### Docker 部署
+
+项目支持 Docker 容器化部署，适合自托管环境。
+
+#### 快速部署
+
+1. **克隆项目**
+```bash
+git clone https://github.com/tianyaxiang/NavSphere.git
+cd NavSphere
+```
+
+2. **配置环境变量**
+```bash
+cp .env.example .env.local
+# 编辑 .env.local 文件，配置必要的环境变量
+```
+
+#### 手动部署
+
+1. **构建镜像**
+```bash
+docker build -f docker/Dockerfile -t navsphere:latest .
+```
+
+2. **使用 Docker Compose**
+```bash
+# 开发环境
+docker-compose -f docker/docker-compose.yml up -d
+
+# 生产环境
+docker-compose -f docker/docker-compose.prod.yml up -d
+```
+
+3. **检查服务状态**
+```bash
+# 查看容器状态
+docker-compose -f docker/docker-compose.yml ps
+
+# 查看日志
+docker-compose -f docker/docker-compose.yml logs -f
+
+# 停止服务
+docker-compose -f docker/docker-compose.yml down
+```
+
+#### Docker 配置说明
+
+- **端口映射**: 容器内部端口 3000 映射到主机端口 3000
+- **环境变量**: 通过 `.env.local` 文件注入
+- **健康检查**: 内置健康检查端点 `/api/health`
+- **自动重启**: 容器异常退出时自动重启
 
 ### 其他部署平台
 
-- **Vercel**: 支持零配置部署
 - **Netlify**: 需要配置构建命令  
 - **Railway**: 支持 Docker 部署
+- **自托管**: 支持 Docker 容器部署
 
 ## 📊 数据结构
 
@@ -177,11 +307,11 @@ NEXTAUTH_SECRET=your-nextauth-secret
 
 项目使用 GitHub 仓库存储数据，自动创建以下文件：
 
-| 文件 | 用途 | 位置 |
-|------|------|------|
+| 文件              | 用途     | 位置           |
+| ----------------- | -------- | -------------- |
 | `navigation.json` | 导航数据 | 数据仓库根目录 |
-| `site.json` | 站点配置 | 数据仓库根目录 |
-| `resources.json` | 资源数据 | 数据仓库根目录 |
+| `site.json`       | 站点配置 | 数据仓库根目录 |
+| `resources.json`  | 资源数据 | 数据仓库根目录 |
 
 ### 数据格式示例
 
@@ -311,6 +441,46 @@ NavSphere/
 4. 查看构建日志详细错误信息
 </details>
 
+<details>
+<summary><strong>Vercel 部署问题</strong></summary>
+
+**问题**: Vercel 部署失败或运行异常
+
+**解决方案**:
+1. **环境变量检查**: 确保所有必需的环境变量都已正确配置
+2. **NEXTAUTH_URL 设置**: 确保设置为你的 Vercel 域名 (如: `https://your-app.vercel.app`)
+3. **GitHub OAuth 回调**: 更新 GitHub OAuth App 的回调地址为 Vercel 域名
+4. **函数超时**: 如果 API 调用超时，检查 `vercel.json` 中的 `maxDuration` 设置
+5. **查看日志**: 在 Vercel Dashboard 中查看函数日志和构建日志
+</details>
+
+<details>
+<summary><strong>Cloudflare Pages 部署问题</strong></summary>
+
+**问题**: Cloudflare Pages 部署失败或运行异常
+
+**解决方案**:
+1. **构建命令检查**: 确保使用 `npx @cloudflare/next-on-pages@1` 作为构建命令
+2. **输出目录设置**: 确保输出目录设置为 `.vercel/output/static`
+3. **Node.js 版本**: 确保使用 Node.js 18.17.0 或更高版本
+4. **环境变量配置**: 检查所有环境变量是否正确配置
+5. **兼容性标志**: 确保 `wrangler.toml` 文件包含正确的兼容性设置
+6. **查看构建日志**: 在 Cloudflare Pages Dashboard 中查看详细的构建和部署日志
+</details>
+
+
+## 💖 支持我们
+
+如果这个项目对你有帮助，欢迎支持我们的开发工作！
+
+<p align="center">
+  <img src="doc/a.jpg" alt="打赏码" width="300" />
+</p>
+
+<p align="center">
+  <strong>扫码支持 | 您的支持是我们持续开发的动力</strong>
+</p>
+
 ## 🤝 贡献指南
 
 我们欢迎所有形式的贡献！
@@ -341,6 +511,7 @@ NavSphere/
 - [Radix UI](https://www.radix-ui.com/) - 无障碍组件库
 - [Cloudflare Pages](https://pages.cloudflare.com/) - 可靠的部署平台
 - 所有为项目做出贡献的开发者
+
 
 ---
 

@@ -7,11 +7,12 @@ export const runtime = 'edge'
 
 export async function GET(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const data = await getFileContent('navsphere/content/navigation.json') as NavigationData
-    const item = data.navigationItems.find(item => item.id === params.id)
+    const item = data.navigationItems.find(item => item.id === id)
     
     if (!item) {
       return NextResponse.json({ error: 'Navigation not found' }, { status: 404 })
@@ -25,9 +26,10 @@ export async function GET(
 
 export async function POST(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const session = await auth()
     if (!session?.user?.accessToken) {
       return new Response('Unauthorized', { status: 401 })
@@ -37,7 +39,7 @@ export async function POST(
     const data = await getFileContent('navsphere/content/navigation.json') as NavigationData
     
     const updatedItems = data.navigationItems.map(item => {
-      if (item.id === params.id) {
+      if (item.id === id) {
         return {
           ...item,
           items: [...(item.items || []), newItem]
@@ -61,9 +63,10 @@ export async function POST(
 
 export async function PUT(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const session = await auth()
     if (!session?.user?.accessToken) {
       return new Response('Unauthorized', { status: 401 })
@@ -72,7 +75,7 @@ export async function PUT(
     const { index, item }: { index: number, item: NavigationSubItem } = await request.json()
     const data = await getFileContent('navsphere/content/navigation.json') as NavigationData
     
-    const navigation = data.navigationItems.find(nav => nav.id === params.id)
+    const navigation = data.navigationItems.find(nav => nav.id === id)
     if (!navigation) {
       return NextResponse.json({ error: 'Navigation not found' }, { status: 404 })
     }
@@ -81,7 +84,7 @@ export async function PUT(
     updatedItems[index] = item
 
     const updatedNavigations = data.navigationItems.map(nav => {
-      if (nav.id === params.id) {
+      if (nav.id === id) {
         return {
           ...nav,
           items: updatedItems
@@ -105,9 +108,10 @@ export async function PUT(
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const session = await auth()
     if (!session?.user?.accessToken) {
       return new Response('Unauthorized', { status: 401 })
@@ -116,14 +120,14 @@ export async function DELETE(
     const { index } = await request.json()
     const data = await getFileContent('navsphere/content/navigation.json') as NavigationData
     
-    const navigation = data.navigationItems.find(nav => nav.id === params.id)
+    const navigation = data.navigationItems.find(nav => nav.id === id)
     if (!navigation) {
       return NextResponse.json({ error: 'Navigation not found' }, { status: 404 })
     }
 
     const updatedItems = (navigation.items || []).filter((_, i) => i !== index)
     const updatedNavigations = data.navigationItems.map(nav => {
-      if (nav.id === params.id) {
+      if (nav.id === id) {
         return {
           ...nav,
           items: updatedItems

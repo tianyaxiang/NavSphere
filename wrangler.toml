@@ -3,8 +3,6 @@ compatibility_date = "2024-11-11"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
 
-
-
 [env.production.vars]
 GITHUB_ID = "Ov23lix1Mr0FRgjQy3Bg" 
 GITHUB_OWNER = "fanmochen"

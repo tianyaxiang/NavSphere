@@ -1,14 +1,14 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import type { NavigationData } from '@/types/navigation'
+import type { NavigationData, NavigationItem, NavigationSubItem } from '@/types/navigation'
 import type { SiteConfig } from '@/types/site'
 import { NavigationCard } from '@/components/navigation-card'
 import { Sidebar } from '@/components/sidebar'
 import { SearchBar } from '@/components/search-bar'
 import { ModeToggle } from '@/components/mode-toggle'
 import { Footer } from '@/components/footer'
-import { Github } from 'lucide-react'
+import { Github, HelpCircle } from 'lucide-react'
 import { Button } from "@/registry/new-york/ui/button"
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
@@ -23,12 +23,21 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
 
-  // 修复类型检查
+  // 修复类型检查和搜索逻辑
   const searchResults = useMemo(() => {
     const query = searchQuery.toLowerCase().trim()
     if (!query) return []
 
-    return navigationData.navigationItems.map(category => {
+    const results: Array<{
+      category: NavigationItem
+      items: (NavigationItem | NavigationSubItem)[]
+      subCategories: Array<{
+        title: string
+        items: (NavigationItem | NavigationSubItem)[]
+      }>
+    }> = []
+
+    navigationData.navigationItems.forEach(category => {
       // 搜索主分类下的项目
       const items = (category.items || []).filter(item => {
         const titleMatch = item.title.toLowerCase().includes(query)
@@ -37,21 +46,55 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
       })
 
       // 搜索子分类下的项目
-      const subResults = (category.subCategories || []).map(sub => {
-        const subItems = (sub.items || []).filter(item => {
-          const titleMatch = item.title.toLowerCase().includes(query)
-          const descMatch = item.description?.toLowerCase().includes(query)
-          return titleMatch || descMatch
-        })
-        return { ...sub, items: subItems }
-      }).filter(sub => sub.items.length > 0)
+      const subResults: Array<{
+        title: string
+        items: (NavigationItem | NavigationSubItem)[]
+      }> = []
 
-      return {
-        category,
-        items,
-        subCategories: subResults
+      if (category.subCategories) {
+        category.subCategories.forEach(sub => {
+          const subItems = (sub.items || []).filter(item => {
+            const titleMatch = item.title.toLowerCase().includes(query)
+            const descMatch = item.description?.toLowerCase().includes(query)
+            return titleMatch || descMatch
+          })
+          
+          if (subItems.length > 0) {
+            subResults.push({
+              title: sub.title,
+              items: subItems
+            })
+          }
+        })
       }
-    }).filter(result => result.items.length > 0 || result.subCategories.length > 0)
+
+      // 只有当主分类或子分类有匹配结果时才添加到结果中
+      if (items.length > 0 || subResults.length > 0) {
+        results.push({
+          category,
+          items,
+          subCategories: subResults
+        })
+      }
+    })
+
+    // 调试信息
+    if (query && results.length > 0) {
+      console.log('搜索结果:', {
+        query,
+        totalResults: results.length,
+        results: results.map(r => ({
+          category: r.category.title,
+          mainItems: r.items.length,
+          subCategories: r.subCategories.map(s => ({
+            title: s.title,
+            items: s.items.length
+          }))
+        }))
+      })
+    }
+
+    return results
   }, [navigationData, searchQuery])
 
   const handleSearch = (query: string) => {
@@ -61,9 +104,9 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
   return (
     <div className="flex flex-col sm:flex-row min-h-screen">
       <div className="hidden sm:block">
-        <Sidebar 
-          navigationData={navigationData} 
-          siteInfo={siteData} 
+        <Sidebar
+          navigationData={navigationData}
+          siteInfo={siteData}
           className="sticky top-0 h-screen"
         />
       </div>
@@ -76,8 +119,8 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
           "fixed inset-y-0 right-0 sm:left-0 w-3/4 max-w-xs bg-background shadow-lg transform transition-transform duration-200 ease-in-out",
           isSidebarOpen ? "translate-x-0" : "translate-x-full sm:-translate-x-full"
         )}>
-          <Sidebar 
-            navigationData={navigationData} 
+          <Sidebar
+            navigationData={navigationData}
             siteInfo={siteData}
             onClose={() => setIsSidebarOpen(false)}
           />
@@ -85,11 +128,11 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
       </div>
 
       <main className="flex-1">
-        <div className="sticky top-0 bg-background/90 backdrop-blur-sm z-10 px-3 sm:px-6 py-2">
+        <div className="sticky top-0 bg-background/90 backdrop-blur-sm z-30 px-3 sm:px-6 py-2">
           <div className="flex items-center gap-3">
             <div className="flex-1">
-              <SearchBar 
-                navigationData={navigationData} 
+              <SearchBar
+                navigationData={navigationData}
                 onSearch={handleSearch}
                 searchResults={searchResults}
                 searchQuery={searchQuery}
@@ -97,6 +140,34 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
             </div>
             <div className="flex items-center gap-1">
               <ModeToggle />
+              <Link
+                href="https://github.com/tianyaxiang/NavSphere"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="访问 GitHub 仓库"
+              >
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-accent hover:text-accent-foreground"
+                >
+                  <Github className="h-5 w-5" />
+                </Button>
+              </Link>
+              <Link
+                href="https://mp.weixin.qq.com/s/90LUmKilfLZfc5L63Ej3Sg"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="查看帮助文档"
+              >
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="hover:bg-accent hover:text-accent-foreground"
+                >
+                  <HelpCircle className="h-5 w-5" />
+                </Button>
+              </Link>
               <Button
                 variant="ghost"
                 size="icon"
@@ -108,7 +179,7 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
             </div>
           </div>
         </div>
-        
+
         <div className="px-3 sm:px-6 py-3 sm:py-6">
           <div className="space-y-6">
             {navigationData.navigationItems.map((category) => (

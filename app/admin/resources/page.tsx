@@ -6,11 +6,11 @@ import { useEffect, useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-import { Card, CardContent, CardHeader, CardTitle } from "@/registry/new-york/ui/card"
+import { Card, CardContent } from "@/registry/new-york/ui/card"
 import { Input } from "@/registry/new-york/ui/input"
 import { Button } from "@/registry/new-york/ui/button"
 import { useToast } from "@/registry/new-york/hooks/use-toast"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/new-york/ui/tabs"
+
 import {
   Loader2,
   Plus,
@@ -19,7 +19,10 @@ import {
   AlertCircle,
   Copy,
   Inbox,
-  Search
+  Search,
+  Trash2,
+  CheckSquare,
+  Square
 } from "lucide-react"
 import {
   Dialog,
@@ -49,7 +52,10 @@ const Icons = {
   alertCircle: AlertCircle,
   copy: Copy,
   inbox: Inbox,
-  search: Search
+  search: Search,
+  trash2: Trash2,
+  checkSquare: CheckSquare,
+  square: Square
 }
 
 const formSchema = z.object({
@@ -91,17 +97,7 @@ const ResourceGridSkeleton = () => (
   </div>
 );
 
-// Add styles
-const styles = {
-  '@keyframes shimmer': {
-    '0%': {
-      transform: 'translateX(-100%) skewX(-12deg)',
-    },
-    '100%': {
-      transform: 'translateX(200%) skewX(-12deg)',
-    },
-  },
-} as const;
+
 
 // Add style tag to the document
 if (typeof document !== 'undefined') {
@@ -137,11 +133,15 @@ export default function ResourceManagement() {
   const [isUploading, setIsUploading] = useState(false); // State to track if an upload is in progress
   const [selectedImage, setSelectedImage] = useState<string | null>(null); // State to hold the selected image for preview
   const [uploadSpeed, setUploadSpeed] = useState<number>(0);
-  const [uploadStartTime, setUploadStartTime] = useState<number>(0);
+
   const [abortController, setAbortController] = useState<AbortController | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedFile, setSelectedFile] = useState<File | null>(null); // 新增文件状态
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedResources, setSelectedResources] = useState<Set<string>>(new Set());
+  const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [resourceReferences, setResourceReferences] = useState<Record<string, Array<{ type: string; location: string; title?: string }>>>({});
 
   const fetchResources = async () => {
     try {
@@ -253,7 +253,7 @@ export default function ResourceManagement() {
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
-    
+
     const file = e.dataTransfer.files[0];
     if (file) {
       handleImageChange(file);
@@ -269,13 +269,12 @@ export default function ResourceManagement() {
     return new Promise((resolve, reject) => {
       const controller = new AbortController();
       setAbortController(controller);
-      
+
       const xhr = new XMLHttpRequest();
       xhr.open("POST", "/api/resource", true);
       xhr.setRequestHeader("Content-Type", "application/json");
 
       let startTime = Date.now();
-      setUploadStartTime(startTime);
 
       xhr.upload.onprogress = (event) => {
         if (event.lengthComputable) {
@@ -296,7 +295,7 @@ export default function ResourceManagement() {
         setUploadProgress(0);
         setUploadSpeed(0);
         setAbortController(null);
-        
+
         if (xhr.status >= 200 && xhr.status < 300) {
           try {
             const response = JSON.parse(xhr.response);
@@ -367,9 +366,109 @@ export default function ResourceManagement() {
   };
 
   // 添加搜索过滤函数
-  const filteredResources = resources.filter((resource) => 
+  const filteredResources = resources.filter((resource) =>
     resource.items[0].url.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  // 批量选择相关函数
+  const toggleResourceSelection = (resourceId: string) => {
+    const newSelected = new Set(selectedResources);
+    if (newSelected.has(resourceId)) {
+      newSelected.delete(resourceId);
+    } else {
+      newSelected.add(resourceId);
+    }
+    setSelectedResources(newSelected);
+  };
+
+  const selectAllResources = () => {
+    if (selectedResources.size === filteredResources.length) {
+      setSelectedResources(new Set());
+    } else {
+      setSelectedResources(new Set(filteredResources.map(r => r.id)));
+    }
+  };
+
+  // 检查资源引用
+  const checkResourceReferences = async (resourcePaths: string[]) => {
+    try {
+      const response = await fetch('/api/resource/check-references', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ resourcePaths }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to check references');
+      }
+
+      const data = await response.json();
+      return data.references;
+    } catch (error) {
+      console.error('Error checking references:', error);
+      return {};
+    }
+  };
+
+  // 批量删除资源
+  const handleBatchDelete = async () => {
+    if (selectedResources.size === 0) return;
+
+    // 获取选中资源的路径和hash
+    const selectedResourcesData = filteredResources.filter(r => selectedResources.has(r.id));
+    const resourcePaths = selectedResourcesData.map(r => r.items[0].url);
+    const resourceHashes = selectedResourcesData.map(r => r.id);
+
+    // 检查引用
+    const references = await checkResourceReferences(resourcePaths);
+    setResourceReferences(references);
+
+    setIsDeleteDialogOpen(true);
+  };
+
+  // 确认删除
+  const confirmDelete = async () => {
+    if (selectedResources.size === 0) return;
+
+    try {
+      setIsDeleting(true);
+      const resourceHashes = Array.from(selectedResources);
+
+      const response = await fetch('/api/resource', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ resourceHashes }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to delete resources');
+      }
+
+      const result = await response.json();
+
+      toast({
+        title: "成功",
+        description: result.message || `成功删除 ${selectedResources.size} 个资源`,
+      });
+
+      // 刷新资源列表
+      await fetchResources();
+      setSelectedResources(new Set());
+      setIsDeleteDialogOpen(false);
+    } catch (error) {
+      toast({
+        title: "错误",
+        description: error instanceof Error ? error.message : "删除资源失败",
+        variant: "destructive",
+      });
+    } finally {
+      setIsDeleting(false);
+    }
+  };
 
   return (
     <>
@@ -389,8 +488,8 @@ export default function ResourceManagement() {
                     <span className="text-gray-400">•</span>
                     <span>{(uploadSpeed / (1024 * 1024)).toFixed(2)} MB/s</span>
                   </div>
-                  <Button 
-                    variant="ghost" 
+                  <Button
+                    variant="ghost"
                     onClick={cancelUpload}
                     size="sm"
                     className="text-red-600 hover:text-red-700 hover:bg-red-50"
@@ -402,19 +501,19 @@ export default function ResourceManagement() {
               </div>
               <div className="relative w-full h-1.5 bg-gray-100 rounded-full overflow-hidden">
                 {/* 背景动画效果 */}
-                <div 
+                <div
                   className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 animate-pulse opacity-20"
                 />
                 {/* 主进度条 */}
-                <div 
+                <div
                   className="relative h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300 ease-out"
-                  style={{ 
+                  style={{
                     width: `${uploadProgress}%`,
                     boxShadow: '0 0 10px rgba(37, 99, 235, 0.5)'
                   }}
                 >
                   {/* 光晕效果 */}
-                  <div 
+                  <div
                     className="absolute right-0 top-0 h-full w-4 bg-white opacity-30 transform -skew-x-12 animate-[shimmer_1s_infinite]"
                   />
                 </div>
@@ -427,22 +526,56 @@ export default function ResourceManagement() {
       <div className="space-y-4 p-6">
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
-          <div className="relative">
-            <Icons.search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
-            <Input
-              placeholder="搜索资源..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 max-w-md"
-            />
-          </div>            <Button onClick={() => setIsDialogOpen(true)}>
+            <div className="flex items-center gap-4">
+              <div className="relative">
+                <Icons.search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Input
+                  placeholder="搜索资源..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 max-w-md"
+                />
+              </div>
+
+              {filteredResources.length > 0 && (
+                <div className="flex items-center gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={selectAllResources}
+                    className="flex items-center gap-2"
+                  >
+                    {selectedResources.size === filteredResources.length ? (
+                      <Icons.checkSquare className="h-4 w-4" />
+                    ) : (
+                      <Icons.square className="h-4 w-4" />
+                    )}
+                    全选 ({selectedResources.size}/{filteredResources.length})
+                  </Button>
+
+                  {selectedResources.size > 0 && (
+                    <Button
+                      variant="destructive"
+                      size="sm"
+                      onClick={handleBatchDelete}
+                      className="flex items-center gap-2"
+                    >
+                      <Icons.trash2 className="h-4 w-4" />
+                      删除选中 ({selectedResources.size})
+                    </Button>
+                  )}
+                </div>
+              )}
+            </div>
+
+            <Button onClick={() => setIsDialogOpen(true)}>
               <Icons.plus className="mr-2 h-4 w-4" />
               上传资源
             </Button>
           </div>
-          
+
           {/* 添加搜索框 */}
-         
+
         </div>
 
         {error && (
@@ -459,11 +592,28 @@ export default function ResourceManagement() {
         ) : filteredResources.length > 0 ? (
           <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2">
             {filteredResources.map((resource, index) => (
-              <div 
+              <div
                 key={index}
-                className="group bg-white rounded-lg border shadow-sm hover:shadow-md transition-shadow duration-200"
+                className={`group bg-white rounded-lg border shadow-sm hover:shadow-md transition-all duration-200 ${selectedResources.has(resource.id) ? 'ring-2 ring-blue-500 border-blue-500' : ''
+                  }`}
               >
                 <div className="relative aspect-square">
+                  {/* 选择框 */}
+                  <div className="absolute top-2 left-2 z-10">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => toggleResourceSelection(resource.id)}
+                      className="h-6 w-6 p-0 bg-white/80 backdrop-blur-sm hover:bg-white/90"
+                    >
+                      {selectedResources.has(resource.id) ? (
+                        <Icons.checkSquare className="h-3 w-3 text-blue-600" />
+                      ) : (
+                        <Icons.square className="h-3 w-3 text-gray-600" />
+                      )}
+                    </Button>
+                  </div>
+
                   <img
                     src={resource.items[0].url}
                     alt={`Resource ${index + 1}`}
@@ -472,7 +622,7 @@ export default function ResourceManagement() {
                   />
                   {/* 图片遮罩层和预览按钮 - 进一步缩小 */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-                    <a 
+                    <a
                       href={resource.items[0].url}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -512,7 +662,7 @@ export default function ResourceManagement() {
               {searchQuery ? '未找到匹配的资源' : '暂无资源'}
             </p>
             {!searchQuery && (
-              <Button 
+              <Button
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
                 className="mt-4"
@@ -546,14 +696,13 @@ export default function ResourceManagement() {
               <FormField
                 control={form.control}
                 name="resource.image"
-                render={({ field }) => (
+                render={() => (
                   <FormItem>
                     <FormLabel>选择图片</FormLabel>
                     <FormControl>
                       <Card
-                        className={`border-2 border-dashed ${
-                          selectedImage ? 'border-blue-400' : 'border-gray-200'
-                        } hover:border-blue-400 transition-colors duration-200`}
+                        className={`border-2 border-dashed ${selectedImage ? 'border-blue-400' : 'border-gray-200'
+                          } hover:border-blue-400 transition-colors duration-200`}
                       >
                         <CardContent
                           className="flex flex-col items-center justify-center p-6 cursor-pointer"
@@ -633,6 +782,162 @@ export default function ResourceManagement() {
               </DialogFooter>
             </form>
           </Form>
+        </DialogContent>
+      </Dialog>
+
+      {/* 批量删除确认对话框 */}
+      <Dialog open={isDeleteDialogOpen} onOpenChange={setIsDeleteDialogOpen}>
+        <DialogContent className="sm:max-w-[600px] max-h-[80vh] flex flex-col">
+          <DialogHeader className="flex-shrink-0">
+            <DialogTitle className="flex items-center gap-2">
+              <Icons.alertCircle className="h-5 w-5 text-red-500" />
+              确认删除资源
+            </DialogTitle>
+            <DialogDescription>
+              您即将删除 {selectedResources.size} 个资源，此操作不可撤销。
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="flex-1 overflow-hidden flex flex-col space-y-4">
+            {/* 显示有引用的资源警告 */}
+            {Object.entries(resourceReferences).some(([_, refs]) => refs.length > 0) && (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex-shrink-0">
+                <div className="flex items-start gap-2">
+                  <Icons.alertCircle className="h-5 w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
+                  <div className="space-y-2 min-w-0">
+                    <p className="text-sm font-medium text-yellow-800">
+                      以下资源正在被使用中：
+                    </p>
+                    <div className="max-h-24 overflow-y-auto space-y-2">
+                      {Object.entries(resourceReferences).map(([resourcePath, refs]) =>
+                        refs.length > 0 && (
+                          <div key={resourcePath} className="text-sm text-yellow-700">
+                            <p className="font-medium truncate" title={resourcePath}>
+                              {resourcePath.split('/').pop()}
+                            </p>
+                            <ul className="ml-4 space-y-1">
+                              {refs.slice(0, 3).map((ref, index) => (
+                                <li key={index} className="text-xs truncate">
+                                  • {ref.location}
+                                </li>
+                              ))}
+                              {refs.length > 3 && (
+                                <li className="text-xs text-yellow-600">
+                                  • 还有 {refs.length - 3} 个引用...
+                                </li>
+                              )}
+                            </ul>
+                          </div>
+                        )
+                      )}
+                    </div>
+                    <p className="text-xs text-yellow-600">
+                      删除这些资源可能会导致相关功能异常，请确认是否继续。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* 显示将要删除的资源列表 */}
+            <div className="flex-1 overflow-hidden">
+              <div className="flex items-center justify-between mb-3">
+                <p className="text-sm font-medium text-gray-700">
+                  将要删除的资源 ({selectedResources.size} 个)：
+                </p>
+                {selectedResources.size > 12 && (
+                  <p className="text-xs text-gray-500">
+                    显示前 12 个，共 {selectedResources.size} 个
+                  </p>
+                )}
+              </div>
+
+              <div className="overflow-y-auto max-h-48">
+                {selectedResources.size <= 12 ? (
+                  // 少量资源时显示网格
+                  <div className="grid grid-cols-4 gap-2">
+                    {filteredResources
+                      .filter(r => selectedResources.has(r.id))
+                      .map((resource, index) => (
+                        <div key={index} className="relative group">
+                          <img
+                            src={resource.items[0].url}
+                            alt="Resource"
+                            className="w-full aspect-square object-cover rounded border"
+                          />
+                          <div className="absolute inset-0 bg-red-500/20 rounded"></div>
+                          <div className="absolute bottom-1 left-1 right-1">
+                            <div className="bg-black/60 text-white text-xs px-1 py-0.5 rounded truncate">
+                              {resource.items[0].url.split('/').pop()}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                ) : (
+                  // 大量资源时显示列表
+                  <div className="space-y-2">
+                    {filteredResources
+                      .filter(r => selectedResources.has(r.id))
+                      .slice(0, 12)
+                      .map((resource, index) => (
+                        <div key={index} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
+                          <img
+                            src={resource.items[0].url}
+                            alt="Resource"
+                            className="w-12 h-12 object-cover rounded border flex-shrink-0"
+                          />
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900 truncate">
+                              {resource.items[0].url.split('/').pop()}
+                            </p>
+                            <p className="text-xs text-gray-500 truncate">
+                              {resource.items[0].url}
+                            </p>
+                          </div>
+                          <div className="w-4 h-4 bg-red-500/20 rounded border border-red-300 flex-shrink-0"></div>
+                        </div>
+                      ))}
+
+                    {selectedResources.size > 12 && (
+                      <div className="text-center py-3 border-t border-gray-200">
+                        <p className="text-sm text-gray-500">
+                          还有 {selectedResources.size - 12} 个资源将被删除
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          <DialogFooter className="gap-2 flex-shrink-0 border-t pt-4">
+            <Button
+              variant="outline"
+              onClick={() => setIsDeleteDialogOpen(false)}
+              disabled={isDeleting}
+            >
+              取消
+            </Button>
+            <Button
+              variant="destructive"
+              onClick={confirmDelete}
+              disabled={isDeleting}
+            >
+              {isDeleting ? (
+                <>
+                  <Icons.loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  删除中...
+                </>
+              ) : (
+                <>
+                  <Icons.trash2 className="mr-2 h-4 w-4" />
+                  确认删除 ({selectedResources.size})
+                </>
+              )}
+            </Button>
+          </DialogFooter>
         </DialogContent>
       </Dialog>
 

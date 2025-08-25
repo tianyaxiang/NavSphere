@@ -76,14 +76,6 @@
           "description": "Beautiful Screenshots and Mockups\nCusomizable, eye-catching presentation for any content",
           "icon": "/assets/img_1741747241014.png",
           "enabled": true
-        },
-        {
-          "id": "item-1756127666905",
-          "enabled": true,
-          "title": "Creating a pull request from a fork - GitHub Docs",
-          "href": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork",
-          "description": "",
-          "icon": "https://docs.github.com/assets/cb-345/images/site/favicon.png"
         }
       ],
       "subCategories": [],
@@ -271,6 +263,14 @@
               "description": "Netlify is the essential platform for the delivery of exceptional and dynamic web experiences, without limitations.",
               "icon": "/assets/img_1735612745862.png",
               "enabled": true
+            },
+            {
+              "id": "1755225929754",
+              "title": "Tencent -  EdgeOne亚洲最佳CDN、边缘和安全解决方案",
+              "href": "https://edgeone.ai/zh",
+              "description": "Tencent EdgeOne，亚洲领先的CDN，利用腾讯先进的边缘节点提供卓越的边缘解决方案，用于加速、安全、无服务器和视频。",
+              "icon": "/assets/favicon_1755225933031.ico",
+              "enabled": true
             }
           ]
         },
@@ -363,6 +363,23 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "47206329-6eed-422c-bdc9-c7cec1eb5190",
+          "title": "域名注册",
+          "icon": "Files",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1754295485849",
+              "title": "namecheap",
+              "href": "https://www.namecheap.com/",
+              "description": "Register domain names at Namecheap. Buy cheap domain names and enjoy 24/7 support. With over 18 million domains under management, you know you’re in good hands.",
+              "icon": "/assets/favicon_1754295511938.ico",
+              "enabled": true
+            }
+          ]
         }
       ]
     },
@@ -408,12 +425,45 @@
           ]
         },
         {
+          "id": "5737638e-0c17-4377-9e67-12cf0fb2acd5",
+          "title": "国外平台",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1755168164096",
+              "title": "Reddit - The heart of the internet",
+              "href": "https://www.reddit.com/",
+              "description": "Reddit is where millions of people gather for conversations about the things they care about, in over 100,000 subreddit communities.",
+              "icon": "/assets/favicon_1755168414977.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
           "id": "2d33f756-959e-4171-9e0e-b616bcd274be",
           "title": "公众号排版",
           "icon": "Edit",
           "description": "",
           "enabled": true,
           "items": [
+            {
+              "id": "1754791068961",
+              "title": "NeuraPress Pro Markdown Editor",
+              "href": "https://mp.leti.ltd/",
+              "description": "NeuraPress 是一个现代化的 Markdown 编辑器，专注于提供优质的内容排版体验。 响应式设计，支持移动设备，让创作变得更加高效。\n\n",
+              "icon": "/assets/favicon_1754791082337.svg",
+              "enabled": true
+            },
+            {
+              "id": "1754791158725",
+              "title": "NeuraPress",
+              "href": "https://md.leti.ltd/",
+              "description": "Markdown 转微信公众号内容神器",
+              "icon": "/assets/favicon_1754791168416.svg",
+              "enabled": true
+            },
             {
               "id": "1735456910129",
               "title": "WeChat Markdown Editor",
@@ -429,6 +479,14 @@
               "description": "微信公众号样式一键转换，知乎/语雀专属排版优化",
               "icon": "/assets/img_1737961266055.png",
               "enabled": true
+            },
+            {
+              "id": "item-1756116137255",
+              "enabled": true,
+              "title": "MD2Card - Markdown 转知识卡片工具",
+              "href": "https://md2card.com/zh/editor",
+              "description": "MD2Card 是一个免费的 Markdown 转知识卡片工具，支持一键生成小红书风格海报、社交媒体文案排版，让创作者轻松制作精美的图文内容。支持多种主题风格、长文自动拆分、一键导出图片，让你的创作更加高效。",
+              "icon": "/assets/favicon_1756116123667.ico"
             }
           ]
         },
@@ -453,6 +511,23 @@
               "href": "https://cursorful.com/",
               "description": "具有自动缩放功能的屏幕录像 使用 Cursorful 浏览器扩展程序录制精美的屏幕录像跟随光标缩放或在编辑器中加载您自己的视频并可以手动添加缩放。",
               "icon": "/assets/img_1753396105178.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "0ed6d8b1-effe-4535-8cde-60ec38f9c96c",
+          "title": "AI 检测工具",
+          "icon": "BookOpen",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1754573112532",
+              "title": "腾讯朱雀AI文本检测",
+              "href": "https://matrix.tencent.com/ai-detect/",
+              "description": "腾讯朱雀AI文本检测基于多种先进的人工智能模型，构造数百万级别的数据进行训练，能够识别出人类和AI的书写模式。该系统不仅具备优秀的英文检测能力，在处理中文数据方面表现尤为出色。\n",
+              "icon": "/assets/img_1754573290976.png",
               "enabled": true
             }
           ]

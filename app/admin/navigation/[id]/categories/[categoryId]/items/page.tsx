@@ -575,7 +575,7 @@ export default function CategoryItemsPage() {
               <DialogHeader>
                 <DialogTitle>删除确认</DialogTitle>
                 <DialogDescription>
-                  确定要删除站点 "{deletingItem?.item.title}" 吗？此操作无法撤销。
+                  确定要删除站点 &ldquo;{deletingItem?.item.title}&rdquo; 吗？此操作无法撤销。
                 </DialogDescription>
               </DialogHeader>
               <DialogFooter>

@@ -17,7 +17,8 @@ const sessionOptions = {
 }
 
 export async function getSession() {
-  const session = await getIronSession<SessionData>(cookies(), sessionOptions)
+  const cookieStore = await cookies()
+  const session = await getIronSession<SessionData>(cookieStore, sessionOptions)
   
   // 初始化会话数据
   if (!session.isLoggedIn) {

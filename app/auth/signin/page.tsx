@@ -4,7 +4,7 @@ import { signIn } from 'next-auth/react'
 import { useSearchParams } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import {
   Card,
   CardContent,
@@ -14,7 +14,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-export default function SignInPage() {
+function SignInContent() {
   const searchParams = useSearchParams()
   const callbackUrl = searchParams?.get('callbackUrl') || '/admin'
   const [isLoading, setIsLoading] = useState(false)
@@ -56,7 +56,7 @@ export default function SignInPage() {
         <div className="relative z-20 mt-auto">
           <blockquote className="space-y-2">
             <p className="text-lg">
-              "这是一个专为程序员设计的导航网站，集成了常用的开发工具、学习资源和技术社区。"
+              &ldquo;这是一个专为程序员设计的导航网站，集成了常用的开发工具、学习资源和技术社区。&rdquo;
             </p>
             <footer className="text-sm">NavSphere Team</footer>
           </blockquote>
@@ -114,5 +114,13 @@ export default function SignInPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function SignInPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SignInContent />
+    </Suspense>
   )
 } 

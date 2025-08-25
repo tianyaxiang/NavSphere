@@ -94,3 +94,49 @@ async function uploadImageToGitHub(binaryData: Uint8Array, token: string): Promi
 
     return { path, commitHash }; // Return the URL of the uploaded image
 }
+
+export async function DELETE(request: Request) {
+    try {
+        const session = await auth();
+        if (!session?.user?.accessToken) {
+            return new Response('Unauthorized', { status: 401 });
+        }
+
+        const { resourceHashes } = await request.json();
+        
+        if (!Array.isArray(resourceHashes) || resourceHashes.length === 0) {
+            return NextResponse.json({ error: 'Invalid resource hashes' }, { status: 400 });
+        }
+
+        // 获取当前的资源元数据
+        const metadata = await getFileContent('navsphere/content/resource-metadata.json') as ResourceMetadata;
+        
+        // 过滤掉要删除的资源
+        const originalCount = metadata.metadata.length;
+        metadata.metadata = metadata.metadata.filter(item => !resourceHashes.includes(item.hash));
+        const deletedCount = originalCount - metadata.metadata.length;
+
+        // 更新资源元数据文件
+        await commitFile(
+            'navsphere/content/resource-metadata.json',
+            JSON.stringify(metadata, null, 2),
+            `Delete ${deletedCount} resource(s)`,
+            session.user.accessToken
+        );
+
+        // 注意：这里只是从元数据中删除了引用，实际的图片文件仍然存在于GitHub仓库中
+        // 如果需要删除实际文件，需要额外的GitHub API调用
+
+        return NextResponse.json({ 
+            success: true, 
+            deletedCount,
+            message: `成功删除 ${deletedCount} 个资源` 
+        });
+    } catch (error) {
+        console.error('Failed to delete resources:', error);
+        return NextResponse.json(
+            { error: error instanceof Error ? error.message : 'Failed to delete resources' },
+            { status: 500 }
+        );
+    }
+}

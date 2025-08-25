@@ -6,17 +6,17 @@ import { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { Button } from "@/registry/new-york/ui/button"
 import { useToast } from "@/registry/new-york/hooks/use-toast"
-import { 
-  Plus, 
-  Folder, 
-  Search, 
-  X, 
-  ArrowLeft, 
-  List, 
-  Pencil, 
-  Trash, 
-  ChevronsUp, 
-  ChevronsDown 
+import {
+  Plus,
+  Folder,
+  Search,
+  X,
+  ArrowLeft,
+  List,
+  Pencil,
+  Trash,
+  ChevronsUp,
+  ChevronsDown
 } from 'lucide-react'
 import { NavigationItem, NavigationCategory } from '@/types/navigation'
 import {
@@ -31,7 +31,7 @@ import {
 import { AddCategoryForm } from '../../components/AddCategoryForm'
 import { Input } from "@/registry/new-york/ui/input"
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd'
-import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
+
 import { Badge } from "@/registry/new-york/ui/badge"
 import { Skeleton } from "@/registry/new-york/ui/skeleton"
 import {
@@ -84,11 +84,11 @@ export default function CategoriesPage() {
     }
   }
 
-  const addCategory = async (values: { 
-    title: string, 
-    icon: string, 
+  const addCategory = async (values: {
+    title: string,
+    icon: string,
     description?: string,
-    enabled: boolean 
+    enabled: boolean
   }) => {
     if (!params?.id || !navigation) return
 
@@ -131,24 +131,24 @@ export default function CategoriesPage() {
     }
   }
 
-  const editCategory = async (values: { 
-    title: string, 
-    icon: string, 
+  const editCategory = async (values: {
+    title: string,
+    icon: string,
     description?: string,
-    enabled: boolean 
+    enabled: boolean
   }) => {
     if (!params?.id || !navigation || !editingCategory) return
 
     try {
-      const updatedCategories = navigation.subCategories?.map((cat, index) => 
-        index === editingCategory.index 
-          ? { 
-              ...cat, 
-              title: values.title, 
-              icon: values.icon, 
-              description: values.description,
-              enabled: values.enabled 
-            }
+      const updatedCategories = navigation.subCategories?.map((cat, index) =>
+        index === editingCategory.index
+          ? {
+            ...cat,
+            title: values.title,
+            icon: values.icon,
+            description: values.description,
+            enabled: values.enabled
+          }
           : cat
       ) || []
 
@@ -168,7 +168,7 @@ export default function CategoriesPage() {
       const updatedData = await response.json()
       setNavigation(updatedData)
       setEditingCategory(null)
-      
+
       toast({
         title: "成功",
         description: "更新成功"
@@ -257,7 +257,7 @@ export default function CategoriesPage() {
 
   const handleDragEnd = (result: DropResult) => {
     const { destination, source } = result
-    
+
     if (!destination || destination.index === source.index || !navigation?.subCategories) return
 
     moveCategory(source.index, destination.index)
@@ -287,40 +287,14 @@ export default function CategoriesPage() {
     }
   }
 
-  const updateNavigation = async (updatedNavigation: NavigationItem) => {
-    if (!params?.id) {
-      throw new Error('Navigation ID not found')
-    }
 
-    try {
-      const response = await fetch(`/api/navigation/${params.id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updatedNavigation)
-      })
-
-      if (!response.ok) throw new Error('Failed to save')
-
-      setNavigation(updatedNavigation)
-      toast({
-        title: "成功",
-        description: "保存成功"
-      })
-    } catch (error) {
-      toast({
-        title: "错误",
-        description: "保存失败",
-        variant: "destructive"
-      })
-    }
-  }
 
   const filteredCategories = navigation?.subCategories?.filter(category => {
     const matchesSearch = category.title.toLowerCase().includes(searchQuery.toLowerCase())
-    const matchesStatus = statusFilter === 'all' 
-      ? true 
-      : statusFilter === 'enabled' 
-        ? category.enabled 
+    const matchesStatus = statusFilter === 'all'
+      ? true
+      : statusFilter === 'enabled'
+        ? category.enabled
         : !category.enabled
     return matchesSearch && matchesStatus
   }) || []
@@ -394,9 +368,9 @@ export default function CategoriesPage() {
             <DialogHeader>
               <DialogTitle>添加分类</DialogTitle>
             </DialogHeader>
-            <AddCategoryForm 
-              onSubmit={addCategory} 
-              onCancel={() => setIsAddDialogOpen(false)} 
+            <AddCategoryForm
+              onSubmit={addCategory}
+              onCancel={() => setIsAddDialogOpen(false)}
             />
           </DialogContent>
         </Dialog>
@@ -438,9 +412,16 @@ export default function CategoriesPage() {
                             <div>
                               <div className="flex items-center gap-2">
                                 <span className="font-medium leading-none">{category.title}</span>
-                                {!category.enabled && (
-                                  <Badge variant="secondary" className="text-xs">已禁用</Badge>
-                                )}
+                                <Badge 
+                                  variant={(category.enabled ?? true) ? "default" : "secondary"}
+                                  className={
+                                    (category.enabled ?? true)
+                                      ? "text-xs bg-green-100 text-green-800 hover:bg-green-100" 
+                                      : "text-xs bg-gray-100 text-gray-600 hover:bg-gray-100"
+                                  }
+                                >
+                                  {(category.enabled ?? true) ? "已启用" : "已禁用"}
+                                </Badge>
                               </div>
                               {category.description && (
                                 <div className="text-xs text-muted-foreground mt-1">
@@ -453,6 +434,32 @@ export default function CategoriesPage() {
                             </div>
                           </div>
                           <div className="flex items-center gap-1">
+                            {/* 置顶置底按钮 - 在hover时显示 */}
+                            <div className="hidden group-hover:flex items-center gap-1 mr-2">
+                              {index > 0 && (
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  className="h-7 w-7"
+                                  onClick={() => moveToTop(category.id)}
+                                  title="置顶"
+                                >
+                                  <ChevronsUp className="h-4 w-4" />
+                                </Button>
+                              )}
+                              {index < (navigation?.subCategories?.length || 0) - 1 && (
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  className="h-7 w-7"
+                                  onClick={() => moveToBottom(category.id)}
+                                  title="置底"
+                                >
+                                  <ChevronsDown className="h-4 w-4" />
+                                </Button>
+                              )}
+                            </div>
+                            {/* 常规操作按钮 */}
                             <Button
                               variant="ghost"
                               size="icon"
@@ -482,30 +489,6 @@ export default function CategoriesPage() {
                               <Trash className="h-4 w-4" />
                             </Button>
                           </div>
-                        </div>
-                        <div className="absolute right-0 top-1/2 -translate-y-1/2 pr-2 hidden group-hover:flex items-center gap-1">
-                          {index > 0 && (
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              className="h-6 w-6"
-                              onClick={() => moveToTop(category.id)}
-                              title="置顶"
-                            >
-                              <ChevronsUp className="h-4 w-4" />
-                            </Button>
-                          )}
-                          {index < (navigation?.subCategories?.length || 0) - 1 && (
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              className="h-6 w-6"
-                              onClick={() => moveToBottom(category.id)}
-                              title="置底"
-                            >
-                              <ChevronsDown className="h-4 w-4" />
-                            </Button>
-                          )}
                         </div>
                       </div>
                     )}
@@ -537,7 +520,7 @@ export default function CategoriesPage() {
               title: editingCategory?.category.title || '',
               icon: editingCategory?.category.icon || '',
               description: editingCategory?.category.description || '',
-              enabled: editingCategory?.category.enabled || true
+              enabled: editingCategory?.category.enabled ?? true
             }}
             onSubmit={editCategory}
             onCancel={() => setEditingCategory(null)}
@@ -550,7 +533,7 @@ export default function CategoriesPage() {
           <DialogHeader>
             <DialogTitle>删除确认</DialogTitle>
             <DialogDescription>
-              确定要删除分类 "{deletingCategory?.category.title}" 吗？此操作无法撤销，分类下的所有项目也将被删除。
+              确定要删除分类 &ldquo;{deletingCategory?.category.title}&rdquo; 吗？此操作无法撤销，分类下的所有项目也将被删除。
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>

@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server'
 import navigationData from '@/navsphere/content/navigation.json'
 
 export const runtime = 'edge'
-export const dynamic = 'force-static'
 
 export async function GET() {
   try {

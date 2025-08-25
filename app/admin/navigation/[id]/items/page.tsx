@@ -21,7 +21,7 @@ import {
 import { AddItemForm } from '../../components/AddItemForm'
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
 import { Skeleton } from "@/registry/new-york/ui/skeleton"
-import { Label } from "@/registry/new-york/ui/label"
+
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/registry/new-york/ui/select"
 import { Badge } from "@/registry/new-york/ui/badge"
 
@@ -558,7 +558,7 @@ export default function ItemsPage() {
           <DialogHeader>
             <DialogTitle>删除确认</DialogTitle>
             <DialogDescription>
-              确定要删除站点 "{deletingItem?.item.title}" 吗？此操作无法撤销。
+              确定要删除站点 &ldquo;{deletingItem?.item.title}&rdquo; 吗？此操作无法撤销。
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>

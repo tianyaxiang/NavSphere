@@ -5,9 +5,8 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { signOut } from 'next-auth/react'
 import { Button } from "@/registry/new-york/ui/button"
-import { ScrollArea } from "@/registry/new-york/ui/scroll-area"
 import { Separator } from "@/registry/new-york/ui/separator"
-import { 
+import {
   LayoutDashboard,
   ListTodo,
   Settings,
@@ -16,6 +15,10 @@ import {
   ChevronDown,
   LogOut,
   Home,
+  Moon,
+  Sun,
+  Monitor,
+  Database,
 } from "lucide-react"
 import { cn } from '@/lib/utils'
 import {
@@ -25,8 +28,12 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
 } from "@/registry/new-york/ui/dropdown-menu"
 import { Avatar, AvatarImage, AvatarFallback } from "@/registry/new-york/ui/avatar"
+import { useTheme } from "next-themes"
 
 interface AdminLayoutClientProps {
   children: React.ReactNode
@@ -62,12 +69,16 @@ const menuItems = [
       {
         title: "资源管理",
         href: "/admin/resources"
-      },
-      {
+      },{
         title: "网站图标下载",
-        href: "/admin/resources/load"
+        href: "/admin/resources/download"
       }
     ]
+  },
+  {
+    title: "数据管理",
+    href: "/admin/data",
+    icon: Database
   },
   {
     title: "站点设置",
@@ -81,10 +92,11 @@ export function AdminLayoutClient({ children, user }: AdminLayoutClientProps) {
   const pathname = usePathname()
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false)
   const [expandedItems, setExpandedItems] = useState<string[]>([])
+  const { setTheme } = useTheme()
 
   const toggleMenuItem = (href: string) => {
-    setExpandedItems(prev => 
-      prev.includes(href) 
+    setExpandedItems(prev =>
+      prev.includes(href)
         ? prev.filter(item => item !== href)
         : [...prev, href]
     )
@@ -119,8 +131,8 @@ export function AdminLayoutClient({ children, user }: AdminLayoutClientProps) {
                 <div className="flex flex-col flex-1">
                   <div className="px-3 py-4">
                     <div className="mb-4">
-                      <Link 
-                        href="/admin" 
+                      <Link
+                        href="/admin"
                         className={cn(
                           "flex items-center",
                           isSidebarCollapsed ? "justify-center" : "px-2"
@@ -131,8 +143,8 @@ export function AdminLayoutClient({ children, user }: AdminLayoutClientProps) {
                           isSidebarCollapsed && "flex-col"
                         )}>
                           <div className="relative w-8 h-8 overflow-hidden rounded-md">
-                            <img 
-                              src="/assets/images/alogo.png" 
+                            <img
+                              src="/assets/images/alogo.png"
                               alt="Logo"
                               className="object-cover"
                             />
@@ -152,7 +164,7 @@ export function AdminLayoutClient({ children, user }: AdminLayoutClientProps) {
                     </div>
 
                     <Separator className="mb-4" />
-                    
+
                     <div className="px-3 flex-1">
                       {!isSidebarCollapsed && (
                         <h2 className="mb-3 px-2 text-lg font-semibold tracking-tight">
@@ -182,7 +194,7 @@ export function AdminLayoutClient({ children, user }: AdminLayoutClientProps) {
                                   {!isSidebarCollapsed && (
                                     <>
                                       <span>{item.title}</span>
-                                      <ChevronDown 
+                                      <ChevronDown
                                         className={cn(
                                           "ml-auto h-4 w-4 transition-transform",
                                           expandedItems.includes(item.href) && "rotate-180"
@@ -222,8 +234,8 @@ export function AdminLayoutClient({ children, user }: AdminLayoutClientProps) {
                 <div className="p-3">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button 
-                        variant="ghost" 
+                      <Button
+                        variant="ghost"
                         className={cn(
                           "w-full h-auto p-2",
                           "hover:bg-muted transition-colors",
@@ -232,9 +244,9 @@ export function AdminLayoutClient({ children, user }: AdminLayoutClientProps) {
                       >
                         <div className="flex items-center gap-3 w-full">
                           <Avatar className="h-8 w-8">
-                            <AvatarImage 
-                              src={user.image || ''} 
-                              alt={user.name || ''} 
+                            <AvatarImage
+                              src={user.image || ''}
+                              alt={user.name || ''}
                             />
                             <AvatarFallback>
                               {user.name?.charAt(0).toUpperCase() || 'U'}
@@ -255,8 +267,8 @@ export function AdminLayoutClient({ children, user }: AdminLayoutClientProps) {
                         </div>
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent 
-                      className="w-56" 
+                    <DropdownMenuContent
+                      className="w-56"
                       align={isSidebarCollapsed ? "center" : "start"}
                       side="top"
                     >
@@ -272,16 +284,38 @@ export function AdminLayoutClient({ children, user }: AdminLayoutClientProps) {
                       </DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem asChild>
-                        <Link 
-                          href="/" 
+                        <Link
+                          href="/"
                           className="cursor-pointer"
-                          target="_blank" 
+                          target="_blank"
                           rel="noopener noreferrer"
                         >
                           <Home className="mr-2 h-4 w-4" />
                           前台首页
                         </Link>
                       </DropdownMenuItem>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuSub>
+                        <DropdownMenuSubTrigger>
+                          <Sun className="h-4 w-4 mr-2 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                          <Moon className="absolute h-4 w-4 mr-2 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                          <span className="ml-2">主题</span>
+                        </DropdownMenuSubTrigger>
+                        <DropdownMenuSubContent>
+                          <DropdownMenuItem onClick={() => setTheme("light")}>
+                            <Sun className="h-4 w-4 mr-2" />
+                            浅色
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => setTheme("dark")}>
+                            <Moon className="h-4 w-4 mr-2" />
+                            深色
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => setTheme("system")}>
+                            <Monitor className="h-4 w-4 mr-2" />
+                            跟随系统
+                          </DropdownMenuItem>
+                        </DropdownMenuSubContent>
+                      </DropdownMenuSub>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem
                         className="cursor-pointer flex items-center text-red-600 focus:text-red-600 focus:bg-red-100"
