@@ -76,6 +76,14 @@
           "description": "Beautiful Screenshots and Mockups\nCusomizable, eye-catching presentation for any content",
           "icon": "/assets/img_1741747241014.png",
           "enabled": true
+        },
+        {
+          "id": "item-1756127666905",
+          "enabled": true,
+          "title": "Creating a pull request from a fork - GitHub Docs",
+          "href": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork",
+          "description": "",
+          "icon": "https://docs.github.com/assets/cb-345/images/site/favicon.png"
         }
       ],
       "subCategories": [],
