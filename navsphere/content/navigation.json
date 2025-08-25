@@ -2,7 +2,7 @@
   "navigationItems": [
     {
       "id": "1",
-      "title": "常用推荐",
+      "title": "常用推荐-demo",
       "icon": "Star",
       "items": [
         {
@@ -76,30 +76,6 @@
           "description": "Beautiful Screenshots and Mockups\nCusomizable, eye-catching presentation for any content",
           "icon": "/assets/img_1741747241014.png",
           "enabled": true
-        },
-        {
-          "id": "item-1754218579319",
-          "enabled": true,
-          "title": "DeepSeek - 探索未至之境",
-          "href": "https://chat.deepseek.com/",
-          "description": "Chat with DeepSeek AI – your intelligent assistant for coding, content creation, file reading, and more. Upload documents, engage in long-context conversations, and get expert help in AI, natural language processing, and beyond. | 深度求索（DeepSeek）助力编程代码开发、创意写作、文件处理等任务，支持文件上传及长文本对话，随时为您提供高效的AI支持。",
-          "icon": "/assets/favicon_1754218571142.svg"
-        },
-        {
-          "id": "1754229699374",
-          "title": "Lucide",
-          "href": "https://lucide.dev/",
-          "description": "Beautiful & consistent icon toolkit made by the community.",
-          "icon": "/assets/favicon_1754229702059.ico",
-          "enabled": true
-        },
-        {
-          "id": "item-1756114712832",
-          "enabled": true,
-          "title": "MD2Card - Markdown 转知识卡片工具",
-          "href": "https://md2card.com/zh/editor",
-          "description": "MD2Card 是一个免费的 Markdown 转知识卡片工具，支持一键生成小红书风格海报、社交媒体文案排版，让创作者轻松制作精美的图文内容。支持多种主题风格、长文自动拆分、一键导出图片，让你的创作更加高效。",
-          "icon": "/assets/favicon_1756114706715.ico"
         }
       ],
       "subCategories": [],
