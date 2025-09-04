@@ -124,14 +124,6 @@
           "items": [
             {
               "id": "1756265495362",
-              "title": "Domain Authority Checker",
-              "href": "https://websiteseochecker.com/domain-authority-checker/",
-              "description": "",
-              "icon": "/assets/favicon_1756973373502.ico",
-              "enabled": true
-            },
-            {
-              "id": "1756265495362",
               "title": "DA & SS Checker",
               "href": "https://websiteseochecker.com/domain-authority-checker/",
               "description": "Check Domain Authority (DA)",
