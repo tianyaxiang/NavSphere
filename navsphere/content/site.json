@@ -10,6 +10,6 @@
     "theme": "system"
   },
   "navigation": {
-    "linkTarget": "_blank"
+    "linkTarget": "_self"
   }
 }
