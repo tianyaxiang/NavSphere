@@ -19,6 +19,9 @@ export class SiteConfigService {
           logo: '',
           favicon: '',
           theme: 'system'
+        },
+        navigation: {
+          linkTarget: '_blank'
         }
       }
     }

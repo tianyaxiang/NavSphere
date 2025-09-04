@@ -8,5 +8,8 @@
     "logo": "/assets/images/alogo.png",
     "favicon": "/assets/images/favicon.png",
     "theme": "system"
+  },
+  "navigation": {
+    "linkTarget": "_blank"
   }
 }

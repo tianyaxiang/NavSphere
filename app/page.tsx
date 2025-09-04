@@ -17,6 +17,12 @@ function getData() {
         siteDataRaw.appearance.theme === 'system')
         ? siteDataRaw.appearance.theme
         : 'system'
+    },
+    navigation: {
+      linkTarget: (siteDataRaw.navigation?.linkTarget === '_blank' ||
+        siteDataRaw.navigation?.linkTarget === '_self')
+        ? siteDataRaw.navigation.linkTarget
+        : '_blank'
     }
   }
 
@@ -32,6 +38,9 @@ function getData() {
         logo: '',
         favicon: '',
         theme: 'system' as const
+      },
+      navigation: {
+        linkTarget: '_blank' as const
       }
     }
   }

@@ -44,6 +44,9 @@ export function SiteProvider({ children }: { children: React.ReactNode }) {
             logo: '/logo.png',
             favicon: '/favicon.ico',
             theme: 'system'
+          },
+          navigation: {
+            linkTarget: '_blank'
           }
         })
       } finally {

@@ -21,6 +21,9 @@ export async function GET() {
         logo: '',
         favicon: '',
         theme: 'system'
+      },
+      navigation: {
+        linkTarget: '_blank'
       }
     })
   }

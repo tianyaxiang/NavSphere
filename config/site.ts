@@ -10,6 +10,9 @@ export const siteConfig: SiteConfig = {
     logo: '/logo.png',
     favicon: '/favicon.ico',
     theme: 'system'
+  },
+  navigation: {
+    linkTarget: '_blank'
   }
 }
 

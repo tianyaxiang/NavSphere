@@ -6,6 +6,7 @@ import { Command, CommandList, CommandGroup, CommandItem } from '@/registry/new-
 import { Search, X } from 'lucide-react'
 import { Button } from '@/registry/new-york/ui/button'
 import type { NavigationData, NavigationItem, NavigationSubItem } from '@/types/navigation'
+import type { SiteConfig } from '@/types/site'
 
 interface SearchBarProps {
   navigationData: NavigationData
@@ -19,9 +20,10 @@ interface SearchBarProps {
     }>
   }>
   searchQuery: string
+  siteConfig?: SiteConfig
 }
 
-export function SearchBar({ onSearch, searchResults, searchQuery }: SearchBarProps) {
+export function SearchBar({ onSearch, searchResults, searchQuery, siteConfig }: SearchBarProps) {
   const [isFocused, setIsFocused] = useState(false)
   const searchRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -72,7 +74,12 @@ export function SearchBar({ onSearch, searchResults, searchQuery }: SearchBarPro
   const handleItemSelect = (item: NavigationItem | NavigationSubItem) => {
     const itemWithHref = item as NavigationSubItem
     if (itemWithHref.href) {
-      window.open(itemWithHref.href, '_blank')
+      const linkTarget = siteConfig?.navigation?.linkTarget || '_blank'
+      if (linkTarget === '_self') {
+        window.location.href = itemWithHref.href
+      } else {
+        window.open(itemWithHref.href, linkTarget)
+      }
     }
     onSearch('')
     setIsFocused(false)
