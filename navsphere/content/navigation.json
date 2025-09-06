@@ -172,6 +172,14 @@
           "description": "",
           "icon": "/assets/favicon_1757171394620.ico",
           "enabled": true
+        },
+        {
+          "id": "site_1757171867825_uka5krlh0",
+          "title": "Microsoft Clarity",
+          "href": "https://clarity.microsoft.com/",
+          "description": "网站录像/热力图",
+          "icon": "/assets/favicon_1757171985614.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
