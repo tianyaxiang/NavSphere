@@ -9,10 +9,10 @@
       "items": [
         {
           "id": "1756265046826",
-          "title": "ChatGPT",
+          "title": "Chatgpt",
           "href": "https://chatgpt.com/",
-          "description": "",
-          "icon": "/assets/favicon_1756972962426.png",
+          "description": "ChatGPT",
+          "icon": "/assets/favicon_1757171264200.png",
           "enabled": true
         },
         {
