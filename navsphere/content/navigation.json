@@ -54,6 +54,14 @@
           "description": "Google分析（Google Analytics）是一个由Google所提供的网站流量统计服务。",
           "icon": "/assets/images/logos/analytics.ico",
           "enabled": true
+        },
+        {
+          "id": "1757404866335",
+          "title": "闪击工作台",
+          "href": "https://nav.sankki.com",
+          "description": "网址导航",
+          "icon": "/assets/favicon_1757404881784.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
