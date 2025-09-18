@@ -299,19 +299,19 @@
               "enabled": true
             },
             {
-              "id": "site_1756829417348_0ed49iikf",
-              "title": "Digital Ocean",
-              "href": "https://cloud.digitalocean.com/apps?i=49339f",
-              "description": "",
-              "icon": "/assets/favicon_1757171490053.png",
-              "enabled": true
-            },
-            {
               "id": "1_2",
               "title": "Vercel",
               "href": "https://vercel.com/",
               "description": "Vercel ",
               "icon": "/assets/images/logos/vercel.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756829417348_0ed49iikf",
+              "title": "Digital Ocean",
+              "href": "https://cloud.digitalocean.com/apps?i=49339f",
+              "description": "",
+              "icon": "/assets/favicon_1757171490053.png",
               "enabled": true
             },
             {
