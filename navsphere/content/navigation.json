@@ -129,7 +129,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "1758180430270",
+              "title": "Google Search Console",
+              "href": "https://search.google.com/search-console",
+              "description": "",
+              "icon": "/assets/favicon_1758180450222.png",
+              "enabled": true
+            }
+          ]
         },
         {
           "id": "c50c9dda-4f65-43db-87de-25f5abc589f3",
