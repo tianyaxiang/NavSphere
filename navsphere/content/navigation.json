@@ -70,6 +70,14 @@
           "description": "Google Search",
           "icon": "/assets/favicon_1758181032944.ico",
           "enabled": true
+        },
+        {
+          "id": "1758181042852",
+          "title": "Baidu",
+          "href": "https://baidu.com",
+          "description": "",
+          "icon": "/assets/favicon_1758181055080.png",
+          "enabled": true
         }
       ],
       "subCategories": []
