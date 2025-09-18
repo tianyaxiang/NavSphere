@@ -229,6 +229,14 @@
           "description": "网站录像/热力图",
           "icon": "/assets/favicon_1757171985614.ico",
           "enabled": true
+        },
+        {
+          "id": "1758180644657",
+          "title": "WHOIS Search",
+          "href": "https://who.is/",
+          "description": "域名查询",
+          "icon": "/assets/favicon_1758180649670.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
