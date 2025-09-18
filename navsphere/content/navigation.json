@@ -145,6 +145,14 @@
               "description": "SiteGuru SEO dashboard.",
               "icon": "/assets/favicon_1758180479744.ico",
               "enabled": true
+            },
+            {
+              "id": "1758180494017",
+              "title": "PageSpeed Insights",
+              "href": "https://pagespeed.web.dev/",
+              "description": "网页速度测试",
+              "icon": "/assets/favicon_1758180499106.png",
+              "enabled": true
             }
           ]
         },
