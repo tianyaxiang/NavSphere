@@ -341,40 +341,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "1756829823058",
-      "title": "AI工具",
-      "icon": "Globe",
-      "description": "",
-      "enabled": true,
-      "items": [
-        {
-          "id": "1_6",
-          "title": "Leonardo.AI",
-          "href": "https://app.leonardo.ai/",
-          "description": "Leonardo.AI是一个人工智能绘图社区和工具。它基于Stable Diffusion人工智能模型,深度集成了其各种插件,提供强大的图片生成和创作功能。",
-          "icon": "/assets/images/logos/leonardo.ico",
-          "enabled": true
-        },
-        {
-          "id": "1756265093200",
-          "title": "Napkin AI",
-          "href": "https://www.napkin.ai/",
-          "description": "",
-          "icon": "/assets/favicon_1757171517702.png",
-          "enabled": true
-        },
-        {
-          "id": "1756265156129",
-          "title": "Gamma",
-          "href": "https://gamma.app/",
-          "description": "AI演示文稿",
-          "icon": "/assets/favicon_1757171528273.ico",
-          "enabled": true
-        }
-      ],
-      "subCategories": []
     }
   ]
 }
