@@ -24,19 +24,19 @@
           "enabled": true
         },
         {
-          "id": "1756265046826",
-          "title": "Chatgpt",
-          "href": "https://chatgpt.com/",
-          "description": "ChatGPT",
-          "icon": "/assets/favicon_1757171264200.png",
-          "enabled": true
-        },
-        {
           "id": "1756265066977",
           "title": "‎Google Gemini",
           "href": "https://gemini.google.com/",
           "description": "",
           "icon": "/assets/favicon_1756973006812.svg",
+          "enabled": true
+        },
+        {
+          "id": "1756265046826",
+          "title": "Chatgpt",
+          "href": "https://chatgpt.com/",
+          "description": "ChatGPT",
+          "icon": "/assets/favicon_1757171264200.png",
           "enabled": true
         },
         {
