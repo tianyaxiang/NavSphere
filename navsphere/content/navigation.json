@@ -137,6 +137,14 @@
               "description": "",
               "icon": "/assets/favicon_1758180450222.png",
               "enabled": true
+            },
+            {
+              "id": "1758180469936",
+              "title": "SiteGuru",
+              "href": "https://app.siteguru.co/sites",
+              "description": "SiteGuru SEO dashboard.",
+              "icon": "/assets/favicon_1758180479744.ico",
+              "enabled": true
             }
           ]
         },
