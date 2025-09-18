@@ -62,6 +62,14 @@
           "description": "Google分析（Google Analytics）是一个由Google所提供的网站流量统计服务。",
           "icon": "/assets/images/logos/analytics.ico",
           "enabled": true
+        },
+        {
+          "id": "1758181019998",
+          "title": "Google",
+          "href": "https://google.com",
+          "description": "Google Search",
+          "icon": "/assets/favicon_1758181032944.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
