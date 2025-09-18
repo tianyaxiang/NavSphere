@@ -40,6 +40,14 @@
           "enabled": true
         },
         {
+          "id": "1_1",
+          "title": "Google Analytics",
+          "href": "https://analytics.google.com/",
+          "description": "Google分析（Google Analytics）是一个由Google所提供的网站流量统计服务。",
+          "icon": "/assets/images/logos/analytics.ico",
+          "enabled": true
+        },
+        {
           "id": "1756265845494",
           "title": "UTM Builder",
           "href": "https://utmbuilder.net/",
@@ -61,14 +69,6 @@
           "href": "https://www.iamwawa.cn/daxiaoxie.html",
           "description": "",
           "icon": "/assets/favicon_1756973036290.png",
-          "enabled": true
-        },
-        {
-          "id": "1_1",
-          "title": "Google Analytics",
-          "href": "https://analytics.google.com/",
-          "description": "Google分析（Google Analytics）是一个由Google所提供的网站流量统计服务。",
-          "icon": "/assets/images/logos/analytics.ico",
           "enabled": true
         },
         {
