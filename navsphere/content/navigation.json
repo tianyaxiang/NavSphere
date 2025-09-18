@@ -147,19 +147,19 @@
               "enabled": true
             },
             {
-              "id": "1758180494017",
-              "title": "PageSpeed Insights",
-              "href": "https://pagespeed.web.dev/",
-              "description": "网页速度测试",
-              "icon": "/assets/favicon_1758180499106.png",
-              "enabled": true
-            },
-            {
               "id": "1758180521250",
               "title": "Ahrefs SEO Dashboard",
               "href": "https://app.ahrefs.com/dashboard",
               "description": "Track SEO performance and progress.",
               "icon": "/assets/favicon_1758180526751.ico",
+              "enabled": true
+            },
+            {
+              "id": "1758180494017",
+              "title": "PageSpeed Insights",
+              "href": "https://pagespeed.web.dev/",
+              "description": "网页速度测试",
+              "icon": "/assets/favicon_1758180499106.png",
               "enabled": true
             }
           ]
