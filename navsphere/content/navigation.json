@@ -43,7 +43,7 @@
           "id": "1_1",
           "title": "Google Analytics",
           "href": "https://analytics.google.com/",
-          "description": "Google分析（Google Analytics）是一个由Google所提供的网站流量统计服务。",
+          "description": "网站流量分析",
           "icon": "/assets/images/logos/analytics.ico",
           "enabled": true
         },
