@@ -124,6 +124,14 @@
       ],
       "subCategories": [
         {
+          "id": "70f8fa44-36dc-44d9-bbf4-9ba5f78d69b4",
+          "title": "网站内部优化",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
+        },
+        {
           "id": "c50c9dda-4f65-43db-87de-25f5abc589f3",
           "title": "外链建设",
           "icon": "Globe",
@@ -147,14 +155,6 @@
               "enabled": true
             }
           ]
-        },
-        {
-          "id": "70f8fa44-36dc-44d9-bbf4-9ba5f78d69b4",
-          "title": "网站内部优化",
-          "icon": "Folder",
-          "description": "",
-          "enabled": true,
-          "items": []
         }
       ]
     },
