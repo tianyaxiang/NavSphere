@@ -291,14 +291,6 @@
           "enabled": true,
           "items": [
             {
-              "id": "site_1756829283671_fuorituln",
-              "title": "Claw Cloud",
-              "href": "https://us-west-1.run.claw.cloud/",
-              "description": "ClawCloud云平台",
-              "icon": "/assets/favicon_1757171468850.png",
-              "enabled": true
-            },
-            {
               "id": "1756829513553",
               "title": "GitHub",
               "href": "https://github.com/",
