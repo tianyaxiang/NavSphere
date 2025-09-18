@@ -323,19 +323,19 @@
               "enabled": true
             },
             {
-              "id": "site_1756829417348_0ed49iikf",
-              "title": "Digital Ocean",
-              "href": "https://cloud.digitalocean.com/apps?i=49339f",
-              "description": "",
-              "icon": "/assets/favicon_1757171490053.png",
-              "enabled": true
-            },
-            {
               "id": "1758158583936",
               "title": "Zeabur",
               "href": "https://zeabur.com/",
               "description": "Cloud Deployment",
               "icon": "/assets/favicon_1758158592648.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756829417348_0ed49iikf",
+              "title": "Digital Ocean",
+              "href": "https://cloud.digitalocean.com/apps?i=49339f",
+              "description": "",
+              "icon": "/assets/favicon_1757171490053.png",
               "enabled": true
             }
           ]
