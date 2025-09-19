@@ -193,6 +193,14 @@
               "description": "网页速度测试",
               "icon": "/assets/favicon_1758180499106.png",
               "enabled": true
+            },
+            {
+              "id": "1758261736624",
+              "title": "SERP Preview",
+              "href": "https://totheweb.com/learning_center/tool-test-google-title-meta-description-lengths/",
+              "description": "SERP 预览",
+              "icon": "/assets/favicon_1758261742158.png",
+              "enabled": true
             }
           ]
         },
