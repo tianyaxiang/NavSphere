@@ -388,6 +388,14 @@
               "enabled": true
             },
             {
+              "id": "1_3",
+              "title": "Cloudflare",
+              "href": "https://dash.cloudflare.com/",
+              "description": "域名解析管理",
+              "icon": "/assets/images/logos/cloudflar.ico",
+              "enabled": true
+            },
+            {
               "id": "1_2",
               "title": "Vercel",
               "href": "https://vercel.com/",
@@ -401,14 +409,6 @@
               "href": "https://railway.com/dashboard",
               "description": "PaaS，云端部署",
               "icon": "/assets/favicon_1758158570835.ico",
-              "enabled": true
-            },
-            {
-              "id": "1_3",
-              "title": "Cloudflare",
-              "href": "https://dash.cloudflare.com/",
-              "description": "域名解析管理",
-              "icon": "/assets/images/logos/cloudflar.ico",
               "enabled": true
             },
             {
