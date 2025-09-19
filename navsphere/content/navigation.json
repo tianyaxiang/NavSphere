@@ -391,7 +391,7 @@
               "id": "1_2",
               "title": "Vercel",
               "href": "https://vercel.com/",
-              "description": "Vercel ",
+              "description": "Vercel前端部署",
               "icon": "/assets/images/logos/vercel.png",
               "enabled": true
             },
