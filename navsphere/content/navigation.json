@@ -86,6 +86,14 @@
           "description": "",
           "icon": "/assets/favicon_1758181055080.png",
           "enabled": true
+        },
+        {
+          "id": "1758260919531",
+          "title": "Every Time Zone",
+          "href": "https://everytimezone.com/",
+          "description": "多时区查询",
+          "icon": "/assets/favicon_1758260932883.png",
+          "enabled": true
         }
       ],
       "subCategories": []
