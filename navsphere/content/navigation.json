@@ -423,7 +423,7 @@
               "id": "site_1756829417348_0ed49iikf",
               "title": "Digital Ocean",
               "href": "https://cloud.digitalocean.com/apps?i=49339f",
-              "description": "",
+              "description": "PaaS，云端部署",
               "icon": "/assets/favicon_1757171490053.png",
               "enabled": true
             }
