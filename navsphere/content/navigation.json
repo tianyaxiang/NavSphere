@@ -64,6 +64,14 @@
           "enabled": true
         },
         {
+          "id": "1758260635327",
+          "title": "Bitwarden",
+          "href": "https://bitwarden.com/",
+          "description": "Password Manager",
+          "icon": "/assets/favicon_1758260648438.ico",
+          "enabled": true
+        },
+        {
           "id": "1756265912645",
           "title": "在线大小写转换器工具",
           "href": "https://www.iamwawa.cn/daxiaoxie.html",
@@ -77,14 +85,6 @@
           "href": "https://baidu.com",
           "description": "",
           "icon": "/assets/favicon_1758181055080.png",
-          "enabled": true
-        },
-        {
-          "id": "1758260635327",
-          "title": "Bitwarden",
-          "href": "https://bitwarden.com/",
-          "description": "Password Manager",
-          "icon": "/assets/favicon_1758260648438.ico",
           "enabled": true
         }
       ],
