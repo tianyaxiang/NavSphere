@@ -332,47 +332,6 @@
       "items": [],
       "subCategories": [
         {
-          "id": "589e947d-13aa-40cb-b5d2-ca8b43d2bbc3",
-          "title": "域名与托管",
-          "icon": "Cloud",
-          "description": "",
-          "enabled": true,
-          "items": [
-            {
-              "id": "1756830368986",
-              "title": "Namecheap",
-              "href": "https://namecheap.com",
-              "description": "域名注册，Host",
-              "icon": "/assets/favicon_1757171447408.ico",
-              "enabled": true
-            },
-            {
-              "id": "1756830480673",
-              "title": "Godaddy",
-              "href": "https://www.godaddy.com/",
-              "description": "域名注册",
-              "icon": "/assets/favicon_1757171931501.png",
-              "enabled": true
-            },
-            {
-              "id": "1756830421442",
-              "title": "Namesilo",
-              "href": "https://namesilo.com",
-              "description": "便宜域名注册",
-              "icon": "/assets/favicon_1757171457676.ico",
-              "enabled": true
-            },
-            {
-              "id": "site_1757172495713_62zrp5j9g",
-              "title": "HostVerge",
-              "href": "https://hostverge.com/",
-              "description": "WP Hosting",
-              "icon": "/assets/favicon_1757172623252.png",
-              "enabled": true
-            }
-          ]
-        },
-        {
           "id": "57ecb350-83ad-43bf-8586-230b5bbc0f7f",
           "title": "云计算与部署",
           "icon": "Cloud",
@@ -425,6 +384,47 @@
               "href": "https://zeabur.com/",
               "description": "PaaS，云端部署",
               "icon": "/assets/favicon_1758158592648.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "589e947d-13aa-40cb-b5d2-ca8b43d2bbc3",
+          "title": "域名与托管",
+          "icon": "Cloud",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1756830368986",
+              "title": "Namecheap",
+              "href": "https://namecheap.com",
+              "description": "域名注册，Host",
+              "icon": "/assets/favicon_1757171447408.ico",
+              "enabled": true
+            },
+            {
+              "id": "1756830480673",
+              "title": "Godaddy",
+              "href": "https://www.godaddy.com/",
+              "description": "域名注册",
+              "icon": "/assets/favicon_1757171931501.png",
+              "enabled": true
+            },
+            {
+              "id": "1756830421442",
+              "title": "Namesilo",
+              "href": "https://namesilo.com",
+              "description": "便宜域名注册",
+              "icon": "/assets/favicon_1757171457676.ico",
+              "enabled": true
+            },
+            {
+              "id": "site_1757172495713_62zrp5j9g",
+              "title": "HostVerge",
+              "href": "https://hostverge.com/",
+              "description": "WP Hosting",
+              "icon": "/assets/favicon_1757172623252.png",
               "enabled": true
             }
           ]
