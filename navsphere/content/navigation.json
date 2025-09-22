@@ -48,14 +48,6 @@
           "enabled": true
         },
         {
-          "id": "1_1",
-          "title": "Google Analytics",
-          "href": "https://analytics.google.com/",
-          "description": "网站流量分析",
-          "icon": "/assets/images/logos/analytics.ico",
-          "enabled": true
-        },
-        {
           "id": "1756265845494",
           "title": "UTM Builder",
           "href": "https://utmbuilder.net/",
@@ -284,6 +276,14 @@
           "href": "https://who.is/",
           "description": "域名查询",
           "icon": "/assets/favicon_1758180649670.ico",
+          "enabled": true
+        },
+        {
+          "id": "1_1",
+          "title": "Google Analytics",
+          "href": "https://analytics.google.com/",
+          "description": "网站流量分析",
+          "icon": "/assets/images/logos/analytics.ico",
           "enabled": true
         }
       ],
