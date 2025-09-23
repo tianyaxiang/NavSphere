@@ -1,6 +1,107 @@
 {
   "navigationItems": [
     {
+      "id": "9",
+      "title": "AI汇总",
+      "icon": "Brain",
+      "items": [],
+      "subCategories": [
+        {
+          "id": "cbb3e33d-408b-41ba-9e9a-e0444303e3fd",
+          "title": "AI助手",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "9_1",
+              "title": "ChatGPT",
+              "href": "https://chat.openai.com/",
+              "description": "OpenAI开发的人工智能聊天机器人程序。",
+              "icon": "/assets/images/logos/chatgpt.png",
+              "enabled": true
+            },
+            {
+              "id": "9_2",
+              "title": "Claude",
+              "href": "https://claude.ai/",
+              "description": "Anthropic开发的AI助手，擅长分析和创作。",
+              "icon": "/assets/images/logos/claude.png",
+              "enabled": true
+            },
+            {
+              "id": "9_3",
+              "title": "Gemini",
+              "href": "https://gemini.google.com/",
+              "description": "Google开发的生成式人工智能聊天机器人。它基于同名的Gemini系列大型语言模型。",
+              "icon": "/assets/images/logos/gemini.svg",
+              "enabled": true
+            },
+            {
+              "id": "9_4",
+              "title": "Microsoft Copilot",
+              "href": "https://copilot.microsoft.com/",
+              "description": "Microsoft Copilot 是为你提供信息、娱乐和激发灵感的助手。获取建议、反馈和简单的答案。立即试用 Copilot。",
+              "icon": "/assets/favicon_1758599845861.ico",
+              "enabled": true
+            },
+            {
+              "id": "1739871926277",
+              "title": "perplexity",
+              "href": "https://www.perplexity.ai/",
+              "description": "一个人工智能助手，旨在为您提供信息、解答问题和帮助您完成各种任务。",
+              "icon": "/assets/img_1739871936809.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "cbb3e33d-408b-41ba-9e9a-e0444303e3ff",
+          "title": "生产力工具",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1736418296509",
+              "title": "Napkin",
+              "href": "https://www.napkin.ai/",
+              "description": "Napkin turns your text into visuals so sharing your ideas is quick and effective.\n\nNapkin 能够将你的文本转化为视觉内容，使分享你的想法变得快速而有效。",
+              "icon": "/assets/img_1736418335098.png",
+              "enabled": true
+            },
+            {
+              "id": "1736911347619",
+              "title": "gamma",
+              "href": "https://gamma.app/",
+              "description": "AI生成PPT工具",
+              "icon": "/assets/img_1736911490095.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "21bf96f3-acb0-4e28-aaa8-2759ac55d278",
+          "title": "MCP Server",
+          "icon": "Edit",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1752554261491",
+              "title": "MCP Server 集合站",
+              "href": "https://smithery.ai/",
+              "description": "各种各样的 MCP Server",
+              "icon": "/assets/img_1752554273115.png",
+              "enabled": true
+            }
+          ]
+        }
+      ],
+      "description": "",
+      "enabled": true
+    },
+    {
       "id": "1",
       "title": "常用推荐",
       "icon": "Star",
@@ -297,107 +398,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "9",
-      "title": "AI汇总",
-      "icon": "Brain",
-      "items": [],
-      "subCategories": [
-        {
-          "id": "cbb3e33d-408b-41ba-9e9a-e0444303e3fd",
-          "title": "AI助手",
-          "icon": "Book",
-          "description": "",
-          "enabled": true,
-          "items": [
-            {
-              "id": "9_1",
-              "title": "ChatGPT",
-              "href": "https://chat.openai.com/",
-              "description": "OpenAI开发的人工智能聊天机器人程序。",
-              "icon": "/assets/images/logos/chatgpt.png",
-              "enabled": true
-            },
-            {
-              "id": "9_2",
-              "title": "Claude",
-              "href": "https://claude.ai/",
-              "description": "Anthropic开发的AI助手，擅长分析和创作。",
-              "icon": "/assets/images/logos/claude.png",
-              "enabled": true
-            },
-            {
-              "id": "9_3",
-              "title": "Gemini",
-              "href": "https://gemini.google.com/",
-              "description": "Google开发的生成式人工智能聊天机器人。它基于同名的Gemini系列大型语言模型。",
-              "icon": "/assets/images/logos/gemini.svg",
-              "enabled": true
-            },
-            {
-              "id": "9_4",
-              "title": "Microsoft Copilot",
-              "href": "https://copilot.microsoft.com/",
-              "description": "Microsoft Copilot 是为你提供信息、娱乐和激发灵感的助手。获取建议、反馈和简单的答案。立即试用 Copilot。",
-              "icon": "/assets/favicon_1758599845861.ico",
-              "enabled": true
-            },
-            {
-              "id": "1739871926277",
-              "title": "perplexity",
-              "href": "https://www.perplexity.ai/",
-              "description": "一个人工智能助手，旨在为您提供信息、解答问题和帮助您完成各种任务。",
-              "icon": "/assets/img_1739871936809.png",
-              "enabled": true
-            }
-          ]
-        },
-        {
-          "id": "cbb3e33d-408b-41ba-9e9a-e0444303e3ff",
-          "title": "生产力工具",
-          "icon": "Book",
-          "description": "",
-          "enabled": true,
-          "items": [
-            {
-              "id": "1736418296509",
-              "title": "Napkin",
-              "href": "https://www.napkin.ai/",
-              "description": "Napkin turns your text into visuals so sharing your ideas is quick and effective.\n\nNapkin 能够将你的文本转化为视觉内容，使分享你的想法变得快速而有效。",
-              "icon": "/assets/img_1736418335098.png",
-              "enabled": true
-            },
-            {
-              "id": "1736911347619",
-              "title": "gamma",
-              "href": "https://gamma.app/",
-              "description": "AI生成PPT工具",
-              "icon": "/assets/img_1736911490095.png",
-              "enabled": true
-            }
-          ]
-        },
-        {
-          "id": "21bf96f3-acb0-4e28-aaa8-2759ac55d278",
-          "title": "MCP Server",
-          "icon": "Edit",
-          "description": "",
-          "enabled": true,
-          "items": [
-            {
-              "id": "1752554261491",
-              "title": "MCP Server 集合站",
-              "href": "https://smithery.ai/",
-              "description": "各种各样的 MCP Server",
-              "icon": "/assets/img_1752554273115.png",
-              "enabled": true
-            }
-          ]
-        }
-      ],
-      "description": "",
-      "enabled": true
     },
     {
       "id": "1735433560958",
