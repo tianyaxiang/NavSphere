@@ -14,6 +14,14 @@
           "description": "Google NO.1",
           "icon": "/assets/favicon_1758637910965.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758637999669_a4q8i94nn",
+          "title": "DuckDuckGo ",
+          "href": "https://duckduckgo.com/",
+          "description": "DuckDuckGo搜索引擎",
+          "icon": "/assets/favicon_1758637975113.png",
+          "enabled": true
         }
       ],
       "subCategories": []
