@@ -215,6 +215,14 @@
               "description": "专业的美剧下载网站",
               "icon": "/assets/favicon_1758656933313.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758657030174_jh1138651",
+              "title": "日剧跑",
+              "href": "https://www.rijupao.com/",
+              "description": "",
+              "icon": "/assets/favicon_1758657023189.png",
+              "enabled": true
             }
           ]
         }
