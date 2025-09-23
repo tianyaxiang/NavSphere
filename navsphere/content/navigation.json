@@ -558,7 +558,16 @@
           "icon": "Palette",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758605727164_fatmdqf0p",
+              "title": "Color Hunt - Color Palettes for Designers and Artists",
+              "href": "https://colorhunt.co/",
+              "description": "Discover the newest hand-picked color palettes of Color Hunt. Get color inspiration for your design and art projects.",
+              "icon": "/assets/favicon_1758605720010.png",
+              "enabled": true
+            }
+          ]
         }
       ]
     }
