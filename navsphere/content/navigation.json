@@ -551,7 +551,16 @@
       "description": "",
       "enabled": true,
       "items": [],
-      "subCategories": []
+      "subCategories": [
+        {
+          "id": "424049f9-b0e0-43e1-a8e8-e9e3d328aae5",
+          "title": "在线配色",
+          "icon": "Palette",
+          "description": "",
+          "enabled": true,
+          "items": []
+        }
+      ]
     }
   ]
 }
