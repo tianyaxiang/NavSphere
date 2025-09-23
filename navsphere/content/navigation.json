@@ -131,6 +131,14 @@
           "description": "線上日本成人影片磁力連結分享站，番號搜尋共享AV磁力連結。",
           "icon": "/assets/img_1758607344287.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758607385829_iu0ttjkne",
+          "title": "Javdb",
+          "href": "https://javdb.com/",
+          "description": "访问 javdb.com",
+          "icon": "/assets/favicon_1758607379820.png",
+          "enabled": true
         }
       ],
       "subCategories": []
