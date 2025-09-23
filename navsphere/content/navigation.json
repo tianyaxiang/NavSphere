@@ -183,16 +183,7 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": [
-            {
-              "id": "site_1758633833546_bw12jzcnu",
-              "title": "Hanime1",
-              "href": "https://hanime1.me/",
-              "description": "动画片",
-              "icon": "/assets/favicon_1758633817351.png",
-              "enabled": true
-            }
-          ]
+          "items": []
         }
       ]
     },
@@ -857,6 +848,14 @@
           "href": "https://cn.pornhub.com/",
           "description": "全球第一英文学习网",
           "icon": "/assets/favicon_1758633151653.ico",
+          "enabled": true
+        },
+        {
+          "id": "site_1758633833546_bw12jzcnu",
+          "title": "Hanime1",
+          "href": "https://hanime1.me/",
+          "description": "动画片",
+          "icon": "/assets/favicon_1758633817351.png",
           "enabled": true
         }
       ],
