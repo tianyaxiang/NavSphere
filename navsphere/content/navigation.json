@@ -731,6 +731,14 @@
           "description": "一个免费的二次元风格下载站 收录steam epic 单机资源 switch游戏 ChatGPT",
           "icon": "/assets/favicon_1758607803331.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758607831306_bc0xyjc95",
+          "title": "Switch520",
+          "href": "https://www.gamer520.com/",
+          "description": "switch游戏下载-PC游戏下载-switch破解游戏下载-PC破解游戏下载-Switch520-gamer520",
+          "icon": "/assets/favicon_1758607822745.jpg",
+          "enabled": true
         }
       ],
       "subCategories": []
