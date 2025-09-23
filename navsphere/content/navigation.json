@@ -739,6 +739,14 @@
           "description": "switch游戏下载-PC游戏下载-switch破解游戏下载-PC破解游戏下载-Switch520-gamer520",
           "icon": "/assets/favicon_1758607822745.jpg",
           "enabled": true
+        },
+        {
+          "id": "site_1758607862950_3szlr5ool",
+          "title": "土豆资源库",
+          "href": "https://www.tdtd.chat/index",
+          "description": "土豆资源库,免费游戏下载，免费软件下载，免费教程，steam游戏下载",
+          "icon": "/assets/favicon_1758607853957.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
