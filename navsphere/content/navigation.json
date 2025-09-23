@@ -149,7 +149,16 @@
           "enabled": true
         }
       ],
-      "subCategories": []
+      "subCategories": [
+        {
+          "id": "3e460245-5421-4f38-a997-08d4e258355a",
+          "title": "非礼勿视",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
+        }
+      ]
     },
     {
       "id": "1758607435218",
