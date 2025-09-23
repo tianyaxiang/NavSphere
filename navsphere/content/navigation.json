@@ -550,14 +550,6 @@
               "enabled": true
             }
           ]
-        },
-        {
-          "id": "6aed7446-caab-4520-a724-87dde69bfa22",
-          "title": "界面设计",
-          "icon": "Folder",
-          "description": "",
-          "enabled": true,
-          "items": []
         }
       ],
       "description": "",
