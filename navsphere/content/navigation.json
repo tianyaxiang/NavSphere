@@ -541,6 +541,14 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "1960fc13-238d-4bde-845a-5520b15884ad",
+          "title": "在线配色",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     }
