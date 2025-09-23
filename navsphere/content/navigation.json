@@ -498,7 +498,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758607628315_s5uv0b35t",
+              "title": "Proton Mail",
+              "href": "https://account.proton.me/login",
+              "description": "Sign in to your Proton Account to access all encrypted Proton services such as Proton Mail, Drive, Calendar, and more. Don",
+              "icon": "/assets/favicon_1758607609687.ico",
+              "enabled": true
+            }
+          ]
         }
       ],
       "description": "",
