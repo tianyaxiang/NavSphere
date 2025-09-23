@@ -543,33 +543,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "1758605584363",
-      "title": "图形设计",
-      "icon": "LayoutGrid",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": [
-        {
-          "id": "424049f9-b0e0-43e1-a8e8-e9e3d328aae5",
-          "title": "在线配色",
-          "icon": "Palette",
-          "description": "",
-          "enabled": true,
-          "items": [
-            {
-              "id": "site_1758605727164_fatmdqf0p",
-              "title": "Color Hunt - Color Palettes for Designers and Artists",
-              "href": "https://colorhunt.co/",
-              "description": "Discover the newest hand-picked color palettes of Color Hunt. Get color inspiration for your design and art projects.",
-              "icon": "/assets/favicon_1758605720010.png",
-              "enabled": true
-            }
-          ]
-        }
-      ]
     }
   ]
 }
