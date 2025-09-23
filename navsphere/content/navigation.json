@@ -574,7 +574,7 @@
     },
     {
       "id": "8",
-      "title": "素材资源",
+      "title": "设计资源",
       "icon": "linecons-thumbs-up",
       "items": [],
       "subCategories": [
@@ -799,7 +799,9 @@
             }
           ]
         }
-      ]
+      ],
+      "description": "",
+      "enabled": true
     },
     {
       "id": "1758607794971",
