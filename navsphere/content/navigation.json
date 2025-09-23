@@ -93,7 +93,7 @@
               "href": "https://smithery.ai/",
               "description": "各种各样的 MCP Server",
               "icon": "/assets/img_1752554273115.png",
-              "enabled": true
+              "enabled": false
             }
           ]
         }
