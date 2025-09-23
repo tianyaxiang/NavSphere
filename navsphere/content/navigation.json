@@ -188,7 +188,7 @@
               "title": "视频聚合",
               "href": "https://svmlnsesefbh.ap-northeast-1.clawcloudrun.com/",
               "description": "用户123  密码 123",
-              "icon": "/assets/img_1758655091024.png",
+              "icon": "https://beetv.netlify.app/icons/icon-192x192.png",
               "enabled": true
             },
             {
