@@ -55,10 +55,10 @@
             },
             {
               "id": "site_1758601598497_5fc15beom",
-              "title": "https://lmarena.ai/",
-              "href": "lmarena.ai",
-              "description": "免费使用各类AI 网站",
-              "icon": "/assets/img_1758601553742.png",
+              "title": "LMArena",
+              "href": "https://lmarena.ai/",
+              "description": "An open platform for evaluating AI through human preference",
+              "icon": "/assets/favicon_1758601632979.ico",
               "enabled": true
             }
           ]
