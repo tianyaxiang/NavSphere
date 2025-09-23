@@ -30,6 +30,14 @@
           "description": "Microsoft 必应搜索",
           "icon": "/assets/favicon_1758655813604.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758607514296_skler95gq",
+          "title": "TikTok",
+          "href": "https://www.tiktok.com/",
+          "description": "",
+          "icon": "/assets/favicon_1758607508098.png",
+          "enabled": true
         }
       ],
       "subCategories": []
@@ -216,14 +224,6 @@
           "href": "https://kick.com/",
           "description": "Kick is a streaming platform that makes it easy for you to find and watch your favorite content.",
           "icon": "/assets/favicon_1758607489207.ico",
-          "enabled": true
-        },
-        {
-          "id": "site_1758607514296_skler95gq",
-          "title": "TikTok",
-          "href": "https://www.tiktok.com/",
-          "description": "",
-          "icon": "/assets/favicon_1758607508098.png",
           "enabled": true
         },
         {
