@@ -139,6 +139,14 @@
           "description": "访问 javdb.com",
           "icon": "/assets/favicon_1758607379820.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758633172923_t95k13xvz",
+          "title": "在线视频",
+          "href": "https://cn.pornhub.com/",
+          "description": "欢迎来到 Pornhub.com，这里汇聚了最炙手可热的成人明星出演的最佳免费硬核成人视频。全天候获取您最爱的成人影片公司的完整大片！",
+          "icon": "/assets/favicon_1758633151653.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
