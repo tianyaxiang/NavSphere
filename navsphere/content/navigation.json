@@ -506,6 +506,14 @@
               "description": "Sign in to your Proton Account to access all encrypted Proton services such as Proton Mail, Drive, Calendar, and more. Don",
               "icon": "/assets/favicon_1758607609687.ico",
               "enabled": true
+            },
+            {
+              "id": "site_1758607690994_q5jnqpoek",
+              "title": "花瓣邮箱",
+              "href": "https://www.petalmail.com/",
+              "description": "",
+              "icon": "https://www.google.com/s2/favicons?sz=128&domain=www.petalmail.com",
+              "enabled": true
             }
           ]
         }
