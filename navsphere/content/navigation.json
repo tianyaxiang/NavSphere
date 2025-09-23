@@ -810,6 +810,14 @@
           ]
         },
         {
+          "id": "46cdc5f5-2b11-425d-93ca-ffe7a706afa3",
+          "title": "Dokcer",
+          "icon": "Cloud",
+          "description": "",
+          "enabled": true,
+          "items": []
+        },
+        {
           "id": "1585fa53-2a2d-4336-b58d-9f1935449a5d",
           "title": "翻墙杂事",
           "icon": "Folder",
@@ -857,14 +865,6 @@
               "enabled": true
             }
           ]
-        },
-        {
-          "id": "46cdc5f5-2b11-425d-93ca-ffe7a706afa3",
-          "title": "Dokcer",
-          "icon": "Cloud",
-          "description": "",
-          "enabled": true,
-          "items": []
         }
       ]
     },
