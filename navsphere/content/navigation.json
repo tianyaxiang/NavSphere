@@ -847,6 +847,14 @@
               "description": "随时使用临时电子邮件在可疑的网站、论坛或社交网络上注册。保护您的个人电子邮件地址免受垃圾邮件.",
               "icon": "/assets/favicon_1758607183374.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758657300066_yh134sis8",
+              "title": "SingBox规则集",
+              "href": "https://github.com/KaringX/karing-ruleset/tree/sing",
+              "description": "",
+              "icon": "/assets/favicon_1758657272215.png",
+              "enabled": true
             }
           ]
         }
