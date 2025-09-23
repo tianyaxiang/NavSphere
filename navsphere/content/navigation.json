@@ -131,14 +131,6 @@
           "description": "全球最大在线S网",
           "icon": "/assets/favicon_1758633151653.ico",
           "enabled": true
-        },
-        {
-          "id": "site_1758633924741_22tzkvtck",
-          "title": "Jable.TV | 免費高清AV在線看 | J片 AV看到飽",
-          "href": "https://jable.tv/",
-          "description": "免費日本在線看，無需下載看到飽。",
-          "icon": "/assets/favicon_1758633902276.png",
-          "enabled": true
         }
       ],
       "subCategories": [
@@ -196,6 +188,14 @@
               "href": "https://hanime1.me/",
               "description": "里番",
               "icon": "/assets/favicon_1758633817351.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1758633924741_22tzkvtck",
+              "title": "Jable ",
+              "href": "https://jable.tv/",
+              "description": "免費日本J片在線看，無需下載看到飽。",
+              "icon": "/assets/favicon_1758633902276.png",
               "enabled": true
             }
           ]
