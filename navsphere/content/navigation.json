@@ -172,6 +172,14 @@
               "description": "A better and open source IP Toolbox. Easy to check what",
               "icon": "/assets/favicon_1758605202657.svg",
               "enabled": true
+            },
+            {
+              "id": "site_1758605242783_khuoixxtb",
+              "title": "IP Location - Instantly Locate Any IP Address",
+              "href": "https://iplocation.com/",
+              "description": "本机IP查询",
+              "icon": "/assets/favicon_1758605225269.png",
+              "enabled": true
             }
           ]
         },
