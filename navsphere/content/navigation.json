@@ -193,14 +193,6 @@
               "enabled": true
             },
             {
-              "id": "site_1758633924741_22tzkvtck",
-              "title": "Jable ",
-              "href": "https://jable.tv/",
-              "description": "日本老师在线教育",
-              "icon": "/assets/favicon_1758633902276.png",
-              "enabled": true
-            },
-            {
               "id": "site_1758633172923_t95k13xvz",
               "title": "P站",
               "href": "https://cn.pornhub.com/",
@@ -857,6 +849,14 @@
           "href": "https://www.netflav.com/",
           "description": "奈飞风格在线平台-日本向",
           "icon": "/assets/favicon_1758633642408.ico",
+          "enabled": true
+        },
+        {
+          "id": "site_1758633924741_22tzkvtck",
+          "title": "Jable ",
+          "href": "https://jable.tv/",
+          "description": "日语在线学习网",
+          "icon": "/assets/favicon_1758633902276.png",
           "enabled": true
         }
       ],
