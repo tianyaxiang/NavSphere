@@ -111,6 +111,15 @@
       "subCategories": []
     },
     {
+      "id": "1758601037660",
+      "title": "翻墙工具",
+      "icon": "Shield",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
       "id": "1",
       "title": "常用推荐",
       "icon": "Star",
@@ -566,15 +575,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "1758601037660",
-      "title": "翻墙工具",
-      "icon": "Shield",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": []
     }
   ]
 }
