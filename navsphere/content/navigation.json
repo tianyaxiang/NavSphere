@@ -708,6 +708,15 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1758600597966",
+      "title": "影视资源",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
     }
   ]
 }
