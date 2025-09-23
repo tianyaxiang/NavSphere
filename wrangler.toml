@@ -8,6 +8,6 @@ GITHUB_ID = "Ov23liIu2gokXVzCIBe2"
 GITHUB_OWNER = "908203"
 GITHUB_REPO = "Mainpage"
 GITHUB_BRANCH = "main"
-NEXTAUTH_URL = "https://mainpage-acw.pages.dev/api/auth"
-NEXT_PUBLIC_API_URL="https://mainpage-acw.pages.dev"
+NEXTAUTH_URL = "https://page.908203.xyz/api/auth"
+NEXT_PUBLIC_API_URL="https://page.908203.xyz/"
 
