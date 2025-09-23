@@ -1,6 +1,15 @@
 {
   "navigationItems": [
     {
+      "id": "1758637894005",
+      "title": "常用站点",
+      "icon": "Globe",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
       "id": "9",
       "title": "AI汇总",
       "icon": "Brain",
@@ -800,15 +809,6 @@
           "enabled": true
         }
       ],
-      "subCategories": []
-    },
-    {
-      "id": "1758637894005",
-      "title": "常用站点",
-      "icon": "Globe",
-      "description": "",
-      "enabled": true,
-      "items": [],
       "subCategories": []
     }
   ]
