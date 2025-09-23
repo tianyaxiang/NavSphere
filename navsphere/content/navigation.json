@@ -157,6 +157,14 @@
           "description": "",
           "enabled": true,
           "items": []
+        },
+        {
+          "id": "dccdf844-b059-4da8-9b5b-d12f059d9a2d",
+          "title": "影视聚合",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
