@@ -260,6 +260,15 @@
       ]
     },
     {
+      "id": "1758607435218",
+      "title": "直播平台",
+      "icon": "Video",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
       "id": "2",
       "title": "常用工具",
       "icon": "Laptop",
@@ -657,15 +666,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "1758607435218",
-      "title": "直播平台",
-      "icon": "Video",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": []
     }
   ]
 }
