@@ -137,10 +137,10 @@
             },
             {
               "id": "9_4",
-              "title": "Poe",
-              "href": "https://poe.com/",
-              "description": "Poe一款由Quora开发的应用程序。该应用程序集成了多种生成式人工智能，可使用户能够便利切换，比较和使用市场上主流的大型语言模型。",
-              "icon": "/assets/images/logos/poe.svg",
+              "title": "Microsoft Copilot: 你的 AI 助手",
+              "href": "https://copilot.microsoft.com/",
+              "description": "Microsoft Copilot 是为你提供信息、娱乐和激发灵感的助手。获取建议、反馈和简单的答案。立即试用 Copilot。",
+              "icon": "/assets/favicon_1758599845861.ico",
               "enabled": true
             },
             {
