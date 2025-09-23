@@ -723,7 +723,16 @@
       "icon": "Star",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "site_1758607814406_usai4ufio",
+          "title": "资源避难所",
+          "href": "https://www.flysheep6.com/",
+          "description": "一个免费的二次元风格下载站 收录steam epic 单机资源 switch游戏 ChatGPT",
+          "icon": "/assets/favicon_1758607803331.png",
+          "enabled": true
+        }
+      ],
       "subCategories": []
     }
   ]
