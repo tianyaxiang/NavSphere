@@ -109,14 +109,6 @@
       "enabled": true,
       "items": [
         {
-          "id": "site_1758601275661_ri8yrp9s6",
-          "title": "MoonTV",
-          "href": "https://tv.910501.xyz/",
-          "description": "影视聚合",
-          "icon": "/assets/favicon_1758601669773.png",
-          "enabled": true
-        },
-        {
           "id": "site_1758604871202_9pkhjs50t",
           "title": "Gimy 劇迷 - 高清追劇首選",
           "href": "https://gimy.ai/",
@@ -156,7 +148,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758601275661_ri8yrp9s6",
+              "title": "MoonTV",
+              "href": "https://tv.910501.xyz/",
+              "description": "影视聚合",
+              "icon": "/assets/favicon_1758601669773.png",
+              "enabled": true
+            }
+          ]
         },
         {
           "id": "3e460245-5421-4f38-a997-08d4e258355a",
