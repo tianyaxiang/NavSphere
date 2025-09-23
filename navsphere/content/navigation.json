@@ -157,7 +157,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758606424666_397qeeg4x",
+              "title": "Github-防失联",
+              "href": "https://github.com/wzdnzd/aggregator/issues/91",
+              "description": "",
+              "icon": "/assets/favicon_1758606400028.png",
+              "enabled": true
+            }
+          ]
         },
         {
           "id": "1585fa53-2a2d-4336-b58d-9f1935449a5d",
