@@ -181,6 +181,14 @@
               "description": "奈飞网站风格的 在线日本S站",
               "icon": "/assets/favicon_1758633642408.ico",
               "enabled": true
+            },
+            {
+              "id": "site_1758633833546_bw12jzcnu",
+              "title": "Hanime1",
+              "href": "https://hanime1.me/",
+              "description": "里番",
+              "icon": "/assets/favicon_1758633817351.png",
+              "enabled": true
             }
           ]
         }
