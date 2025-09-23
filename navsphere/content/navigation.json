@@ -716,6 +716,15 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1758607794971",
+      "title": "游戏破解",
+      "icon": "Star",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
     }
   ]
 }
