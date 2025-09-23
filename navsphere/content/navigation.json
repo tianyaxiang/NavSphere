@@ -476,15 +476,6 @@
           "enabled": true
         },
         {
-          "id": "4",
-          "title": "图形创意",
-          "href": "#图形创意",
-          "icon": "Folder",
-          "description": "",
-          "items": [],
-          "enabled": true
-        },
-        {
           "id": "5",
           "title": "界面设计",
           "href": "#界面设计",
