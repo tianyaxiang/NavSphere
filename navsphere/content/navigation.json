@@ -355,6 +355,14 @@
               "description": "App Screenshot Generator for App Store&Google Play,Create panoramic screenshots for iOS and Android apps. No account needed.",
               "icon": "/assets/img_1735258064656.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758643546700_ehydpev8a",
+              "title": "Sink - A Simple &#x2F; Speedy &#x2F; Secure Link Shortener with Analytics, 100% run on Cloudflare.",
+              "href": "https://dlink.908203.xyz/",
+              "description": "A Simple / Speedy / Secure Link Shortener with Analytics, 100% run on Cloudflare.",
+              "icon": "https://dlink.908203.xyz/icon-192.png",
+              "enabled": true
             }
           ],
           "enabled": true
