@@ -63,14 +63,6 @@
           "enabled": true,
           "items": [
             {
-              "id": "1736418296509",
-              "title": "Napkin",
-              "href": "https://www.napkin.ai/",
-              "description": "Napkin turns your text into visuals so sharing your ideas is quick and effective.\n\nNapkin 能够将你的文本转化为视觉内容，使分享你的想法变得快速而有效。",
-              "icon": "/assets/img_1736418335098.png",
-              "enabled": true
-            },
-            {
               "id": "1736911347619",
               "title": "gamma",
               "href": "https://gamma.app/",
