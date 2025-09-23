@@ -117,14 +117,6 @@
           "enabled": true
         },
         {
-          "id": "site_1758604981658_0j41zgxwj",
-          "title": "JavBus ",
-          "href": "https://www.javbus.com/",
-          "description": "線上日本成人影片磁力連結分享站，番號搜尋共享AV磁力連結。",
-          "icon": "/assets/img_1758607344287.png",
-          "enabled": true
-        },
-        {
           "id": "site_1758607385829_iu0ttjkne",
           "title": "Javdb",
           "href": "https://javdb.com/",
@@ -155,6 +147,14 @@
               "href": "https://tv.910501.xyz/",
               "description": "影视聚合",
               "icon": "/assets/favicon_1758601669773.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1758604981658_0j41zgxwj",
+              "title": "JavBus ",
+              "href": "https://www.javbus.com/",
+              "description": "線上日本成人影片磁力連結分享站，番號搜尋共享AV磁力連結。",
+              "icon": "/assets/img_1758607344287.png",
               "enabled": true
             }
           ]
