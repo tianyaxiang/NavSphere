@@ -214,7 +214,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758606969656_07vtdtl29",
+              "title": "真实地址生成器",
+              "href": "https://address.nnuu.nyc.mn/",
+              "description": "基于IP地址生成真实地址",
+              "icon": "https://address.nnuu.nyc.mn/favicon.ico",
+              "enabled": true
+            }
+          ]
         }
       ]
     },
