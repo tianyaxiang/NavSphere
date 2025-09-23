@@ -173,6 +173,14 @@
               "description": "世界排名第二在线S网",
               "icon": "/assets/favicon_1758633435542.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758633671997_si5qvq8sw",
+              "title": "Netflav =",
+              "href": "https://www.netflav.com/",
+              "description": "奈飞网站风格的 在线日本S站",
+              "icon": "/assets/favicon_1758633642408.ico",
+              "enabled": true
             }
           ]
         }
