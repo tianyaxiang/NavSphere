@@ -255,122 +255,6 @@
       "subCategories": []
     },
     {
-      "id": "1758601037660",
-      "title": "翻墙工具",
-      "icon": "Shield",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": [
-        {
-          "id": "ebb19c90-7a1c-4390-be2b-ac5ab6165510",
-          "title": "定期签到",
-          "icon": "Folder",
-          "description": "",
-          "enabled": true,
-          "items": []
-        },
-        {
-          "id": "08128545-a513-4ea7-a7ee-ce9a5aeeeeaa",
-          "title": "长期饭盆",
-          "icon": "Folder",
-          "description": "",
-          "enabled": true,
-          "items": [
-            {
-              "id": "site_1758606424666_397qeeg4x",
-              "title": "Github-防失联",
-              "href": "https://github.com/wzdnzd/aggregator/issues/91",
-              "description": "",
-              "icon": "/assets/favicon_1758606400028.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1758606484317_48r3mv5ii",
-              "title": "悦通 — 轻快、稳定、即刻可用",
-              "href": "https://yue.to/",
-              "description": "Yue.to | 悦通 —— 轻快稳定的一站式网络加速服务。高带宽、低延迟、跨平台客户端，流媒体与日常办公皆适配。",
-              "icon": "https://www.google.com/s2/favicons?sz=128&domain=yue.to",
-              "enabled": true
-            },
-            {
-              "id": "site_1758606520753_7iqfscgav",
-              "title": "新门机场",
-              "href": "https://v0.crosswall.dpdns.org/",
-              "description": "访问 v0.crosswall.dpdns.org",
-              "icon": "https://www.google.com/s2/favicons?sz=128&domain=v0.crosswall.dpdns.org",
-              "enabled": true
-            },
-            {
-              "id": "site_1758606577225_g8r1m7ilc",
-              "title": "Nova加速",
-              "href": "https://mynova.xlm.plus/#/home",
-              "description": "Nova加速",
-              "icon": "https://mynova.xlm.plus/theme/Aurora/favicon.svg",
-              "enabled": true
-            },
-            {
-              "id": "site_1758606617737_a8u5r26ex",
-              "title": "华夏联盟",
-              "href": "https://www.huaxia.cyou/",
-              "description": "华夏联盟提供独家技术支持",
-              "icon": "/assets/favicon_1758606607423.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1758606651087_wwilem5d5",
-              "title": "海豚加速",
-              "href": "https://hty1.duia.us/#/login",
-              "description": "访问 hty1.duia.us",
-              "icon": "https://www.google.com/s2/favicons?sz=128&domain=hty1.duia.us",
-              "enabled": true
-            }
-          ]
-        },
-        {
-          "id": "1585fa53-2a2d-4336-b58d-9f1935449a5d",
-          "title": "翻墙杂事",
-          "icon": "Folder",
-          "description": "",
-          "enabled": true,
-          "items": [
-            {
-              "id": "site_1758606969656_07vtdtl29",
-              "title": "真实地址生成器",
-              "href": "https://address.nnuu.nyc.mn/",
-              "description": "基于IP地址生成真实地址",
-              "icon": "https://address.nnuu.nyc.mn/favicon.ico",
-              "enabled": true
-            },
-            {
-              "id": "site_1758607042426_1l6pg14ak",
-              "title": "接码平台",
-              "href": "https://simcodes.net/",
-              "description": "访问 simcodes.net",
-              "icon": "/assets/favicon_1758607027402.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1758607167212_kem34kvmf",
-              "title": "临时邮箱-minbox",
-              "href": "https://www.minuteinbox.com/",
-              "description": "10 minute mail service provides temporary email for 10 minutes. Stay safe with MinuteInbox, the online service for temporary email addresses. Set the timer for 10 minutes to one month.",
-              "icon": "/assets/favicon_1758607130289.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1758607195331_q5bidql4j",
-              "title": "临时邮件",
-              "href": "https://mail.tm/zh/",
-              "description": "随时使用临时电子邮件在可疑的网站、论坛或社交网络上注册。保护您的个人电子邮件地址免受垃圾邮件.",
-              "icon": "/assets/favicon_1758607183374.png",
-              "enabled": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "2",
       "title": "常用工具",
       "icon": "Laptop",
@@ -827,6 +711,122 @@
         }
       ],
       "subCategories": []
+    },
+    {
+      "id": "1758601037660",
+      "title": "翻墙工具",
+      "icon": "Shield",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": [
+        {
+          "id": "ebb19c90-7a1c-4390-be2b-ac5ab6165510",
+          "title": "定期签到",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
+        },
+        {
+          "id": "08128545-a513-4ea7-a7ee-ce9a5aeeeeaa",
+          "title": "长期饭盆",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "site_1758606424666_397qeeg4x",
+              "title": "Github-防失联",
+              "href": "https://github.com/wzdnzd/aggregator/issues/91",
+              "description": "",
+              "icon": "/assets/favicon_1758606400028.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1758606484317_48r3mv5ii",
+              "title": "悦通 — 轻快、稳定、即刻可用",
+              "href": "https://yue.to/",
+              "description": "Yue.to | 悦通 —— 轻快稳定的一站式网络加速服务。高带宽、低延迟、跨平台客户端，流媒体与日常办公皆适配。",
+              "icon": "https://www.google.com/s2/favicons?sz=128&domain=yue.to",
+              "enabled": true
+            },
+            {
+              "id": "site_1758606520753_7iqfscgav",
+              "title": "新门机场",
+              "href": "https://v0.crosswall.dpdns.org/",
+              "description": "访问 v0.crosswall.dpdns.org",
+              "icon": "https://www.google.com/s2/favicons?sz=128&domain=v0.crosswall.dpdns.org",
+              "enabled": true
+            },
+            {
+              "id": "site_1758606577225_g8r1m7ilc",
+              "title": "Nova加速",
+              "href": "https://mynova.xlm.plus/#/home",
+              "description": "Nova加速",
+              "icon": "https://mynova.xlm.plus/theme/Aurora/favicon.svg",
+              "enabled": true
+            },
+            {
+              "id": "site_1758606617737_a8u5r26ex",
+              "title": "华夏联盟",
+              "href": "https://www.huaxia.cyou/",
+              "description": "华夏联盟提供独家技术支持",
+              "icon": "/assets/favicon_1758606607423.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1758606651087_wwilem5d5",
+              "title": "海豚加速",
+              "href": "https://hty1.duia.us/#/login",
+              "description": "访问 hty1.duia.us",
+              "icon": "https://www.google.com/s2/favicons?sz=128&domain=hty1.duia.us",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "1585fa53-2a2d-4336-b58d-9f1935449a5d",
+          "title": "翻墙杂事",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "site_1758606969656_07vtdtl29",
+              "title": "真实地址生成器",
+              "href": "https://address.nnuu.nyc.mn/",
+              "description": "基于IP地址生成真实地址",
+              "icon": "https://address.nnuu.nyc.mn/favicon.ico",
+              "enabled": true
+            },
+            {
+              "id": "site_1758607042426_1l6pg14ak",
+              "title": "接码平台",
+              "href": "https://simcodes.net/",
+              "description": "访问 simcodes.net",
+              "icon": "/assets/favicon_1758607027402.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1758607167212_kem34kvmf",
+              "title": "临时邮箱-minbox",
+              "href": "https://www.minuteinbox.com/",
+              "description": "10 minute mail service provides temporary email for 10 minutes. Stay safe with MinuteInbox, the online service for temporary email addresses. Set the timer for 10 minutes to one month.",
+              "icon": "/assets/favicon_1758607130289.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1758607195331_q5bidql4j",
+              "title": "临时邮件",
+              "href": "https://mail.tm/zh/",
+              "description": "随时使用临时电子邮件在可疑的网站、论坛或社交网络上注册。保护您的个人电子邮件地址免受垃圾邮件.",
+              "icon": "/assets/favicon_1758607183374.png",
+              "enabled": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
