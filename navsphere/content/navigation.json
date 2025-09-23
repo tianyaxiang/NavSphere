@@ -815,7 +815,16 @@
           "icon": "Cloud",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758657477193_ixf5yxuy8",
+              "title": "ClawCloud",
+              "href": "https://claw.cloud/",
+              "description": "爪云：2Github、1 google",
+              "icon": "/assets/favicon_1758657445976.ico",
+              "enabled": true
+            }
+          ]
         },
         {
           "id": "1585fa53-2a2d-4336-b58d-9f1935449a5d",
