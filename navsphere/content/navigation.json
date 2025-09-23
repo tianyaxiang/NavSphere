@@ -230,6 +230,14 @@
               "description": "访问 simcodes.net",
               "icon": "/assets/favicon_1758607027402.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758607167212_kem34kvmf",
+              "title": "临时邮箱-minbox",
+              "href": "https://www.minuteinbox.com/",
+              "description": "10 minute mail service provides temporary email for 10 minutes. Stay safe with MinuteInbox, the online service for temporary email addresses. Set the timer for 10 minutes to one month.",
+              "icon": "/assets/favicon_1758607130289.png",
+              "enabled": true
             }
           ]
         }
