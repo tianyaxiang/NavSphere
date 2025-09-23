@@ -491,6 +491,14 @@
             }
           ],
           "enabled": true
+        },
+        {
+          "id": "137d1650-8b1f-4d00-a370-4e28bbc6c72f",
+          "title": "固定邮箱",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ],
       "description": "",
