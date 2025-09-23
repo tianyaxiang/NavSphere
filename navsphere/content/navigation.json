@@ -22,6 +22,14 @@
           "description": "DuckDuckGo搜索引擎",
           "icon": "/assets/favicon_1758637975113.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758655832726_5453lj6q6",
+          "title": "必应",
+          "href": "https://www.bing.com/",
+          "description": "Microsoft 必应搜索",
+          "icon": "/assets/favicon_1758655813604.png",
+          "enabled": true
         }
       ],
       "subCategories": []
