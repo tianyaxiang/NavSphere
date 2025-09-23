@@ -115,6 +115,14 @@
           "description": "影视聚合",
           "icon": "/assets/favicon_1758601669773.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758604871202_9pkhjs50t",
+          "title": "Gimy 劇迷 - 高清追劇首選",
+          "href": "https://gimy.ai/",
+          "description": "Gimy 劇迷線上看、Gimy TV 是您追劇的最佳選擇。免費提供高清電影、最新電視劇、熱門動漫與綜藝節目，涵蓋陸劇、韓劇、美劇、日劇、泰劇等，支援跨裝置觀看，立即享受流暢無廣告的追劇體驗。",
+          "icon": "/assets/favicon_1758604859292.png",
+          "enabled": true
         }
       ],
       "subCategories": []
