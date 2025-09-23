@@ -197,6 +197,14 @@
               "description": "华夏联盟提供独家技术支持",
               "icon": "/assets/favicon_1758606607423.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758606651087_wwilem5d5",
+              "title": "海豚加速",
+              "href": "https://hty1.duia.us/#/login",
+              "description": "访问 hty1.duia.us",
+              "icon": "https://www.google.com/s2/favicons?sz=128&domain=hty1.duia.us",
+              "enabled": true
             }
           ]
         },
