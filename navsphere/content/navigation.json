@@ -141,14 +141,6 @@
           "description": "访问 javdb.com",
           "icon": "/assets/favicon_1758607379820.png",
           "enabled": true
-        },
-        {
-          "id": "site_1758633172923_t95k13xvz",
-          "title": "在线视频",
-          "href": "https://cn.pornhub.com/",
-          "description": "全球最大在线S网",
-          "icon": "/assets/favicon_1758633151653.ico",
-          "enabled": true
         }
       ],
       "subCategories": [
@@ -222,6 +214,14 @@
               "href": "https://jable.tv/",
               "description": "免費日本J片在線看，無需下載看到飽。",
               "icon": "/assets/favicon_1758633902276.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1758633172923_t95k13xvz",
+              "title": "P站",
+              "href": "https://cn.pornhub.com/",
+              "description": "全球第一欧美向，P站",
+              "icon": "/assets/favicon_1758633151653.ico",
               "enabled": true
             }
           ]
