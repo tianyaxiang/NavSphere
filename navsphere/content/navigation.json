@@ -189,6 +189,14 @@
               "description": "Nova加速",
               "icon": "https://mynova.xlm.plus/theme/Aurora/favicon.svg",
               "enabled": true
+            },
+            {
+              "id": "site_1758606617737_a8u5r26ex",
+              "title": "华夏联盟",
+              "href": "https://www.huaxia.cyou/",
+              "description": "华夏联盟提供独家技术支持",
+              "icon": "/assets/favicon_1758606607423.png",
+              "enabled": true
             }
           ]
         },
