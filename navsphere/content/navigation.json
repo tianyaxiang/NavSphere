@@ -199,7 +199,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758656859746_9ut97ym71",
+              "title": "美剧天堂",
+              "href": "https://www.imeijutt.tv/",
+              "description": "",
+              "icon": "/assets/favicon_1758656838328.ico",
+              "enabled": true
+            }
+          ]
         }
       ]
     },
