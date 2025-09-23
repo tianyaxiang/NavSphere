@@ -181,6 +181,14 @@
               "description": "访问 v0.crosswall.dpdns.org",
               "icon": "https://www.google.com/s2/favicons?sz=128&domain=v0.crosswall.dpdns.org",
               "enabled": true
+            },
+            {
+              "id": "site_1758606577225_g8r1m7ilc",
+              "title": "Nova加速",
+              "href": "https://mynova.xlm.plus/#/home",
+              "description": "Nova加速",
+              "icon": "https://mynova.xlm.plus/theme/Aurora/favicon.svg",
+              "enabled": true
             }
           ]
         },
