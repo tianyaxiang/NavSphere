@@ -150,6 +150,14 @@
           "description": "",
           "enabled": true,
           "items": []
+        },
+        {
+          "id": "08128545-a513-4ea7-a7ee-ce9a5aeeeeaa",
+          "title": "长期饭盆",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
