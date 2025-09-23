@@ -185,14 +185,6 @@
           "enabled": true,
           "items": [
             {
-              "id": "site_1758633474162_x5c84rpho",
-              "title": "Xvideos",
-              "href": "https://www.xvideos.com/",
-              "description": "世界排名第二-欧美向",
-              "icon": "/assets/favicon_1758633435542.png",
-              "enabled": true
-            },
-            {
               "id": "site_1758633671997_si5qvq8sw",
               "title": "Netflav",
               "href": "https://www.netflav.com/",
@@ -858,7 +850,16 @@
       "icon": "Heart",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "site_1758633474162_x5c84rpho",
+          "title": "Xvideos",
+          "href": "https://www.xvideos.com/",
+          "description": "世界排名第二-欧美向",
+          "icon": "/assets/favicon_1758633435542.png",
+          "enabled": true
+        }
+      ],
       "subCategories": []
     }
   ]
