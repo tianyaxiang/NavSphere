@@ -791,6 +791,14 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "cb59e978-c4f1-4232-92cf-296d51640e1d",
+          "title": "图形创意",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
