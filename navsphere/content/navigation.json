@@ -142,7 +142,16 @@
       "description": "",
       "enabled": true,
       "items": [],
-      "subCategories": []
+      "subCategories": [
+        {
+          "id": "ebb19c90-7a1c-4390-be2b-ac5ab6165510",
+          "title": "定期签到",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
+        }
+      ]
     },
     {
       "id": "2",
