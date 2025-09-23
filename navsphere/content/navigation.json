@@ -158,6 +158,14 @@
           "description": "",
           "enabled": true,
           "items": []
+        },
+        {
+          "id": "1585fa53-2a2d-4336-b58d-9f1935449a5d",
+          "title": "翻墙杂事",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
