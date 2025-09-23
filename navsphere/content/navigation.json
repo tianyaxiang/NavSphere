@@ -798,6 +798,14 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "3797e482-2920-4bc9-9257-888e91354219",
+          "title": "界面设计",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ],
       "description": "",
