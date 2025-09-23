@@ -481,16 +481,7 @@
           "href": "#图形创意",
           "icon": "Folder",
           "description": "",
-          "items": [
-            {
-              "id": "4_3",
-              "title": "Illustrator",
-              "href": "https://www.adobe.com/cn/products/illustrator/",
-              "description": "矢量图形和插图。",
-              "icon": "/assets/images/logos/Illustrator.png",
-              "enabled": true
-            }
-          ],
+          "items": [],
           "enabled": true
         },
         {
@@ -797,6 +788,14 @@
               "href": "https://affinity.serif.com/",
               "description": "专业创意软件",
               "icon": "/assets/images/logos/AffinityDesigner.png",
+              "enabled": true
+            },
+            {
+              "id": "4_3",
+              "title": "Illustrator",
+              "href": "https://www.adobe.com/cn/products/illustrator/",
+              "description": "矢量图形和插图。",
+              "icon": "/assets/images/logos/Illustrator.png",
               "enabled": true
             }
           ]
