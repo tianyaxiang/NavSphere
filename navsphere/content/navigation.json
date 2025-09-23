@@ -164,6 +164,14 @@
               "description": "访问 ip.skk.moe",
               "icon": "/assets/favicon_1758605187188.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758605209112_bpxls7b9h",
+              "title": "IPCheck.ing - Check My IP Address and Geolocation - Check WebRTC Connection IP - DNS Leak Test - Speed Test -\n    Ping/MTR Test - Jason Ng Open Source",
+              "href": "https://ipcheck.ing/?hl=zh#/",
+              "description": "A better and open source IP Toolbox. Easy to check what",
+              "icon": "/assets/favicon_1758605202657.svg",
+              "enabled": true
             }
           ]
         },
