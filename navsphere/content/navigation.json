@@ -173,6 +173,14 @@
               "description": "Yue.to | 悦通 —— 轻快稳定的一站式网络加速服务。高带宽、低延迟、跨平台客户端，流媒体与日常办公皆适配。",
               "icon": "https://www.google.com/s2/favicons?sz=128&domain=yue.to",
               "enabled": true
+            },
+            {
+              "id": "site_1758606520753_7iqfscgav",
+              "title": "新门机场",
+              "href": "https://v0.crosswall.dpdns.org/",
+              "description": "访问 v0.crosswall.dpdns.org",
+              "icon": "https://www.google.com/s2/favicons?sz=128&domain=v0.crosswall.dpdns.org",
+              "enabled": true
             }
           ]
         },
