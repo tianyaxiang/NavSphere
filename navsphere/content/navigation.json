@@ -30,14 +30,6 @@
           "description": "Microsoft 必应搜索",
           "icon": "/assets/favicon_1758655813604.png",
           "enabled": true
-        },
-        {
-          "id": "site_1758607514296_skler95gq",
-          "title": "TikTok",
-          "href": "https://www.tiktok.com/",
-          "description": "",
-          "icon": "/assets/favicon_1758607508098.png",
-          "enabled": true
         }
       ],
       "subCategories": []
@@ -265,6 +257,14 @@
           "href": "https://www.youtube.com/",
           "description": "在 YouTube 上畅享你喜爱的视频和音乐，上传原创内容并与亲朋好友和全世界观众分享你的视频。",
           "icon": "/assets/img_1758655594650.png",
+          "enabled": true
+        },
+        {
+          "id": "site_1758607514296_skler95gq",
+          "title": "TikTok",
+          "href": "https://www.tiktok.com/",
+          "description": "",
+          "icon": "/assets/favicon_1758607508098.png",
           "enabled": true
         }
       ],
