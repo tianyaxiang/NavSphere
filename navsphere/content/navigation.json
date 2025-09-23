@@ -139,14 +139,6 @@
           "description": "访问 javdb.com",
           "icon": "/assets/favicon_1758607379820.png",
           "enabled": true
-        },
-        {
-          "id": "site_1758608207642_fefwocu69",
-          "title": "Cmoontv",
-          "href": "https://cmoontv.dedyn.io/",
-          "description": "用户 6363945551 密码 123456",
-          "icon": "https://www.google.com/s2/favicons?sz=128&domain=cmoontv.dedyn.io",
-          "enabled": true
         }
       ],
       "subCategories": []
