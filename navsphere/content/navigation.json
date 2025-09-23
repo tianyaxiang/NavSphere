@@ -110,10 +110,10 @@
       "items": [
         {
           "id": "site_1758601275661_ri8yrp9s6",
-          "title": "https://tv.910501.xyz/",
-          "href": "Moon_TV",
-          "description": "油管博主维护的在线视频网站",
-          "icon": "/assets/img_1758601332839.png",
+          "title": "MoonTV",
+          "href": "https://tv.910501.xyz/",
+          "description": "访问 tv.910501.xyz",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=tv.910501.xyz",
           "enabled": true
         }
       ],
