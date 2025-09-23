@@ -180,6 +180,14 @@
               "description": "本机IP查询",
               "icon": "/assets/favicon_1758605225269.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758605353185_d8viu7zrc",
+              "title": "Speedtest",
+              "href": "https://www.speedtest.net/",
+              "description": "IP测速",
+              "icon": "/assets/favicon_1758605338460.png",
+              "enabled": true
             }
           ]
         },
