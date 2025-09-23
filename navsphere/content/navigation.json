@@ -151,6 +151,14 @@
       "items": [],
       "subCategories": [
         {
+          "id": "33c158ac-b250-4b5e-944a-d8e2a02ad2ac",
+          "title": "IP测试",
+          "icon": "Network",
+          "description": "",
+          "enabled": true,
+          "items": []
+        },
+        {
           "id": "3",
           "title": "在线工具",
           "href": "#在线工具",
@@ -319,14 +327,6 @@
             }
           ],
           "enabled": true
-        },
-        {
-          "id": "33c158ac-b250-4b5e-944a-d8e2a02ad2ac",
-          "title": "IP测试",
-          "icon": "Network",
-          "description": "",
-          "enabled": true,
-          "items": []
         }
       ],
       "description": "",
