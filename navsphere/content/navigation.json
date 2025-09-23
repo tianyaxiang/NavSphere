@@ -4,7 +4,16 @@
       "id": "9",
       "title": "AI汇总",
       "icon": "Brain",
-      "items": [],
+      "items": [
+        {
+          "id": "site_1758605424718_vm403dgjv",
+          "title": "Grok",
+          "href": "https://grok.com/",
+          "description": "马斯克的AI",
+          "icon": "/assets/favicon_1758605413014.png",
+          "enabled": true
+        }
+      ],
       "subCategories": [
         {
           "id": "cbb3e33d-408b-41ba-9e9a-e0444303e3fd",
