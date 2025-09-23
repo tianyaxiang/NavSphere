@@ -857,6 +857,14 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "46cdc5f5-2b11-425d-93ca-ffe7a706afa3",
+          "title": "Dokcer",
+          "icon": "Cloud",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
