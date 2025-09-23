@@ -455,6 +455,14 @@
               "description": "",
               "icon": "/assets/img_1758632782880.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758664172848_7u13vxk85",
+              "title": "Zoho Mail",
+              "href": "https://mail.zoho.com/zm/",
+              "description": "",
+              "icon": "/assets/img_1758664136517.png",
+              "enabled": true
             }
           ]
         }
