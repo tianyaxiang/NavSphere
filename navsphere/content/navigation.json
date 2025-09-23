@@ -123,6 +123,14 @@
           "description": "Gimy 劇迷線上看、Gimy TV 是您追劇的最佳選擇。免費提供高清電影、最新電視劇、熱門動漫與綜藝節目，涵蓋陸劇、韓劇、美劇、日劇、泰劇等，支援跨裝置觀看，立即享受流暢無廣告的追劇體驗。",
           "icon": "/assets/favicon_1758604859292.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758604981658_0j41zgxwj",
+          "title": "JavBus - 日本成人影片資料庫",
+          "href": "https://www.javbus.com/",
+          "description": "線上日本成人影片磁力連結分享站，番號搜尋共享AV磁力連結。",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=www.javbus.com",
+          "enabled": true
         }
       ],
       "subCategories": []
