@@ -165,6 +165,14 @@
               "description": "",
               "icon": "/assets/favicon_1758606400028.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758606484317_48r3mv5ii",
+              "title": "悦通 — 轻快、稳定、即刻可用",
+              "href": "https://yue.to/",
+              "description": "Yue.to | 悦通 —— 轻快稳定的一站式网络加速服务。高带宽、低延迟、跨平台客户端，流媒体与日常办公皆适配。",
+              "icon": "https://www.google.com/s2/favicons?sz=128&domain=yue.to",
+              "enabled": true
             }
           ]
         },
