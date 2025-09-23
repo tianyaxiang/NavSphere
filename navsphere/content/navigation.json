@@ -156,7 +156,16 @@
           "icon": "Network",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758605196309_67qk0u7fy",
+              "title": "Ip",
+              "href": "https://ip.skk.moe/",
+              "description": "访问 ip.skk.moe",
+              "icon": "/assets/favicon_1758605187188.png",
+              "enabled": true
+            }
+          ]
         },
         {
           "id": "3",
