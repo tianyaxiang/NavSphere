@@ -222,6 +222,14 @@
               "description": "基于IP地址生成真实地址",
               "icon": "https://address.nnuu.nyc.mn/favicon.ico",
               "enabled": true
+            },
+            {
+              "id": "site_1758607042426_1l6pg14ak",
+              "title": "接码平台",
+              "href": "https://simcodes.net/",
+              "description": "访问 simcodes.net",
+              "icon": "/assets/favicon_1758607027402.png",
+              "enabled": true
             }
           ]
         }
