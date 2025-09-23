@@ -273,6 +273,14 @@
           "description": "Twitch 是一种交互式直播服务，内容涵盖游戏、娱乐、体育、音乐等。每个人都能在 Twitch 上找到适合自己的内容。",
           "icon": "/assets/favicon_1758607476801.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758607495361_1xjgcutaz",
+          "title": "Kick",
+          "href": "https://kick.com/",
+          "description": "Kick is a streaming platform that makes it easy for you to find and watch your favorite content.",
+          "icon": "/assets/favicon_1758607489207.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
