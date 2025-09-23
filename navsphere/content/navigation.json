@@ -548,7 +548,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758605801712_unh4zs4io",
+              "title": "Color Hunt ",
+              "href": "https://colorhunt.co/",
+              "description": "",
+              "icon": "/assets/favicon_1758605791948.svg",
+              "enabled": true
+            }
+          ]
         }
       ]
     }
