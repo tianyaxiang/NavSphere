@@ -709,14 +709,6 @@
       "enabled": true,
       "items": [
         {
-          "id": "site_1758747497784_i9mqe4l79",
-          "title": "Netlify",
-          "href": "https://app.netlify.com/",
-          "description": "@zoho.com",
-          "icon": "/assets/img_1758751821378.png",
-          "enabled": true
-        },
-        {
           "id": "site_1758747526935_8delyszve",
           "title": "Vercel",
           "href": "https://vercel.com/",
@@ -756,7 +748,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758747497784_i9mqe4l79",
+              "title": "Netlify",
+              "href": "https://app.netlify.com/",
+              "description": "@zoho.com",
+              "icon": "/assets/img_1758751821378.png",
+              "enabled": true
+            }
+          ]
         },
         {
           "id": "a6564c88-6f3a-47e5-8542-0759ad4e9bd8",
