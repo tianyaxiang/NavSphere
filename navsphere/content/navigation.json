@@ -149,16 +149,7 @@
       "icon": "Video",
       "description": "",
       "enabled": true,
-      "items": [
-        {
-          "id": "site_1758607385829_iu0ttjkne",
-          "title": "Javdb",
-          "href": "https://javdb.com/",
-          "description": "访问 javdb.com",
-          "icon": "/assets/favicon_1758607379820.png",
-          "enabled": true
-        }
-      ],
+      "items": [],
       "subCategories": [
         {
           "id": "dccdf844-b059-4da8-9b5b-d12f059d9a2d",
