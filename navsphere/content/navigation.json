@@ -708,7 +708,16 @@
       "icon": "Edit",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "site_1758747497784_i9mqe4l79",
+          "title": "Netlify",
+          "href": "https://app.netlify.com/",
+          "description": "Start building the best web experiences in record time",
+          "icon": "/assets/favicon_1758747485524.ico",
+          "enabled": true
+        }
+      ],
       "subCategories": []
     },
     {
