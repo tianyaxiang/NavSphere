@@ -703,6 +703,15 @@
       "enabled": true
     },
     {
+      "id": "1758747466694",
+      "title": "部署平台",
+      "icon": "Edit",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
       "id": "1758607794971",
       "title": "游戏破解",
       "icon": "Star",
@@ -925,15 +934,6 @@
           "enabled": true
         }
       ],
-      "subCategories": []
-    },
-    {
-      "id": "1758747466694",
-      "title": "部署平台",
-      "icon": "Edit",
-      "description": "",
-      "enabled": true,
-      "items": [],
       "subCategories": []
     }
   ]
