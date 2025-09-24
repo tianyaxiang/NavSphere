@@ -176,35 +176,11 @@
           "enabled": true,
           "items": [
             {
-              "id": "site_1758601275661_ri8yrp9s6",
-              "title": "MoonTV",
-              "href": "https://tv.910501.xyz/",
-              "description": "影视聚合",
-              "icon": "/assets/favicon_1758601669773.png",
-              "enabled": true
-            },
-            {
               "id": "site_1758604871202_9pkhjs50t",
               "title": "Gimy 劇迷 - 高清追劇首選",
               "href": "https://gimy.ai/",
               "description": "Gimy 劇迷線上看、Gimy TV 是您追劇的最佳選擇。免費提供高清電影、最新電視劇、熱門動漫與綜藝節目，涵蓋陸劇、韓劇、美劇、日劇、泰劇等，支援跨裝置觀看，立即享受流暢無廣告的追劇體驗。",
               "icon": "/assets/favicon_1758604859292.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1758654346663_z8leu5i8q",
-              "title": "视频聚合",
-              "href": "https://svmlnsesefbh.ap-northeast-1.clawcloudrun.com/",
-              "description": "Moontv 备用站",
-              "icon": "https://beetv.netlify.app/icons/icon-192x192.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1758663089262_ebzc3zfa8",
-              "title": "BeeTV",
-              "href": "https://beetv.netlify.app/",
-              "description": "Moontv 备用站",
-              "icon": "https://beetv.netlify.app/icons/icon-192x192.png",
               "enabled": true
             }
           ]
