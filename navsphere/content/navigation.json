@@ -741,7 +741,16 @@
           "enabled": true
         }
       ],
-      "subCategories": []
+      "subCategories": [
+        {
+          "id": "c9bd12f7-78f6-4965-9713-4c0945a44e19",
+          "title": "Docker",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
+        }
+      ]
     },
     {
       "id": "1758607794971",
