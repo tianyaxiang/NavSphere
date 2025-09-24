@@ -181,6 +181,14 @@
               "description": "MoonTv-备站",
               "icon": "/assets/favicon_1758757871869.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758757993187_svq6so9jz",
+              "title": "月饼TV-主站",
+              "href": "https://beecake.netlify.app/    ",
+              "description": "月饼TV-主站",
+              "icon": "/assets/img_1758747271072.png ",
+              "enabled": true
             }
           ]
         },
