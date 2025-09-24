@@ -716,6 +716,14 @@
           "description": "Start building the best web experiences in record time",
           "icon": "/assets/favicon_1758747485524.ico",
           "enabled": true
+        },
+        {
+          "id": "site_1758747526935_8delyszve",
+          "title": "Vercel: Build and deploy the best web experiences with the AI Cloud",
+          "href": "https://vercel.com/",
+          "description": "Vercel gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized web.",
+          "icon": "/assets/favicon_1758747516154.png",
+          "enabled": true
         }
       ],
       "subCategories": []
