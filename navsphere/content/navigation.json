@@ -715,14 +715,6 @@
           "description": "Vercel gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized web.",
           "icon": "/assets/favicon_1758747516154.png",
           "enabled": true
-        },
-        {
-          "id": "site_1758747659121_42v6u9o8m",
-          "title": "Upstash",
-          "href": "https://upstash.com/",
-          "description": "在线数据库平台",
-          "icon": "/assets/favicon_1758747640662.png",
-          "enabled": true
         }
       ],
       "subCategories": [
@@ -766,7 +758,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758747659121_42v6u9o8m",
+              "title": "Upstash",
+              "href": "https://upstash.com/",
+              "description": "在线数据库平台",
+              "icon": "/assets/favicon_1758747640662.png",
+              "enabled": true
+            }
+          ]
         }
       ]
     },
