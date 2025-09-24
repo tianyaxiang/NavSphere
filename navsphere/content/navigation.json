@@ -731,6 +731,14 @@
           "description": "在线数据库平台",
           "icon": "/assets/favicon_1758747640662.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758657477193_ixf5yxuy8",
+          "title": "ClawCloud",
+          "href": "https://us-west-1.run.claw.cloud/",
+          "description": "ClawCloud Dokcer",
+          "icon": "/assets/favicon_1758737641899.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
@@ -848,16 +856,7 @@
           "icon": "Cloud",
           "description": "",
           "enabled": true,
-          "items": [
-            {
-              "id": "site_1758657477193_ixf5yxuy8",
-              "title": "ClawCloud",
-              "href": "https://us-west-1.run.claw.cloud/",
-              "description": "ClawCloud Run delivers a high-performance, lightweight cloud-native deployment platform with integrated GitOps workflows, native Docker/Kubernetes support, and seamless GitHub integration. A production-grade solution trusted by thousands of development teams worldwide.",
-              "icon": "/assets/favicon_1758737641899.ico",
-              "enabled": true
-            }
-          ]
+          "items": []
         },
         {
           "id": "1585fa53-2a2d-4336-b58d-9f1935449a5d",
