@@ -723,6 +723,14 @@
               "description": "ClawCloud Dokcer",
               "icon": "/assets/favicon_1758737641899.ico",
               "enabled": true
+            },
+            {
+              "id": "site_1758752334975_ebhse0x75",
+              "title": "Freecloud",
+              "href": "https://panel.freecloud.ltd/clientarea.php",
+              "description": "访问 panel.freecloud.ltd",
+              "icon": "/assets/img_1758752316884.png",
+              "enabled": true
             }
           ]
         },
