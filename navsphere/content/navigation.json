@@ -181,6 +181,14 @@
               "description": "",
               "icon": "/assets/img_1758751689424.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758753966231_4emggsjr8",
+              "title": "MoonTV",
+              "href": "https://tv.910501.xyz/",
+              "description": "公益站点",
+              "icon": "https://tv.910501.xyz/icons/icon-192x192.png",
+              "enabled": true
             }
           ]
         },
