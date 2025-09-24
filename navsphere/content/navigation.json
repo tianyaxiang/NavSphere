@@ -757,6 +757,14 @@
           "description": "",
           "enabled": true,
           "items": []
+        },
+        {
+          "id": "a6564c88-6f3a-47e5-8542-0759ad4e9bd8",
+          "title": "在线DB",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
