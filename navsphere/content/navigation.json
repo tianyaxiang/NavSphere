@@ -749,6 +749,14 @@
           "description": "",
           "enabled": true,
           "items": []
+        },
+        {
+          "id": "172a9ee1-359a-41f0-913a-35bbfd0d197a",
+          "title": "部署平台",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
