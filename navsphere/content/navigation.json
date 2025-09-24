@@ -157,6 +157,14 @@
           "description": "访问 javdb.com",
           "icon": "/assets/favicon_1758607379820.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758747293066_g3bsshp63",
+          "title": "月饼TV",
+          "href": "https://beecake.netlify.app/",
+          "description": "123",
+          "icon": "/assets/img_1758747271072.png",
+          "enabled": true
         }
       ],
       "subCategories": [
