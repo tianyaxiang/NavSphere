@@ -707,16 +707,7 @@
       "icon": "Edit",
       "description": "",
       "enabled": true,
-      "items": [
-        {
-          "id": "site_1758747526935_8delyszve",
-          "title": "Vercel",
-          "href": "https://vercel.com/",
-          "description": "Vercel gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized web.",
-          "icon": "/assets/favicon_1758747516154.png",
-          "enabled": true
-        }
-      ],
+      "items": [],
       "subCategories": [
         {
           "id": "c9bd12f7-78f6-4965-9713-4c0945a44e19",
@@ -748,6 +739,14 @@
               "href": "https://app.netlify.com/",
               "description": "@zoho.com",
               "icon": "/assets/img_1758751821378.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1758747526935_8delyszve",
+              "title": "Vercel",
+              "href": "https://vercel.com/",
+              "description": "Vercel gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized web.",
+              "icon": "/assets/favicon_1758747516154.png",
               "enabled": true
             }
           ]
