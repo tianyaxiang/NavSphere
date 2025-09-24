@@ -731,6 +731,14 @@
               "description": "访问 panel.freecloud.ltd",
               "icon": "/assets/img_1758752316884.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758752401926_6w9cd7d70",
+              "title": "Serv00",
+              "href": "https://panel1.serv00.com/ssl/www",
+              "description": "Serv00",
+              "icon": "/assets/favicon_1758752385505.png",
+              "enabled": true
             }
           ]
         },
