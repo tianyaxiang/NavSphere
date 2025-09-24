@@ -277,6 +277,14 @@
           "description": "网站流量分析",
           "icon": "/assets/images/logos/analytics.ico",
           "enabled": true
+        },
+        {
+          "id": "1758697001995",
+          "title": "CxGenie Chatbot",
+          "href": "https://app.cxgenie.ai/",
+          "description": "CxGenie AI Chatbot",
+          "icon": "/assets/favicon_1758697031322.png",
+          "enabled": true
         }
       ],
       "subCategories": []
