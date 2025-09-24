@@ -926,6 +926,15 @@
         }
       ],
       "subCategories": []
+    },
+    {
+      "id": "1758747466694",
+      "title": "部署平台",
+      "icon": "Edit",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
     }
   ]
 }
