@@ -723,14 +723,6 @@
           "description": "在线数据库平台",
           "icon": "/assets/favicon_1758747640662.png",
           "enabled": true
-        },
-        {
-          "id": "site_1758657477193_ixf5yxuy8",
-          "title": "ClawCloud",
-          "href": "https://us-west-1.run.claw.cloud/",
-          "description": "ClawCloud Dokcer",
-          "icon": "/assets/favicon_1758737641899.ico",
-          "enabled": true
         }
       ],
       "subCategories": [
@@ -740,7 +732,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758657477193_ixf5yxuy8",
+              "title": "ClawCloud",
+              "href": "https://us-west-1.run.claw.cloud/",
+              "description": "ClawCloud Dokcer",
+              "icon": "/assets/favicon_1758737641899.ico",
+              "enabled": true
+            }
+          ]
         },
         {
           "id": "172a9ee1-359a-41f0-913a-35bbfd0d197a",
