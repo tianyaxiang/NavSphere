@@ -265,6 +265,14 @@
           "description": "",
           "icon": "/assets/favicon_1758607508098.png",
           "enabled": true
+        },
+        {
+          "id": "site_1758755794848_yviyiactj",
+          "title": "Sooplive",
+          "href": "https://www.sooplive.co.kr/",
+          "description": "棒子国直播平台",
+          "icon": "/assets/favicon_1758755771642.png",
+          "enabled": true
         }
       ],
       "subCategories": []
