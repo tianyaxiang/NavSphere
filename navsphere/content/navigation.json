@@ -157,14 +157,6 @@
           "description": "访问 javdb.com",
           "icon": "/assets/favicon_1758607379820.png",
           "enabled": true
-        },
-        {
-          "id": "site_1758747293066_g3bsshp63",
-          "title": "月饼TV",
-          "href": "https://beecake.netlify.app/",
-          "description": "123",
-          "icon": "/assets/img_1758747271072.png",
-          "enabled": true
         }
       ],
       "subCategories": [
@@ -181,6 +173,14 @@
               "href": "https://gimy.ai/",
               "description": "Gimy 劇迷線上看、Gimy TV 是您追劇的最佳選擇。免費提供高清電影、最新電視劇、熱門動漫與綜藝節目，涵蓋陸劇、韓劇、美劇、日劇、泰劇等，支援跨裝置觀看，立即享受流暢無廣告的追劇體驗。",
               "icon": "/assets/favicon_1758604859292.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1758747293066_g3bsshp63",
+              "title": "月饼TV",
+              "href": "https://beecake.netlify.app/",
+              "description": "123",
+              "icon": "/assets/img_1758747271072.png",
               "enabled": true
             }
           ]
