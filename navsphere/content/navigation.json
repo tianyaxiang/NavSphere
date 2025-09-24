@@ -189,6 +189,14 @@
               "description": "MoonTV-主站",
               "icon": "/assets/img_1758601332839.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758757895120_2ut0ubskz",
+              "title": "MoonTv-备站",
+              "href": "https://beetv.netlify.app/",
+              "description": "MoonTv-备站",
+              "icon": "/assets/favicon_1758757871869.png",
+              "enabled": true
             }
           ]
         },
