@@ -173,6 +173,14 @@
               "description": "123",
               "icon": "/assets/img_1758747271072.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758751703977_3tna0i466",
+              "title": "月饼TV",
+              "href": "https://beetv.908203.xyz/",
+              "description": "",
+              "icon": "/assets/img_1758751689424.png",
+              "enabled": true
             }
           ]
         },
