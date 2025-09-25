@@ -973,6 +973,14 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "82ae327e-5dcf-440a-8645-0bf693fb5138",
+          "title": "订阅聚合",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
