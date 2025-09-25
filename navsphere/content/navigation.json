@@ -980,7 +980,16 @@
           "icon": "Folder",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1758816328286_ubeo4q2az",
+              "title": "MISUB_VIP",
+              "href": "https://subgui.908203.xyz/",
+              "description": "",
+              "icon": "/assets/img_1758816307771.png",
+              "enabled": true
+            }
+          ]
         }
       ]
     },
