@@ -988,6 +988,14 @@
               "description": "",
               "icon": "/assets/img_1758816307771.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758816391682_mr65ulya1",
+              "title": "MISUB_Public",
+              "href": "https://cfsub.pcbean.qzz.io/",
+              "description": "",
+              "icon": "/assets/img_1758816307771.png",
+              "enabled": true
             }
           ]
         }
