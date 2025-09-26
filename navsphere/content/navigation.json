@@ -335,6 +335,14 @@
           "description": "Mailchimp Email Marketing",
           "icon": "/assets/favicon_1757171438952.png",
           "enabled": true
+        },
+        {
+          "id": "1758851524785",
+          "title": "Google Postmaster",
+          "href": "https://postmaster.google.com/v2/",
+          "description": "PostMaster Tool",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=postmaster.google.com",
+          "enabled": true
         }
       ],
       "subCategories": []
