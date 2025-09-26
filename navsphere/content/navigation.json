@@ -16,14 +16,6 @@
           "enabled": true
         },
         {
-          "id": "1758527038628",
-          "title": "滴答清单",
-          "href": "https://dida365.com/webapp/#q/all/tasks",
-          "description": "Todo，笔记，任务管理",
-          "icon": "/assets/favicon_1758527047217.png",
-          "enabled": true
-        },
-        {
           "id": "1758260635327",
           "title": "Bitwarden",
           "href": "https://bitwarden.com/",
