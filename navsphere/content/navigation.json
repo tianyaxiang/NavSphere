@@ -94,6 +94,14 @@
           "description": "Rubbish",
           "icon": "/assets/favicon_1758181055080.png",
           "enabled": true
+        },
+        {
+          "id": "1758851229797",
+          "title": "Outline",
+          "href": "https://wiki.guijige.com",
+          "description": "Knowledge Base",
+          "icon": "/assets/favicon_1758851251080.png",
+          "enabled": true
         }
       ],
       "subCategories": []
