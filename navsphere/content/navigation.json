@@ -16,14 +16,6 @@
           "enabled": true
         },
         {
-          "id": "1758260635327",
-          "title": "Bitwarden",
-          "href": "https://bitwarden.com/",
-          "description": "Password Manager",
-          "icon": "/assets/favicon_1758260648438.ico",
-          "enabled": true
-        },
-        {
           "id": "1758181019998",
           "title": "Google",
           "href": "https://google.com",
