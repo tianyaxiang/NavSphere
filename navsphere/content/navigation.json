@@ -100,6 +100,14 @@
           "description": "Developers and Open Source authors now have a massive amount of services offering free tiers, but it can be hard to find them all to make informed decisions.",
           "icon": "/assets/favicon_1760507241370.png",
           "enabled": true
+        },
+        {
+          "id": "1761117296013",
+          "title": "Cloudns",
+          "href": "https://www.cloudns.net",
+          "description": "访问 www.cloudns.net",
+          "icon": "/assets/favicon_1761117354981.png",
+          "enabled": true
         }
       ],
       "subCategories": [],
