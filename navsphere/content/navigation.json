@@ -32,6 +32,14 @@
           "description": "qn.taobao.com",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1761813007544",
+          "title": "机器人接待",
+          "href": "https://qn.taobao.com/home.htm/app-customer-service/robot?acKey=setting",
+          "description": "淘宝机器人接待",
+          "icon": "/assets/favicon_1761813056464.png",
+          "enabled": true
         }
       ],
       "subCategories": []
