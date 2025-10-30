@@ -40,6 +40,14 @@
           "description": "淘宝机器人接待",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1761813502636",
+          "title": "店小蜜全自动接待",
+          "href": "https://dianxiaomi.taobao.com/#/setting/serve",
+          "description": "此项设置与离线公告相配合，可以有效规避淘宝店铺的三分钟人工响应率。",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": []
