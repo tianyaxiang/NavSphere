@@ -634,6 +634,15 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1761809033511",
+      "title": "跨境工具",
+      "icon": "Network",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
     }
   ]
 }
