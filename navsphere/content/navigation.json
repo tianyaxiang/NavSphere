@@ -24,7 +24,16 @@
       "icon": "Home",
       "description": "淘宝",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "1761812947737",
+          "title": "客服离线公告",
+          "href": "https://qn.taobao.com/home.htm/app-customer-service/toolpage/service-off-line",
+          "description": "qn.taobao.com",
+          "icon": "",
+          "enabled": true
+        }
+      ],
       "subCategories": []
     }
   ]
