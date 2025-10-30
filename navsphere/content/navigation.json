@@ -66,7 +66,16 @@
           "enabled": true
         }
       ],
-      "subCategories": []
+      "subCategories": [
+        {
+          "id": "d71cf9a4-4634-4c80-84f4-8d7579c457fc",
+          "title": "基础设置",
+          "icon": "Folder",
+          "description": "万丈高楼平地起，这个基础设置很有必要",
+          "enabled": true,
+          "items": []
+        }
+      ]
     }
   ]
 }
