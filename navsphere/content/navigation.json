@@ -54,7 +54,7 @@
           "title": "基础设置",
           "icon": "Folder",
           "description": "万丈高楼平地起，这个基础设置很有必要",
-          "enabled": true,
+          "enabled": false,
           "items": []
         }
       ]
