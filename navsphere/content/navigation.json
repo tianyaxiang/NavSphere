@@ -1,24 +1,6 @@
 {
   "navigationItems": [
     {
-      "id": "1761809033511",
-      "title": "跨境工具",
-      "icon": "Network",
-      "description": "",
-      "enabled": true,
-      "items": [
-        {
-          "id": "site_1761809094476_xd0v5lpzq",
-          "title": "妙手ERP - 免费TikTok、Shopee、TEMU、OZON等跨境电商ERP软件",
-          "href": "https://erp.91miaoshou.com/",
-          "description": "妙手ERP，80万+跨境电商卖家的共同选择，致力于为TikTok、Shopee虾皮、Temu、Ozon、Lazada、SHEIN、速卖通等平台卖家提供采集、刊登、定价、营销、订单、代发采购、仓储、物流、财务等一体化服务",
-          "icon": "",
-          "enabled": true
-        }
-      ],
-      "subCategories": []
-    },
-    {
       "id": "1761812940080",
       "title": "淘宝电商工具",
       "icon": "Home",
@@ -76,6 +58,24 @@
           "items": []
         }
       ]
+    },
+    {
+      "id": "1761809033511",
+      "title": "跨境工具",
+      "icon": "Network",
+      "description": "",
+      "enabled": true,
+      "items": [
+        {
+          "id": "site_1761809094476_xd0v5lpzq",
+          "title": "妙手ERP - 免费TikTok、Shopee、TEMU、OZON等跨境电商ERP软件",
+          "href": "https://erp.91miaoshou.com/",
+          "description": "妙手ERP，80万+跨境电商卖家的共同选择，致力于为TikTok、Shopee虾皮、Temu、Ozon、Lazada、SHEIN、速卖通等平台卖家提供采集、刊登、定价、营销、订单、代发采购、仓储、物流、财务等一体化服务",
+          "icon": "",
+          "enabled": true
+        }
+      ],
+      "subCategories": []
     }
   ]
 }
