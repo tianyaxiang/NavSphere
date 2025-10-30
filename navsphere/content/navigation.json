@@ -48,6 +48,14 @@
           "description": "此项设置与离线公告相配合，可以有效规避淘宝店铺的三分钟人工响应率。",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1761814075602",
+          "title": "万相台创意关闭",
+          "href": "https://one.alimama.com/index.html?spm=a21dvs.28495141.ccab3350b.1.4dad2cdeiM1Wme#!/creative/setting?spm=a21dvs.28495141.ccab3350b.1.4dad2cdeiM1Wme&tab=sucai_switch&scene=onebpAdStrategyWholeShop",
+          "description": "万相台的创意素材拉取，除了3:4主图需要拉取其他都不要",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": []
