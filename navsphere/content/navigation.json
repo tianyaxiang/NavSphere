@@ -56,6 +56,14 @@
           "description": "万相台的创意素材拉取，除了3:4主图需要拉取其他都不要",
           "icon": "",
           "enabled": true
+        },
+        {
+          "id": "1761814816244",
+          "title": "淘宝智能退款策略",
+          "href": "https://qn.taobao.com/home.htm/auto-refund/InstanceList",
+          "description": "通过淘宝智能退款策略，可以设置多种订单场景下的自动操作，非常有助于提升店铺的综合体验分。",
+          "icon": "",
+          "enabled": true
         }
       ],
       "subCategories": []
