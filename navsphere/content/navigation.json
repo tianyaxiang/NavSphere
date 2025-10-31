@@ -43,7 +43,223 @@
           "id": "1761812947737",
           "title": "淘宝客服离线公告",
           "href": "https://qn.taobao.com/home.htm/app-customer-service/toolpage/service-off-line",
-          "description": "总是要进行休息的，所以对于店铺的客服离线公告设置是必不可少的。不然都会计入考核范围，同时与店内的机器人的自动回复和店小蜜的自动回复相配合，可以给消费者有很好的购物体验。",
+          "description": "客服离线公告设置是必不可少的，可避免考核处罚，并与机器人回复配合优化体验。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001001",
+          "title": "公益宝贝",
+          "href": "https://qn.taobao.com/home.htm/gongyi/charity-goods-setting?spm=a21dvs.23580594.0.0.1d293d0dZOHX6U&%24qnsource=sellmanager",
+          "description": "开启公益宝贝计划，为消费者传递温暖形象的同时助力公益事业。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001002",
+          "title": "学生价活动",
+          "href": "https://xszxbt.sale.tmall.com/sale/seller/activity_detail.htm?activityId=227863920144",
+          "description": "针对学生群体推出专属优惠活动，提升品牌年轻化形象。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001003",
+          "title": "淘金币活动",
+          "href": "https://market.m.taobao.com/app/tbcoin/coin_seller/index.html#/home",
+          "description": "参与淘金币活动，提升曝光率和店铺活跃度。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001004",
+          "title": "低价活动入口",
+          "href": "https://myseller.taobao.com/home.htm/ltao-home",
+          "description": "报名低价活动，获取更多流量曝光机会。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001005",
+          "title": "红包签到",
+          "href": "http://p.tb.cn/yNrgi",
+          "description": "每日红包签到活动入口。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001006",
+          "title": "【年终冲刺】青春惊喜补贴玩法招商",
+          "href": "https://sale.taobao.com/sale/seller/activity_detail.htm?activityId=449788560157",
+          "description": "淘宝官方年终冲刺补贴活动报名入口。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001007",
+          "title": "淘宝好价清退",
+          "href": "https://survey.taobao.com/apps/zhiliao/wwF-h0G9j",
+          "description": "查看好价活动的清退政策和处理方式。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001008",
+          "title": "分期免息玩法清退",
+          "href": "https://survey.taobao.com/apps/zhiliao/PNgh0UcMY",
+          "description": "分期免息活动的清退规则说明。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001009",
+          "title": "信用卡支付开通",
+          "href": "https://qn.taobao.com/home.htm/qianniu-app-market/home/service-detail?tracelog=qn_search&service_code=APP_ALIPAY_CREDITCARD",
+          "description": "店铺信用卡支付开通入口。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001010",
+          "title": "花呗支付开通",
+          "href": "https://qn.taobao.com/home.htm/qianniu-app-market/home/service-detail?tracelog=qn_search&service_code=APP_ALIPAY_CREDITCARD",
+          "description": "花呗支付开通，提升消费者支付转化率。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001011",
+          "title": "【超级卖家&金牌计划专属】日常单品团",
+          "href": "https://qn.taobao.com/home.htm/qn-tmc-seller/sale/seller/activity_detail.htm?spm=a21dov.b27349657d.0.0.6246444aYhSuDB&activityId=37425720009",
+          "description": "超级卖家专属单品团报名入口。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001012",
+          "title": "一键卖全球",
+          "href": "https://g-sellercenter.taobao.com/mail/sellercenter?from=qianniu",
+          "description": "帮助卖家轻松开启跨境销售。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001013",
+          "title": "限售区域设置方法",
+          "href": "https://myseller.taobao.com/home.htm/inventory-manage/salesScopeManage?spm=a21d2t.22405527.ewServiceWindow.2.9b396afaAIxuMd",
+          "description": "设置商品限售区域，防止违规销售。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001014",
+          "title": "详情旧版改新版【批量投放自定义模块】",
+          "href": "https://xiangqing.wangpu.taobao.com/material.html#module",
+          "description": "新版详情模块批量投放入口。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001015",
+          "title": "价格竞争力退出",
+          "href": "https://qn.taobao.com/home.htm/coupon/priceDropRecord",
+          "description": "管理或退出价格竞争力活动。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001016",
+          "title": "新客专享10%",
+          "href": "https://ppxk.tmall.com/new/index.html?spm=service_hall.0.0.0.1432fo5Ufo5Ujs#!/crowd/tyro-gift-transform-list/index",
+          "description": "新客专享优惠活动入口。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001017",
+          "title": "自动发送说明书",
+          "href": "https://qn.taobao.com/home.htm/commodity-instruction?appId=2402060",
+          "description": "自动为买家发送商品说明书，提升服务体验。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001018",
+          "title": "淘宝自动回评",
+          "href": "https://myseller.taobao.com/home.htm/smartapp-auto/?spm=service_hall.0.0.0.150fx7SZx7SZQd",
+          "description": "设置自动好评规则，提升DSR评分。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001019",
+          "title": "最新的3元购",
+          "href": "https://tjbcommon.sale.tmall.com/sale/seller/activity_detail.htm?activityId=611914320182",
+          "description": "报名3元购活动，提升转化与曝光。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001020",
+          "title": "最新的1元购",
+          "href": "https://tjbcommon.sale.tmall.com/sale/seller/activity_detail.htm?activityId=609228270182",
+          "description": "报名1元购活动入口。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001021",
+          "title": "超级立减",
+          "href": "https://qn.taobao.com/home.htm/starb/tmc-next/sale/seller/ttmjpt.htm",
+          "description": "参与超级立减活动，提升订单量。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001022",
+          "title": "商品详情页【搭配购买】",
+          "href": "https://xhd.sale.tmall.com/sale/seller/activity_detail.htm?activityId=615020650168&inviteId=8135035401",
+          "description": "搭配购买设置入口，提升客单价。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001023",
+          "title": "淘宝营业执照更新路径",
+          "href": "https://myseller.taobao.com/home.htm/shop-manage/iframe?src=https%3A%2F%2Fqc-main.taobao.com%2Fquali%2Fportal%3FbizSource%3Dtaobao%26url_open_type%3Diframe%23%2FqualiInfo-center%2F",
+          "description": "淘宝营业执照更新与年检路径。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001024",
+          "title": "很多商品没有质量分",
+          "href": "https://qn.taobao.com/home.htm/sell-diagnose/all?spm=a21dvs.23580594.0.0.4fee2c1bj2k11g",
+          "description": "质量分诊断入口，查看影响评分的因素。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001025",
+          "title": "淘宝知识产权平台",
+          "href": "https://ipp.taobao.com/home.htm#/login",
+          "description": "知识产权保护平台，进行维权申诉。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001026",
+          "title": "集运仓在线客服链接",
+          "href": "https://market.m.taobao.com/app/cnAIService/bailingPCNew/bailingPC.html?channel=1000000523",
+          "description": "淘宝集运仓在线客服入口。",
+          "icon": "",
+          "enabled": true
+        },
+        {
+          "id": "1761820001027",
+          "title": "1元购限制黄牛",
+          "href": "https://ss.taobao.com/app#/transaction-risk/RuleConfig?type=SCALPER&id=null&key=1&status=create",
+          "description": "1元购防黄牛规则设置入口。",
           "icon": "",
           "enabled": true
         }
@@ -60,7 +276,7 @@
           "id": "site_1761809094476_xd0v5lpzq",
           "title": "妙手ERP - 免费TikTok、Shopee、TEMU、OZON等跨境电商ERP软件",
           "href": "https://erp.91miaoshou.com/",
-          "description": "妙手ERP，80万+跨境电商卖家的共同选择，致力于为TikTok、Shopee虾皮、Temu、Ozon、Lazada、SHEIN、速卖通等平台卖家提供采集、刊登、定价、营销、订单、代发采购、仓储、物流、财务等一体化服务",
+          "description": "妙手ERP，80万+跨境电商卖家的共同选择，支持TikTok、Shopee、Temu、Ozon、Lazada、SHEIN等平台一体化服务。",
           "icon": "",
           "enabled": true
         }
