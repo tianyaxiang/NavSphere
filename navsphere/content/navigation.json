@@ -40,14 +40,6 @@
           "enabled": true
         },
         {
-          "id": "1756265046826",
-          "title": "Chatgpt",
-          "href": "https://chatgpt.com/",
-          "description": "ChatGPT",
-          "icon": "/assets/favicon_1757171264200.png",
-          "enabled": true
-        },
-        {
           "id": "1756265845494",
           "title": "UTM Builder",
           "href": "https://utmbuilder.net/",
@@ -103,6 +95,14 @@
           "href": "https://gemini.google.com/",
           "description": "Gemini助手",
           "icon": "/assets/favicon_1756973006812.svg",
+          "enabled": true
+        },
+        {
+          "id": "1756265046826",
+          "title": "Chatgpt",
+          "href": "https://chatgpt.com/",
+          "description": "ChatGPT",
+          "icon": "/assets/favicon_1757171264200.png",
           "enabled": true
         }
       ],
