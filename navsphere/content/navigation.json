@@ -99,6 +99,15 @@
       "subCategories": []
     },
     {
+      "id": "1762305655061",
+      "title": "AI",
+      "icon": "Brain",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
       "id": "1756259095124",
       "title": "SEO优化",
       "icon": "Folder",
@@ -454,15 +463,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "1762305655061",
-      "title": "AI",
-      "icon": "Brain",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": []
     }
   ]
 }
