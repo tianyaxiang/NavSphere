@@ -104,6 +104,14 @@
           "description": "ChatGPT",
           "icon": "/assets/favicon_1757171264200.png",
           "enabled": true
+        },
+        {
+          "id": "site_1762305731527_i50gvj1ul",
+          "title": "Napkin AI",
+          "href": "https://app.napkin.ai/",
+          "description": "文本-图形生成",
+          "icon": "/assets/favicon_1762305712916.png",
+          "enabled": true
         }
       ],
       "subCategories": []
