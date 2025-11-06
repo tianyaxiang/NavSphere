@@ -112,6 +112,14 @@
           "description": "文本-图形生成",
           "icon": "/assets/favicon_1762305712916.png",
           "enabled": true
+        },
+        {
+          "id": "site_1762400487562_8l62488ht",
+          "title": "Stitch - Design with AI",
+          "href": "https://stitch.withgoogle.com/",
+          "description": "Stitch generates UIs",
+          "icon": "/assets/favicon_1762400471745.png",
+          "enabled": true
         }
       ],
       "subCategories": []
