@@ -102,17 +102,51 @@
           "enabled": true
         },
         {
-          "id": "1761117296013",
-          "title": "Cloudns",
-          "href": "https://www.cloudns.net",
-          "description": "访问 www.cloudns.net",
-          "icon": "/assets/favicon_1761117354981.png",
+          "id": "1761724833829",
+          "title": "Hacker News",
+          "href": "https://news.ycombinator.com/",
+          "description": "",
+          "icon": "/assets/favicon_1761724837449.svg",
           "enabled": true
         }
       ],
       "subCategories": [],
       "description": "",
       "enabled": true
+    },
+    {
+      "id": "1761724945457",
+      "title": "媒体资讯",
+      "icon": "Coffee",
+      "description": "",
+      "enabled": true,
+      "items": [
+        {
+          "id": "1761724973240",
+          "title": "Hacker News",
+          "href": "https://news.ycombinator.com/",
+          "description": "Hacker News 是一家关于计算机黑客和创业公司的社会化新闻网站，由保罗·格雷厄姆的创业孵化器 Y Combinator 创建。与其它社会化新闻网站不同的是 Hacker News 未登录访客没有赞成或反对一条提交新闻的选项，不过还是可以被有足够 Karma 的用户投赞成或反对票。简而言之，Hacker News 允许提交任何可以被理解为“任何满足人们求知欲”的新闻",
+          "icon": "/assets/favicon_1761724976680.svg",
+          "enabled": true
+        },
+        {
+          "id": "1761725040240",
+          "title": "Product Hunt",
+          "href": "https://www.producthunt.com/",
+          "description": "Product Hunt is a curation of the best new products, every day. Discover the latest mobile apps, websites, and technology products that everyone&#x27;s talking about.",
+          "icon": "/assets/favicon_1761725042705.ico",
+          "enabled": true
+        },
+        {
+          "id": "1761725058490",
+          "title": "Reddit",
+          "href": "https://www.reddit.com/",
+          "description": "Reddit 拥有超过 100,000 个 subreddit 社区，数百万用户在此聚集，讨论各自关心的话题。",
+          "icon": "/assets/favicon_1761725100238.png",
+          "enabled": true
+        }
+      ],
+      "subCategories": []
     },
     {
       "id": "9",
@@ -608,6 +642,47 @@
               "href": "https://free-for.dev/#/",
               "description": "Developers and Open Source authors now have a massive amount of services offering free tiers, but it can be hard to find them all to make informed decisions.",
               "icon": "/assets/favicon_1760507315276.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "044a42a2-b7be-4a19-bce8-1bc3fd98f052",
+          "title": "运维工具",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1761279460902",
+              "title": "宝塔",
+              "href": "https://www.bt.cn/new/index.html",
+              "description": "国内用户量很大的一家服务器运维面板",
+              "icon": "/assets/favicon_1761279490427.png",
+              "enabled": true
+            },
+            {
+              "id": "1761279549812",
+              "title": "1panel",
+              "href": "https://1panel.cn/",
+              "description": "1Panel 提供了一个直观的 Web 界面，帮助用户轻松管理 Linux 服务器中的应用、网站、文件、数据库以及大语言模型（LLMs）等。",
+              "icon": "/assets/favicon_1761279574408.png",
+              "enabled": true
+            },
+            {
+              "id": "1761279603255",
+              "title": "Dokploy",
+              "href": "https://dokploy.com/zh-Hans",
+              "description": "以前所未有的简洁和高效提供一站式项目、数据的管理以及系统监控。",
+              "icon": "/assets/favicon_1761279607527.svg",
+              "enabled": true
+            },
+            {
+              "id": "1761279682720",
+              "title": "Coolify",
+              "href": "https://coolify.io/",
+              "description": "Self-hosting platform with superpowers. Deploy apps, databases &#38; 280+ services to your server. Open-source alternative to Heroku.",
+              "icon": "/assets/favicon_1761279686786.png",
               "enabled": true
             }
           ]

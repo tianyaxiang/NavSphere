@@ -512,6 +512,10 @@ NavSphere/
 
  [Email](mailto:tianyaxiang@qq.com) | [Twitter](https://x.com/tianyaxiang)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=tianyaxiang/NavSphere&type=date&legend=top-left)](https://www.star-history.com/#tianyaxiang/NavSphere&type=date&legend=top-left)
+
 ## 🤝 贡献指南
 
 我们欢迎所有形式的贡献！
