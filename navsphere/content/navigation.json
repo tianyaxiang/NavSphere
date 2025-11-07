@@ -194,6 +194,14 @@
           "description": "",
           "icon": "/assets/favicon_1756973363265.png",
           "enabled": true
+        },
+        {
+          "id": "site_1762488176225_iyyi0s02j",
+          "title": "Google SERP Features Timeline",
+          "href": "https://brodieclark.com/notes/",
+          "description": "Latest Changes to SERP Features",
+          "icon": "/assets/favicon_1762488128547.png",
+          "enabled": true
         }
       ],
       "subCategories": [
