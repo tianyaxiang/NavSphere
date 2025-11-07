@@ -1355,7 +1355,16 @@
       "icon": "FolderKanban",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "1762493107181",
+          "title": "阿虚同学的储物间 - 做最好的互联网资源导航",
+          "href": "https://axutongxue.net/",
+          "description": "超2000W人次访问！这里是阿虚收集的精品网络资源导航，包括免费AI工具、免费影视、免费动漫、免费漫画、免费音乐、免费电子书、破解软件、破解APP等等，欢迎前来探索！",
+          "icon": "/assets/favicon_1762493128447.ico",
+          "enabled": true
+        }
+      ],
       "subCategories": []
     }
   ]
