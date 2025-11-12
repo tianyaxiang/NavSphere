@@ -16,6 +16,14 @@
           "enabled": true
         },
         {
+          "id": "site_1762400790763_iuxtp40ox",
+          "title": "DocMost Wiki",
+          "href": "https://wiki.guijige.com/home",
+          "description": "轨迹的Wiki",
+          "icon": "/assets/favicon_1762400756986.png",
+          "enabled": true
+        },
+        {
           "id": "1758181019998",
           "title": "Google",
           "href": "https://google.com",
@@ -77,14 +85,6 @@
           "href": "https://baidu.com",
           "description": "Rubbish",
           "icon": "/assets/favicon_1758181055080.png",
-          "enabled": true
-        },
-        {
-          "id": "site_1762400790763_iuxtp40ox",
-          "title": "DocMost Wiki",
-          "href": "https://wiki.guijige.com/home",
-          "description": "轨迹的Wiki",
-          "icon": "/assets/favicon_1762400756986.png",
           "enabled": true
         }
       ],
