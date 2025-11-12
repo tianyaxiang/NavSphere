@@ -194,6 +194,14 @@
           "description": "SERP 预览",
           "icon": "/assets/favicon_1758261742158.png",
           "enabled": true
+        },
+        {
+          "id": "1756265495362",
+          "title": "DA & SS Checker",
+          "href": "https://smallseotools.com/domain-authority-checker/",
+          "description": "DA & SS Checker",
+          "icon": "/assets/favicon_1761888867304.png",
+          "enabled": true
         }
       ],
       "subCategories": [
@@ -212,14 +220,6 @@
           "description": "外链建设相关工具",
           "enabled": true,
           "items": [
-            {
-              "id": "1756265495362",
-              "title": "DA & SS Checker",
-              "href": "https://smallseotools.com/domain-authority-checker/",
-              "description": "DA & SS Checker",
-              "icon": "/assets/favicon_1761888867304.png",
-              "enabled": true
-            },
             {
               "id": "1756265520353",
               "title": "Pitchbox",
