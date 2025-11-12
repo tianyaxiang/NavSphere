@@ -212,16 +212,7 @@
           "enabled": true
         }
       ],
-      "subCategories": [
-        {
-          "id": "70f8fa44-36dc-44d9-bbf4-9ba5f78d69b4",
-          "title": "网站内部优化",
-          "icon": "Folder",
-          "description": "",
-          "enabled": true,
-          "items": []
-        }
-      ]
+      "subCategories": []
     },
     {
       "id": "1756264411631",
