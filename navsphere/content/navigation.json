@@ -162,6 +162,14 @@
           "description": "SiteGuru SEO dashboard.",
           "icon": "/assets/favicon_1758180479744.ico",
           "enabled": true
+        },
+        {
+          "id": "1758180521250",
+          "title": "Ahrefs SEO Dashboard",
+          "href": "https://app.ahrefs.com/dashboard",
+          "description": "Track SEO performance and progress.",
+          "icon": "/assets/favicon_1758180526751.ico",
+          "enabled": true
         }
       ],
       "subCategories": [
@@ -172,14 +180,6 @@
           "description": "",
           "enabled": true,
           "items": [
-            {
-              "id": "1758180521250",
-              "title": "Ahrefs SEO Dashboard",
-              "href": "https://app.ahrefs.com/dashboard",
-              "description": "Track SEO performance and progress.",
-              "icon": "/assets/favicon_1758180526751.ico",
-              "enabled": true
-            },
             {
               "id": "1758180494017",
               "title": "PageSpeed Insights",
