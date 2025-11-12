@@ -202,6 +202,14 @@
           "description": "DA & SS Checker",
           "icon": "/assets/favicon_1761888867304.png",
           "enabled": true
+        },
+        {
+          "id": "1756265520353",
+          "title": "Pitchbox",
+          "href": "https://pitchbox.com/",
+          "description": "",
+          "icon": "/assets/favicon_1756973385842.png",
+          "enabled": true
         }
       ],
       "subCategories": [
@@ -219,16 +227,7 @@
           "icon": "Globe",
           "description": "外链建设相关工具",
           "enabled": true,
-          "items": [
-            {
-              "id": "1756265520353",
-              "title": "Pitchbox",
-              "href": "https://pitchbox.com/",
-              "description": "",
-              "icon": "/assets/favicon_1756973385842.png",
-              "enabled": true
-            }
-          ]
+          "items": []
         }
       ]
     },
