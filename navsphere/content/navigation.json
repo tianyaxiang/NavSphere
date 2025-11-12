@@ -146,7 +146,16 @@
       "icon": "Folder",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "1758180430270",
+          "title": "Google Search Console",
+          "href": "https://search.google.com/search-console",
+          "description": "Google Search Console",
+          "icon": "/assets/favicon_1758180450222.png",
+          "enabled": true
+        }
+      ],
       "subCategories": [
         {
           "id": "70f8fa44-36dc-44d9-bbf4-9ba5f78d69b4",
@@ -155,14 +164,6 @@
           "description": "",
           "enabled": true,
           "items": [
-            {
-              "id": "1758180430270",
-              "title": "Google Search Console",
-              "href": "https://search.google.com/search-console",
-              "description": "Google Search Console",
-              "icon": "/assets/favicon_1758180450222.png",
-              "enabled": true
-            },
             {
               "id": "1758180469936",
               "title": "SiteGuru",
