@@ -146,56 +146,7 @@
       "icon": "Folder",
       "description": "",
       "enabled": true,
-      "items": [
-        {
-          "id": "1756259104659",
-          "title": "WordCounter",
-          "href": "https://wordcounter.net/",
-          "description": "字符数统计",
-          "icon": "/assets/favicon_1756808437505.ico",
-          "enabled": true
-        },
-        {
-          "id": "1756259127819",
-          "title": "Microsoft Clarity",
-          "href": "https://www.bing.com/webmasters",
-          "description": "",
-          "icon": "/assets/favicon_1756973326252.ico",
-          "enabled": true
-        },
-        {
-          "id": "1756259195922",
-          "title": "Ahrefs Webmaster",
-          "href": "https://app.ahrefs.com/",
-          "description": "Analyze websites, track social media, build backlinks - Ahrefs has you covered. Try our marketing and SEO tools Site Explorer and Content Explorer today!",
-          "icon": "/assets/favicon_1756973336722.ico",
-          "enabled": true
-        },
-        {
-          "id": "1756259242487",
-          "title": "Google Analytics 4",
-          "href": "https://analytics.google.com/",
-          "description": "",
-          "icon": "/assets/favicon_1756973346033.png",
-          "enabled": true
-        },
-        {
-          "id": "1756259257861",
-          "title": "SiteGuru",
-          "href": "https://app.siteguru.co/sites",
-          "description": "Sign in to access your SiteGuru account. Manage your websites and view reports from the SiteGuru dashboard.",
-          "icon": "/assets/favicon_1756973356620.ico",
-          "enabled": true
-        },
-        {
-          "id": "1756259275300",
-          "title": "Google Search Console",
-          "href": "https://search.google.com/search-console",
-          "description": "",
-          "icon": "/assets/favicon_1756973363265.png",
-          "enabled": true
-        }
-      ],
+      "items": [],
       "subCategories": [
         {
           "id": "70f8fa44-36dc-44d9-bbf4-9ba5f78d69b4",
