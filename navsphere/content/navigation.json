@@ -220,14 +220,6 @@
           "description": "",
           "enabled": true,
           "items": []
-        },
-        {
-          "id": "c50c9dda-4f65-43db-87de-25f5abc589f3",
-          "title": "外链建设",
-          "icon": "Globe",
-          "description": "外链建设相关工具",
-          "enabled": true,
-          "items": []
         }
       ]
     },
