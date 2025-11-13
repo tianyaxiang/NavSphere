@@ -136,6 +136,14 @@
           "description": "Chat with DeepSeek AI",
           "icon": "/assets/favicon_1762487515498.svg",
           "enabled": true
+        },
+        {
+          "id": "site_1763002893194_d0ogjs63t",
+          "title": "Lovart | 全球首个设计智能体",
+          "href": "https://www.lovart.ai/",
+          "description": "AI智能设计体",
+          "icon": "/assets/favicon_1763002868381.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
