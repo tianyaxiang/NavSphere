@@ -76,11 +76,77 @@
           "description": "Beautiful Screenshots and Mockups\nCusomizable, eye-catching presentation for any content",
           "icon": "/assets/img_1741747241014.png",
           "enabled": true
+        },
+        {
+          "id": "item-1754218579319",
+          "enabled": true,
+          "title": "DeepSeek - 探索未至之境",
+          "href": "https://chat.deepseek.com/",
+          "description": "Chat with DeepSeek AI – your intelligent assistant for coding, content creation, file reading, and more. Upload documents, engage in long-context conversations, and get expert help in AI, natural language processing, and beyond. | 深度求索（DeepSeek）助力编程代码开发、创意写作、文件处理等任务，支持文件上传及长文本对话，随时为您提供高效的AI支持。",
+          "icon": "/assets/favicon_1754218571142.svg"
+        },
+        {
+          "id": "1754229699374",
+          "title": "Lucide",
+          "href": "https://lucide.dev/",
+          "description": "Beautiful & consistent icon toolkit made by the community.",
+          "icon": "/assets/favicon_1754229702059.ico",
+          "enabled": true
+        },
+        {
+          "id": "1760507233911",
+          "title": "Free for Developers",
+          "href": "https://free-for.dev/#/",
+          "description": "Developers and Open Source authors now have a massive amount of services offering free tiers, but it can be hard to find them all to make informed decisions.",
+          "icon": "/assets/favicon_1760507241370.png",
+          "enabled": true
+        },
+        {
+          "id": "1761724833829",
+          "title": "Hacker News",
+          "href": "https://news.ycombinator.com/",
+          "description": "",
+          "icon": "/assets/favicon_1761724837449.svg",
+          "enabled": true
         }
       ],
       "subCategories": [],
       "description": "",
       "enabled": true
+    },
+    {
+      "id": "1761724945457",
+      "title": "媒体资讯",
+      "icon": "Coffee",
+      "description": "",
+      "enabled": true,
+      "items": [
+        {
+          "id": "1761724973240",
+          "title": "Hacker News",
+          "href": "https://news.ycombinator.com/",
+          "description": "Hacker News 是一家关于计算机黑客和创业公司的社会化新闻网站，由保罗·格雷厄姆的创业孵化器 Y Combinator 创建。与其它社会化新闻网站不同的是 Hacker News 未登录访客没有赞成或反对一条提交新闻的选项，不过还是可以被有足够 Karma 的用户投赞成或反对票。简而言之，Hacker News 允许提交任何可以被理解为“任何满足人们求知欲”的新闻",
+          "icon": "/assets/favicon_1761724976680.svg",
+          "enabled": true
+        },
+        {
+          "id": "1761725040240",
+          "title": "Product Hunt",
+          "href": "https://www.producthunt.com/",
+          "description": "Product Hunt is a curation of the best new products, every day. Discover the latest mobile apps, websites, and technology products that everyone&#x27;s talking about.",
+          "icon": "/assets/favicon_1761725042705.ico",
+          "enabled": true
+        },
+        {
+          "id": "1761725058490",
+          "title": "Reddit",
+          "href": "https://www.reddit.com/",
+          "description": "Reddit 拥有超过 100,000 个 subreddit 社区，数百万用户在此聚集，讨论各自关心的话题。",
+          "icon": "/assets/favicon_1761725100238.png",
+          "enabled": true
+        }
+      ],
+      "subCategories": []
     },
     {
       "id": "9",
@@ -134,6 +200,14 @@
               "description": "一个人工智能助手，旨在为您提供信息、解答问题和帮助您完成各种任务。",
               "icon": "/assets/img_1739871936809.png",
               "enabled": true
+            },
+            {
+              "id": "1759046285125",
+              "title": "Grok",
+              "href": "https://grok.com/",
+              "description": "Grok is a free AI assistant designed by xAI to maximize truth and objectivity. Grok offers real-time search, image generation, trend analysis, and more.",
+              "icon": "/assets/favicon_1759046289851.png",
+              "enabled": true
             }
           ]
         },
@@ -175,6 +249,64 @@
               "href": "https://smithery.ai/",
               "description": "各种各样的 MCP Server",
               "icon": "/assets/img_1752554273115.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "428d0ba1-78f8-48d6-83db-f837f3830e1f",
+          "title": "多媒体",
+          "icon": "BookOpen",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1760435371540",
+              "title": "Suno | AI Music",
+              "href": "https://suno.com/home",
+              "description": "Create stunning original music for free in seconds using AI. Make your own masterpieces, share with friends, and discover music from artists worldwide.",
+              "icon": "/assets/favicon_1760435376153.ico",
+              "enabled": true
+            },
+            {
+              "id": "1760435417839",
+              "title": "Sora",
+              "href": "https://sora.chatgpt.com/",
+              "description": "Transform text and images into immersive videos. Animate stories, visualize ideas, and bring your concepts to life.",
+              "icon": "/assets/favicon_1760435422176.ico",
+              "enabled": true
+            },
+            {
+              "id": "1760435669948",
+              "title": "Nano Banana",
+              "href": "https://aistudio.google.com/gen-media",
+              "description": "在AI 图像生成领域，神秘的Nano Banana 悄悄窜起，现已正名为Gemini 2.5 Flash Image。它最初并非透过Google 官方宣传引起关注，而是在LM Arena 评比平台上表现亮眼，还掀起 Gemini 公仔风潮！",
+              "icon": "/assets/favicon_1760435673911.png",
+              "enabled": true
+            },
+            {
+              "id": "1760605598288",
+              "title": "veo-3",
+              "href": "https://aistudio.google.com/models/veo-3",
+              "description": "The fastest path from prompt to production with Gemini",
+              "icon": "/assets/favicon_1760605601454.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "eb656a11-5442-4670-9cb6-9ba9bd08682f",
+          "title": "AI 代码生成助手",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1760513538759",
+              "title": "v0 by Vercel",
+              "href": "https://v0.app/",
+              "description": "Your collaborative AI assistant to design, iterate, and scale full-stack applications for the web.",
+              "icon": "/assets/favicon_1760513560381.png",
               "enabled": true
             }
           ]
@@ -263,6 +395,14 @@
               "description": "Netlify is the essential platform for the delivery of exceptional and dynamic web experiences, without limitations.",
               "icon": "/assets/img_1735612745862.png",
               "enabled": true
+            },
+            {
+              "id": "1755225929754",
+              "title": "Tencent -  EdgeOne亚洲最佳CDN、边缘和安全解决方案",
+              "href": "https://edgeone.ai/zh",
+              "description": "Tencent EdgeOne，亚洲领先的CDN，利用腾讯先进的边缘节点提供卓越的边缘解决方案，用于加速、安全、无服务器和视频。",
+              "icon": "/assets/favicon_1755225933031.ico",
+              "enabled": true
             }
           ]
         },
@@ -295,6 +435,22 @@
               "href": "https://excalidraw.com/",
               "description": "Excalidraw是免费的在线协作画图工具。\n\n手写风格的草图非常好看；\n漂亮的图库。",
               "icon": "/assets/img_1736922499401.png",
+              "enabled": true
+            },
+            {
+              "id": "1760427418959",
+              "title": "Node-Based UIs in React - React Flow",
+              "href": "https://reactflow.dev/",
+              "description": "Highly customizable React library for workflow builders, no-code apps, image processing, visualizers, and more",
+              "icon": "/assets/favicon_1760427423590.ico",
+              "enabled": true
+            },
+            {
+              "id": "1760427440146",
+              "title": "LottieFiles: Download Free lightweight animations",
+              "href": "https://lottiefiles.com/",
+              "description": "Effortlessly bring the smallest, free, ready-to-use motion graphics for the web, app, social, and designs. Create, edit, test, collaborate, and ship Lottie animations in no time!",
+              "icon": "/assets/favicon_1760427449858.png",
               "enabled": true
             }
           ]
@@ -353,6 +509,265 @@
               "description": "Unleash Claude’s raw power directly in your terminal. Search million-line codebases instantly. Turn hours-long workflows into a single command. Your tools. Your workflow. Your codebase, evolving at thought speed.",
               "icon": "/assets/img_1752662771107.png",
               "enabled": true
+            },
+            {
+              "id": "1760422942439",
+              "title": "Codex | OpenAI",
+              "href": "https://openai.com/zh-Hans-CN/codex/",
+              "description": "Codex 是 OpenAI 推出的一系列人工智能编码工具，通过将任务委托给强大的云端和本地编码代理，帮助开发人员提升工作效率。",
+              "icon": "/assets/favicon_1760422969029.ico",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "47206329-6eed-422c-bdc9-c7cec1eb5190",
+          "title": "域名注册",
+          "icon": "Files",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1754295485849",
+              "title": "namecheap",
+              "href": "https://www.namecheap.com/",
+              "description": "Register domain names at Namecheap. Buy cheap domain names and enjoy 24/7 support. With over 18 million domains under management, you know you’re in good hands.",
+              "icon": "/assets/favicon_1754295511938.ico",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "457c35b5-fcfb-4c72-8a9a-af21f9371e6b",
+          "title": "付费订阅托管平台",
+          "icon": "BookOpen",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1759044488616",
+              "title": "wordpress",
+              "href": "https://wordpress.org/",
+              "description": "Open source software which you can use to easily create a beautiful website, blog, or app.",
+              "icon": "/assets/favicon_1759044512474.ico",
+              "enabled": true
+            },
+            {
+              "id": "1759044534148",
+              "title": "listmonk",
+              "href": "https://listmonk.app/",
+              "description": " Free and open source self-hosted newsletter, mailing list manager, and transactional mails",
+              "icon": "/assets/favicon_1759044556303.png",
+              "enabled": true
+            },
+            {
+              "id": "1759044578679",
+              "title": "Ghost",
+              "href": "https://ghost.org/",
+              "description": "Beautiful, modern publishing with email newsletters and paid subscriptions built-in. Used by Platformer, 404Media, Lever News, Tangle, The Browser, and thousands more.",
+              "icon": "/assets/favicon_1759044603255.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "2d7d4354-20f1-41a5-beeb-068031113bca",
+          "title": "视频制作",
+          "icon": "BookOpen",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1759282146186",
+              "title": "Remotion",
+              "href": "https://www.remotion.dev/",
+              "description": "Make videos programmatically.Create real MP4 videos with React.\nParametrize content, render server-side and build applications.",
+              "icon": "/assets/favicon_1759282148802.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "b0806415-2e79-465d-9abf-f23c22028f36",
+          "title": "动画工具",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1760429456405",
+              "title": "Remotion | Make videos programmatically",
+              "href": "https://www.remotion.dev/",
+              "description": "Make videos programmatically，用代码制作视频",
+              "icon": "/assets/favicon_1760429458803.png",
+              "enabled": true
+            },
+            {
+              "id": "1760429617715",
+              "title": "Motion Canvas",
+              "href": "https://motioncanvas.io/",
+              "description": "A TypeScript library for creating animated videos using the Canvas API.",
+              "icon": "/assets/favicon_1760429621544.svg",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "e4c71dbf-d8c2-4dba-8c7e-b9cef0366a84",
+          "title": "开源组件&SDK",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1760433270740",
+              "title": "AI SDK",
+              "href": "https://ai-sdk.dev/",
+              "description": "The AI Toolkit for TypeScript, from the creators of Next.js.",
+              "icon": "/assets/favicon_1760433274445.ico",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "5820a691-8aa4-4479-a90f-3789744d944a",
+          "title": "知识库",
+          "icon": "Code",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1760507310883",
+              "title": "Free for Developers",
+              "href": "https://free-for.dev/#/",
+              "description": "Developers and Open Source authors now have a massive amount of services offering free tiers, but it can be hard to find them all to make informed decisions.",
+              "icon": "/assets/favicon_1760507315276.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "044a42a2-b7be-4a19-bce8-1bc3fd98f052",
+          "title": "运维工具",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1761279460902",
+              "title": "宝塔",
+              "href": "https://www.bt.cn/new/index.html",
+              "description": "国内用户量很大的一家服务器运维面板",
+              "icon": "/assets/favicon_1761279490427.png",
+              "enabled": true
+            },
+            {
+              "id": "1761279549812",
+              "title": "1panel",
+              "href": "https://1panel.cn/",
+              "description": "1Panel 提供了一个直观的 Web 界面，帮助用户轻松管理 Linux 服务器中的应用、网站、文件、数据库以及大语言模型（LLMs）等。",
+              "icon": "/assets/favicon_1761279574408.png",
+              "enabled": true
+            },
+            {
+              "id": "1761279603255",
+              "title": "Dokploy",
+              "href": "https://dokploy.com/zh-Hans",
+              "description": "以前所未有的简洁和高效提供一站式项目、数据的管理以及系统监控。",
+              "icon": "/assets/favicon_1761279607527.svg",
+              "enabled": true
+            },
+            {
+              "id": "1761279682720",
+              "title": "Coolify",
+              "href": "https://coolify.io/",
+              "description": "Self-hosting platform with superpowers. Deploy apps, databases &#38; 280+ services to your server. Open-source alternative to Heroku.",
+              "icon": "/assets/favicon_1761279686786.png",
+              "enabled": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1760610695230",
+      "title": "投资者工具包",
+      "icon": "Building",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": [
+        {
+          "id": "1cf1cbfa-1a31-4b39-a6ca-a05f153ccbf5",
+          "title": "数据与分析",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1760611119341",
+              "title": "TradingView",
+              "href": "https://www.tradingview.com/",
+              "description": "Where the world charts, chats, and trades markets. We&#39;re a supercharged super-charting platform and social network for traders and investors. Free to sign up.",
+              "icon": "/assets/favicon_1760611123647.ico",
+              "enabled": true
+            },
+            {
+              "id": "1760611134039",
+              "title": "巨潮资讯网",
+              "href": "https://www.cninfo.com.cn/",
+              "description": "巨潮资讯网",
+              "icon": "/assets/favicon_1760611181157.png",
+              "enabled": true
+            },
+            {
+              "id": "1760611219040",
+              "title": "价值投资导航数据",
+              "href": "http://value500.com/",
+              "description": "坚守了十四年的投资数据与资讯网站",
+              "icon": "/assets/favicon_1760611256663.png",
+              "enabled": true
+            },
+            {
+              "id": "1760611357060",
+              "title": "集思录",
+              "href": "https://www.jisilu.cn/",
+              "description": "集思录，一个以数据为本的投资社区",
+              "icon": "/assets/favicon_1760611378684.png",
+              "enabled": true
+            },
+            {
+              "id": "1760669308127",
+              "title": "看财报-价值投资分析工具",
+              "href": "https://www.kancaibao.com/",
+              "description": "看财报为价值投资者提供上市公司财务数据,各项基本面分析指标,同时提供DCF折现工具、杜邦分析表、历史PE（市盈率）和PB（市净率）数据、还有多家公司对比和企业估值功能",
+              "icon": "/assets/favicon_1760669311999.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "a45066a4-3622-43a4-acbb-873da6268788",
+          "title": "溢价观测工具",
+          "icon": "Database",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1760611489487",
+              "title": "集思录-实时数据",
+              "href": "https://www.jisilu.cn/data/cbnew/#cb",
+              "description": "集思录-实时数据",
+              "icon": "/assets/favicon_1760611535023.png",
+              "enabled": true
+            },
+            {
+              "id": "1760611595643",
+              "title": "palmmicro",
+              "href": "https://palmmicro.com/woody/res/chinafuturecn.php",
+              "description": "A股商品等基金净值计算工具",
+              "icon": "/assets/favicon_1760611626932.png",
+              "enabled": true
             }
           ]
         }
@@ -400,12 +815,61 @@
           ]
         },
         {
+          "id": "5737638e-0c17-4377-9e67-12cf0fb2acd5",
+          "title": "国外平台",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1755168164096",
+              "title": "Reddit - The heart of the internet",
+              "href": "https://www.reddit.com/",
+              "description": "Reddit is where millions of people gather for conversations about the things they care about, in over 100,000 subreddit communities.",
+              "icon": "/assets/favicon_1755168414977.png",
+              "enabled": true
+            },
+            {
+              "id": "1_11_5",
+              "title": "Producthunt",
+              "href": "https://www.producthunt.com/",
+              "description": "发现新鲜有趣的产品",
+              "icon": "/assets/images/logos/producthunt.png",
+              "enabled": true
+            },
+            {
+              "id": "1759031046821",
+              "title": "Hacker News",
+              "href": "https://news.ycombinator.com/",
+              "description": "Hacker News 是一家关于计算机黑客和创业公司的社会化新闻网站，由保罗·格雷厄姆的创业孵化器 Y Combinator 创建。与其它社会化新闻网站不同的是 Hacker News 未登录访客没有赞成或反对一条提交新闻的选项，不过还是可以被有足够 Karma 的用户投赞成或反对票。简而言之，Hacker News 允许提交任何可以被理解为“任何满足人们求知欲”的新闻",
+              "icon": "/assets/favicon_1759031156358.svg",
+              "enabled": true
+            }
+          ]
+        },
+        {
           "id": "2d33f756-959e-4171-9e0e-b616bcd274be",
           "title": "公众号排版",
           "icon": "Edit",
           "description": "",
           "enabled": true,
           "items": [
+            {
+              "id": "1754791068961",
+              "title": "NeuraPress Pro Markdown Editor",
+              "href": "https://mp.leti.ltd/",
+              "description": "NeuraPress 是一个现代化的 Markdown 编辑器，专注于提供优质的内容排版体验。 响应式设计，支持移动设备，让创作变得更加高效。\n\n",
+              "icon": "/assets/favicon_1754791082337.svg",
+              "enabled": true
+            },
+            {
+              "id": "1754791158725",
+              "title": "NeuraPress",
+              "href": "https://md.leti.ltd/",
+              "description": "Markdown 转微信公众号内容神器",
+              "icon": "/assets/favicon_1754791168416.svg",
+              "enabled": true
+            },
             {
               "id": "1735456910129",
               "title": "WeChat Markdown Editor",
@@ -421,6 +885,14 @@
               "description": "微信公众号样式一键转换，知乎/语雀专属排版优化",
               "icon": "/assets/img_1737961266055.png",
               "enabled": true
+            },
+            {
+              "id": "item-1756907352615",
+              "enabled": true,
+              "title": "MD2Card - Markdown 转知识卡片工具",
+              "href": "https://md2card.com/zh/editor",
+              "description": "MD2Card 是一个免费的 Markdown 转知识卡片工具，支持一键生成小红书风格海报、社交媒体文案排版，让创作者轻松制作精美的图文内容。支持多种主题风格、长文自动拆分、一键导出图片，让你的创作更加高效。",
+              "icon": "/assets/favicon_1756907338099.ico"
             }
           ]
         },
@@ -445,6 +917,80 @@
               "href": "https://cursorful.com/",
               "description": "具有自动缩放功能的屏幕录像 使用 Cursorful 浏览器扩展程序录制精美的屏幕录像跟随光标缩放或在编辑器中加载您自己的视频并可以手动添加缩放。",
               "icon": "/assets/img_1753396105178.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "0ed6d8b1-effe-4535-8cde-60ec38f9c96c",
+          "title": "AI 检测工具",
+          "icon": "BookOpen",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1754573112532",
+              "title": "腾讯朱雀AI文本检测",
+              "href": "https://matrix.tencent.com/ai-detect/",
+              "description": "腾讯朱雀AI文本检测基于多种先进的人工智能模型，构造数百万级别的数据进行训练，能够识别出人类和AI的书写模式。该系统不仅具备优秀的英文检测能力，在处理中文数据方面表现尤为出色。\n",
+              "icon": "/assets/img_1754573290976.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "6e0eb7f0-860e-43f0-bede-6e36205483e5",
+          "title": "付费订阅平台",
+          "icon": "BookOpen",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1759043230164",
+              "title": "Quaily | 为创作者提供现代人工智慧新闻通讯服务",
+              "href": "https://quaily.com/",
+              "description": "Quaily 是一个现代化的，基于 AI 的，新闻订阅服务。它支持多种推送渠道，包括邮件，telegram 和 discord。它与流行的编辑器（如 Obsidian 和 VScode）有很好的集成。",
+              "icon": "/assets/favicon_1759043242645.png",
+              "enabled": true
+            },
+            {
+              "id": "1759043258513",
+              "title": "Medium: Read and write stories.",
+              "href": "https://medium.com/",
+              "description": "On Medium, anyone can share insightful perspectives, useful knowledge, and life wisdom with the world.",
+              "icon": "/assets/favicon_1759043298903.png",
+              "enabled": true
+            },
+            {
+              "id": "1759043324693",
+              "title": "Substack",
+              "href": "https://substack.com/",
+              "description": "The app for independent voices",
+              "icon": "/assets/favicon_1759043330135.svg",
+              "enabled": true
+            },
+            {
+              "id": "1759043375128",
+              "title": "微信公众平台",
+              "href": "https://mp.weixin.qq.com/",
+              "description": "微信公众平台支持付费合集，付费文章",
+              "icon": "/assets/favicon_1759043379047.ico",
+              "enabled": true
+            },
+            {
+              "id": "1759043449477",
+              "title": "小报童",
+              "href": "https://xiaobot.net/",
+              "description": "付费专栏，体面而用心地创作",
+              "icon": "/assets/favicon_1759043454631.png",
+              "enabled": true
+            },
+            {
+              "id": "1759043585524",
+              "title": "知识星球",
+              "href": "https://zsxq.com/",
+              "description": "知识星球是创作者连接铁杆粉丝，实现知识变现的工具。任何从事创作或艺术的人，例如艺术家、工匠、教师、学术研究、科普等，只要能获得一千位铁杆粉丝，就足够生计无忧，自由创作。社群管理、内容沉淀、链接粉丝等就在知识星球。",
+              "icon": "/assets/favicon_1759043590213.ico",
               "enabled": true
             }
           ]
@@ -804,6 +1350,41 @@
               "href": "https://unsplash.com/",
               "description": "免费高清图片",
               "icon": "/assets/images/logos/unsplash.png",
+              "enabled": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1760512235168",
+      "title": "开源项目",
+      "icon": "Code",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": [
+        {
+          "id": "c58e0eb7-8d56-46cc-a00e-841e07500066",
+          "title": "文档工具",
+          "icon": "Edit",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1760512389014",
+              "title": "Docusaurus",
+              "href": "https://docusaurus.io/",
+              "description": "Build optimized websites quickly, focus on your content.",
+              "icon": "/assets/favicon_1760512394163.png",
+              "enabled": true
+            },
+            {
+              "id": "1760512493923",
+              "title": "VuePress",
+              "href": "https://vuepress.vuejs.org/",
+              "description": "Vue 驱动的静态网站生成器",
+              "icon": "/assets/favicon_1760512644195.png",
               "enabled": true
             }
           ]

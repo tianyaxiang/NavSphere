@@ -362,6 +362,22 @@
               "description": "Design Your Perfect \nshadcn/ui\n Theme\nCustomize colors, typography, and layouts with a real-time preview. No signup required.",
               "icon": "/assets/img_1751433579053.png",
               "enabled": true
+            },
+            {
+              "id": "1763352554793",
+              "title": "Shadcn Marketing Blocks | Tailark",
+              "href": "https://tailark.com/",
+              "description": "Speed up your workflow with responsive, pre-built UI blocks designed for marketing websites.",
+              "icon": "/assets/favicon_1763352557389.svg",
+              "enabled": true
+            },
+            {
+              "id": "1763380040947",
+              "title": "IndieHub ",
+              "href": "https://indiehub.best/tool?category=ui-component",
+              "description": "IndieHub is a community for Indie Makers to discover tools, launch products, and ship applications faster and better.",
+              "icon": "/assets/favicon_1763380043621.ico",
+              "enabled": true
             }
           ]
         },
@@ -625,6 +641,14 @@
               "href": "https://ai-sdk.dev/",
               "description": "The AI Toolkit for TypeScript, from the creators of Next.js.",
               "icon": "/assets/favicon_1760433274445.ico",
+              "enabled": true
+            },
+            {
+              "id": "1763352609100",
+              "title": "Payloadcms",
+              "href": "https://payloadcms.com/",
+              "description": "访问 payloadcms.com",
+              "icon": "/assets/favicon_1763352611319.png",
               "enabled": true
             }
           ]
