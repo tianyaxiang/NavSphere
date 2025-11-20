@@ -218,6 +218,14 @@
           "description": "",
           "icon": "/assets/favicon_1756973385842.png",
           "enabled": true
+        },
+        {
+          "id": "site_1763622871944_h2s1yuaxm",
+          "title": "Spam Score Checker - Check Spam Score in Bulk",
+          "href": "https://www.dapachecker.org/spam-score-checker",
+          "description": "DA, PA, SS检查",
+          "icon": "/assets/favicon_1763622855905.png",
+          "enabled": true
         }
       ],
       "subCategories": []
