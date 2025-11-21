@@ -337,9 +337,9 @@
         },
         {
           "id": "site_1763002835694_houhu9uwr",
-          "title": "Newsletters spam test by mail-tester.com",
+          "title": "Newsletters Spam Test",
           "href": "https://www.mail-tester.com/",
-          "description": "Check your newsletter",
+          "description": "Newsletter Test",
           "icon": "/assets/favicon_1763002831240.png",
           "enabled": true
         }
