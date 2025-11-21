@@ -86,6 +86,14 @@
           "description": "Rubbish",
           "icon": "/assets/favicon_1758181055080.png",
           "enabled": true
+        },
+        {
+          "id": "site_1763715783510_r1sgz0iba",
+          "title": "Pixso",
+          "href": "https://pixso.cn/",
+          "description": "在线原型图",
+          "icon": "/assets/favicon_1763715771295.png",
+          "enabled": true
         }
       ],
       "subCategories": []
