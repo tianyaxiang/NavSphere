@@ -220,19 +220,19 @@
           "enabled": true
         },
         {
-          "id": "1756265520353",
-          "title": "Pitchbox",
-          "href": "https://pitchbox.com/",
-          "description": "",
-          "icon": "/assets/favicon_1756973385842.png",
-          "enabled": true
-        },
-        {
           "id": "site_1763622871944_h2s1yuaxm",
           "title": "Spam Score Checker",
           "href": "https://www.dapachecker.org/spam-score-checker",
           "description": "DA, PA, SS检查",
           "icon": "/assets/favicon_1763622855905.png",
+          "enabled": true
+        },
+        {
+          "id": "1756265520353",
+          "title": "Pitchbox",
+          "href": "https://pitchbox.com/",
+          "description": "",
+          "icon": "/assets/favicon_1756973385842.png",
           "enabled": true
         }
       ],
