@@ -52,7 +52,7 @@
           "title": "Gmail",
           "href": "https://mail.google.com/",
           "description": "Google Mail",
-          "icon": "https://www.google.com/s2/favicons?sz=128&domain=mail.google.com",
+          "icon": "/assets/favicon_1758181032944.ico",
           "enabled": true
         },
         {
