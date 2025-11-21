@@ -370,19 +370,19 @@
           "enabled": true,
           "items": [
             {
-              "id": "1756829513553",
-              "title": "GitHub",
-              "href": "https://github.com/",
-              "description": "开源世界",
-              "icon": "/assets/favicon_1757171480395.png",
-              "enabled": true
-            },
-            {
               "id": "1_3",
               "title": "Cloudflare",
               "href": "https://dash.cloudflare.com/",
               "description": "域名解析管理",
               "icon": "/assets/images/logos/cloudflar.ico",
+              "enabled": true
+            },
+            {
+              "id": "1756829513553",
+              "title": "GitHub",
+              "href": "https://github.com/",
+              "description": "开源世界",
+              "icon": "/assets/favicon_1757171480395.png",
               "enabled": true
             },
             {
