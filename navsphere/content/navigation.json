@@ -24,6 +24,14 @@
           "enabled": true
         },
         {
+          "id": "1758697971155",
+          "title": "Gmail",
+          "href": "https://mail.google.com/",
+          "description": "Google Mail",
+          "icon": "/assets/favicon_1758181032944.ico",
+          "enabled": true
+        },
+        {
           "id": "1757404866335",
           "title": "闪击工作台",
           "href": "https://nav.sankki.com",
@@ -45,14 +53,6 @@
           "href": "https://www.bestrandoms.com/random-address-in-us",
           "description": "Random Street Address",
           "icon": "/assets/favicon_1756973025651.png",
-          "enabled": true
-        },
-        {
-          "id": "1758697971155",
-          "title": "Gmail",
-          "href": "https://mail.google.com/",
-          "description": "Google Mail",
-          "icon": "/assets/favicon_1758181032944.ico",
           "enabled": true
         },
         {
