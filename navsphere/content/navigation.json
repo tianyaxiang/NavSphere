@@ -172,6 +172,14 @@
           "enabled": true
         },
         {
+          "id": "1758180494017",
+          "title": "PageSpeed Insights",
+          "href": "https://pagespeed.web.dev/",
+          "description": "网页速度测试",
+          "icon": "/assets/favicon_1758180499106.png",
+          "enabled": true
+        },
+        {
           "id": "1758180430270",
           "title": "Google Search Console",
           "href": "https://search.google.com/search-console",
@@ -193,14 +201,6 @@
           "href": "https://app.ahrefs.com/dashboard",
           "description": "Track SEO performance and progress.",
           "icon": "/assets/favicon_1758180526751.ico",
-          "enabled": true
-        },
-        {
-          "id": "1758180494017",
-          "title": "PageSpeed Insights",
-          "href": "https://pagespeed.web.dev/",
-          "description": "网页速度测试",
-          "icon": "/assets/favicon_1758180499106.png",
           "enabled": true
         },
         {
