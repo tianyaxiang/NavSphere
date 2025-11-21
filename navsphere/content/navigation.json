@@ -427,6 +427,14 @@
           "enabled": true,
           "items": [
             {
+              "id": "1758180644657",
+              "title": "WHOIS Search",
+              "href": "https://who.is/",
+              "description": "域名查询",
+              "icon": "/assets/favicon_1758180649670.ico",
+              "enabled": true
+            },
+            {
               "id": "1756830368986",
               "title": "Namecheap",
               "href": "https://namecheap.com",
@@ -456,14 +464,6 @@
               "href": "https://hostverge.com/",
               "description": "WP Hosting",
               "icon": "/assets/favicon_1757172623252.png",
-              "enabled": true
-            },
-            {
-              "id": "1758180644657",
-              "title": "WHOIS Search",
-              "href": "https://who.is/",
-              "description": "域名查询",
-              "icon": "/assets/favicon_1758180649670.ico",
               "enabled": true
             }
           ]
