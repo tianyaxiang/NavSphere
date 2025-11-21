@@ -164,6 +164,14 @@
       "enabled": true,
       "items": [
         {
+          "id": "site_1762488176225_iyyi0s02j",
+          "title": "Google SERP Features Timeline",
+          "href": "https://brodieclark.com/notes/",
+          "description": "Latest Changes to SERP Features",
+          "icon": "/assets/favicon_1762488128547.png",
+          "enabled": true
+        },
+        {
           "id": "1758180430270",
           "title": "Google Search Console",
           "href": "https://search.google.com/search-console",
@@ -193,14 +201,6 @@
           "href": "https://pagespeed.web.dev/",
           "description": "网页速度测试",
           "icon": "/assets/favicon_1758180499106.png",
-          "enabled": true
-        },
-        {
-          "id": "site_1762488176225_iyyi0s02j",
-          "title": "Google SERP Features Timeline",
-          "href": "https://brodieclark.com/notes/",
-          "description": "Latest Changes to SERP Features",
-          "icon": "/assets/favicon_1762488128547.png",
           "enabled": true
         },
         {
