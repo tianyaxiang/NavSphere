@@ -378,6 +378,22 @@
               "enabled": true
             },
             {
+              "id": "1758158559851",
+              "title": "RailWay",
+              "href": "https://railway.com/dashboard",
+              "description": "PaaS，云端部署",
+              "icon": "/assets/favicon_1758158570835.ico",
+              "enabled": true
+            },
+            {
+              "id": "1758158583936",
+              "title": "Zeabur",
+              "href": "https://zeabur.com/",
+              "description": "PaaS，云端部署",
+              "icon": "/assets/favicon_1758158592648.png",
+              "enabled": true
+            },
+            {
               "id": "1756829513553",
               "title": "GitHub",
               "href": "https://github.com/",
@@ -394,27 +410,11 @@
               "enabled": true
             },
             {
-              "id": "1758158559851",
-              "title": "RailWay",
-              "href": "https://railway.com/dashboard",
-              "description": "PaaS，云端部署",
-              "icon": "/assets/favicon_1758158570835.ico",
-              "enabled": true
-            },
-            {
               "id": "site_1756829417348_0ed49iikf",
               "title": "Digital Ocean",
               "href": "https://cloud.digitalocean.com/apps?i=49339f",
               "description": "PaaS，云端部署",
               "icon": "/assets/favicon_1757171490053.png",
-              "enabled": true
-            },
-            {
-              "id": "1758158583936",
-              "title": "Zeabur",
-              "href": "https://zeabur.com/",
-              "description": "PaaS，云端部署",
-              "icon": "/assets/favicon_1758158592648.png",
               "enabled": true
             }
           ]
