@@ -8,6 +8,14 @@
       "enabled": true,
       "items": [
         {
+          "id": "1758181019998",
+          "title": "Google",
+          "href": "https://google.com",
+          "description": "Google Search",
+          "icon": "/assets/favicon_1758181032944.ico",
+          "enabled": true
+        },
+        {
           "id": "1757404866335",
           "title": "闪击工作台",
           "href": "https://nav.sankki.com",
@@ -29,14 +37,6 @@
           "href": "https://www.bestrandoms.com/random-address-in-us",
           "description": "Random Street Address",
           "icon": "/assets/favicon_1756973025651.png",
-          "enabled": true
-        },
-        {
-          "id": "1758181019998",
-          "title": "Google",
-          "href": "https://google.com",
-          "description": "Google Search",
-          "icon": "/assets/favicon_1758181032944.ico",
           "enabled": true
         },
         {
