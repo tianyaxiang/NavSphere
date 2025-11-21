@@ -443,19 +443,19 @@
               "enabled": true
             },
             {
-              "id": "1756830480673",
-              "title": "Godaddy",
-              "href": "https://www.godaddy.com/",
-              "description": "域名注册",
-              "icon": "/assets/favicon_1757171931501.png",
-              "enabled": true
-            },
-            {
               "id": "1756830421442",
               "title": "Namesilo",
               "href": "https://namesilo.com",
               "description": "便宜域名注册",
               "icon": "/assets/favicon_1757171457676.ico",
+              "enabled": true
+            },
+            {
+              "id": "1756830480673",
+              "title": "Godaddy",
+              "href": "https://www.godaddy.com/",
+              "description": "域名注册",
+              "icon": "/assets/favicon_1757171931501.png",
               "enabled": true
             },
             {
