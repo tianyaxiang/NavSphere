@@ -152,6 +152,14 @@
           "description": "AI智能设计体",
           "icon": "/assets/favicon_1763002868381.ico",
           "enabled": true
+        },
+        {
+          "id": "site_1764145163224_sf7pxi8ql",
+          "title": "灵光 一闪",
+          "href": "https://www.lingguang.com/",
+          "description": "灵光AI",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=www.lingguang.com",
+          "enabled": true
         }
       ],
       "subCategories": []
