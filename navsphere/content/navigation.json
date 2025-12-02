@@ -48,6 +48,14 @@
           "enabled": true
         },
         {
+          "id": "site_1764658965908_izsr5a8m9",
+          "title": "Todoist",
+          "href": "https://app.todoist.com/",
+          "description": "Manage Todos",
+          "icon": "/assets/favicon_1764658937654.ico",
+          "enabled": true
+        },
+        {
           "id": "1756265870207",
           "title": "Random Street Address",
           "href": "https://www.bestrandoms.com/random-address-in-us",
@@ -93,14 +101,6 @@
           "href": "https://baidu.com",
           "description": "Rubbish",
           "icon": "/assets/favicon_1758181055080.png",
-          "enabled": true
-        },
-        {
-          "id": "site_1764658965908_izsr5a8m9",
-          "title": "Todoist",
-          "href": "https://app.todoist.com/",
-          "description": "Manage Todos",
-          "icon": "/assets/favicon_1764658937654.ico",
           "enabled": true
         }
       ],
