@@ -37,3 +37,13 @@ next-env.d.ts
 
 # 环境变量
 .env*.local
+/.cloudflare/
+# Webpack 缓存
+cache/
+.cache/
+*.pack
+
+# 框架特定缓存
+.next/cache/
+dist/cache/
+build/cache/

@@ -9,6 +9,9 @@ export interface SiteConfig {
     favicon: string
     theme: 'light' | 'dark' | 'system'
   }
+  navigation: {
+    linkTarget: '_blank' | '_self'
+  }
 }
 
 export interface SiteInfo {
@@ -21,5 +24,8 @@ export interface SiteInfo {
     logo: string
     favicon: string
     theme: string
+  }
+  navigation: {
+    linkTarget: string
   }
 } 

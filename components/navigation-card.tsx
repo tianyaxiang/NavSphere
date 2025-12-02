@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/registry/new-york/ui/card'
 import { Icons } from '@/components/icons'
 import type { NavigationSubItem } from '@/types/navigation'
+import type { SiteConfig } from '@/types/site'
 import {
   Tooltip,
   TooltipContent,
@@ -12,9 +13,10 @@ import {
 
 interface NavigationCardProps {
   item: NavigationSubItem
+  siteConfig?: SiteConfig
 }
 
-export function NavigationCard({ item }: NavigationCardProps) {
+export function NavigationCard({ item, siteConfig }: NavigationCardProps) {
   const isExternalIcon = item.icon?.startsWith('http')
   const isLocalIcon = item.icon && !isExternalIcon
 
@@ -24,6 +26,9 @@ export function NavigationCard({ item }: NavigationCardProps) {
       : `/${item.icon}`
     : item.icon || '/placeholder-icon.png'
 
+  // 获取链接打开方式，默认为新窗口
+  const linkTarget = siteConfig?.navigation?.linkTarget || '_blank'
+
   return (
     <TooltipProvider>
       <Tooltip>
@@ -31,7 +36,7 @@ export function NavigationCard({ item }: NavigationCardProps) {
           <Card className="overflow-hidden transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
             <Link
               href={item.href}
-              target="_blank"
+              target={linkTarget}
               rel="noopener noreferrer"
               className="block h-full"
             >

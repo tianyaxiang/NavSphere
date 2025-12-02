@@ -13,9 +13,9 @@ import { Skeleton } from "@/registry/new-york/ui/skeleton"
 import useSWR from 'swr'
 import { NavigationItem } from "@/types/navigation"
 import { DragDropContext, Droppable } from '@hello-pangea/dnd'
-import { Plus, X, AlertTriangle, Inbox } from 'lucide-react'
+import { Plus, AlertTriangle, Inbox } from 'lucide-react'
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/registry/new-york/ui/select"
-import { Badge } from "@/registry/new-york/ui/badge"
+
 
 async function fetcher(url: string): Promise<NavigationItem[]> {
   const res = await fetch(url)
@@ -29,7 +29,7 @@ export default function NavigationPage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [showEnabled, setShowEnabled] = useState<boolean | null>(null)
   const { toast } = useToast()
-  
+
   const { data: items = [], error, isLoading, mutate } = useSWR<NavigationItem[]>(
     '/api/navigation',
     fetcher,
@@ -39,11 +39,11 @@ export default function NavigationPage() {
     }
   )
 
-  const handleAdd = async (values: { 
-    title: string; 
-    icon: string; 
+  const handleAdd = async (values: {
+    title: string;
+    icon: string;
     description?: string;
-    enabled?: boolean 
+    enabled?: boolean
   }) => {
     try {
       // 生成唯一ID
@@ -144,7 +144,7 @@ export default function NavigationPage() {
 
     // 创建一个新的数组副本
     const currentItems = Array.isArray(items) ? [...items] : []
-    
+
     // 记录原始顺序，用于可能的回滚
     const originalItems = [...currentItems]
 
@@ -153,7 +153,7 @@ export default function NavigationPage() {
     currentItems.splice(destinationIndex, 0, movedItem)
 
     // 乐观更新：立即更新本地状态
-    await mutate(currentItems, { 
+    await mutate(currentItems, {
       revalidate: false  // 阻止重新获取数据
     })
 
@@ -195,7 +195,7 @@ export default function NavigationPage() {
   }
 
   const filteredItems = items
-    .filter(item => 
+    .filter(item =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
       (showEnabled === null || item.enabled === showEnabled)
     )

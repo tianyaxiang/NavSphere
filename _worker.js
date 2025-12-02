@@ -1,7 +1,7 @@
 export default {
   async fetch(request, env) {
     // 设置环境变量
-    process.env.GITHUB_ID = env.GITHUB_ID
+    process.env.GITHUB_CLIENT_ID = env.GITHUB_CLIENT_ID
     process.env.GITHUB_SECRET = env.GITHUB_SECRET
     process.env.GITHUB_OWNER = env.GITHUB_OWNER
     process.env.GITHUB_REPO = env.GITHUB_REPO

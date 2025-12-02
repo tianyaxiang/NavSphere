@@ -128,8 +128,21 @@ export function NavigationCard({
         >
           <div className="flex items-center space-x-4">
             <Icon className="h-6 w-6 text-muted-foreground" />
-            <div>
-              <h3 className="text-sm font-medium">{item.title}</h3>
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <h3 className="text-sm font-medium">{item.title}</h3>
+                <Badge 
+                  variant={(item.enabled ?? true) ? "default" : "secondary"}
+                  className={cn(
+                    "text-xs",
+                    (item.enabled ?? true)
+                      ? "bg-green-100 text-green-800 hover:bg-green-100" 
+                      : "bg-gray-100 text-gray-600 hover:bg-gray-100"
+                  )}
+                >
+                  {(item.enabled ?? true) ? "已启用" : "已禁用"}
+                </Badge>
+              </div>
               <p className="text-xs text-muted-foreground">{item.description}</p>
             </div>
           </div>
@@ -242,7 +255,7 @@ export function NavigationCard({
                   title: item.title,
                   description: item.description || '',
                   icon: item.icon || '',
-                  enabled: true
+                  enabled: item.enabled ?? true
                 }}
                 onSubmit={handleEdit}
                 onCancel={() => setIsEditDialogOpen(false)}

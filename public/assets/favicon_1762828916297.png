@@ -1,0 +1,609 @@
+<!DOCTYPE html><html><head>  <script type="text/javascript">
+  if (!window.wx) {
+    window.wx = {};
+  }
+
+  // mp 不再支持 ie浏览器 @sankigan
+  (function() {
+    setTimeout(function() {
+      // 为兼容可选链等高级语法在tpl文件中的使用。未来如果需要使用更多新特性可以考虑加loader降级 @orinyang
+      function checkBrowserVersion(ua){
+        const chromeRegex = /Chrome\/([0-9]+(?:\.[0-9]+)*)/;
+        const safariRegex = /Version\/([0-9]+(?:\.[0-9]+)*)/;
+        const firefoxRegex = /Firefox\/([0-9]+(?:\.[0-9]+)*)/;
+
+        let chromeVersion = ua.match(chromeRegex);
+        if(chromeVersion){
+          return parseFloat(chromeVersion[1]) < 80;
+        }
+        let safariVersion = ua.match(safariRegex);
+        if(safariVersion){
+          return parseFloat(safariVersion[1]) < 13.1;
+        }
+        let firefoxVersion = ua.match(firefoxRegex);
+        if(firefoxVersion){
+          return parseFloat(firefoxVersion[1]) < 74;
+        }
+        return false;
+      }
+
+      function checkIE() {
+        var ua = navigator.userAgent;
+        var isSupportShadow = window.customElements && (document.head.createShadowRoot || document.head.attachShadow);
+        // 分别判断是否是 ie11 以下以及是否是 ie11 浏览器
+        if (
+          (ua.indexOf('compatible') > -1 && ua.indexOf('MSIE') > -1)
+          || (ua.indexOf('Trident') > -1 && ua.indexOf("rv:11.0") > -1)
+          || ua.indexOf('edge') > -1
+          || !isSupportShadow || checkBrowserVersion(ua)
+        ) {
+          // 因为 web1 也有同样的逻辑，这里去重
+          if (!document.querySelector('.js_ie_notsupport')) {
+            var div = document.createElement('div');
+            div.innerHTML = '<div class="js_ie_notsupport" style="width: 100%;min-width: 280px;padding: 5px 30px;display: inline-block;position: fixed;top: 0px;left: 0px;text-align: center;z-index: 9999;background-color: #EAA000;color: #FFFFFF;">当前浏览器版本过低，请将浏览器更新为新版本QQ浏览器或Chrome浏览器，以获得更好的体验</div>';
+            document.body.appendChild(div);
+          }
+        }
+      }
+
+      if (window.attachEvent) {
+        window.attachEvent('onload', checkIE);
+      } else if (window.addEventListener) {
+        window.addEventListener('load', checkIE, false);
+      }
+    }, 10);
+  })();
+
+
+      // 左侧导航栏 @jaminqian
+        // 页面公告 @jaminqian
+          window.wx.announcement = {
+        announcement_list: []
+      };
+            if (!window.wx.menu) {
+      window.wx.menu = {
+        redDot: {}
+      }
+    }
+
+    window.wx.menu.redDot.newNotifyNum = '' * 1;
+    if (!window.wx.cgiData) {
+    window.wx.cgiData = {};
+  }
+
+  window.handlerNickname = function(str, escape) { // 临时对nickname decode
+    // var ar=['&','&amp;','<','&lt;','>','&gt;',' ','&nbsp;','"','&quot;',"'",'&#39;','\\r','<br>','\\n','<br>'];
+    var ar = ['&', '&amp;', '<', '&lt;', '>', '&gt;', ' ', '&nbsp;', '"', '&quot;', '\'', '&#39;'];
+    /*
+    // 最新版的safari 12有一个BUG，如果使用字面量定义一个数组，var a = [1, 2, 3]
+    // 当调用了 a.reverse() 方法把变量 a 元素顺序反转成 3, 2, 1 后，
+    // 即使此页面刷新了， 或者此页面使用 A标签、 window.open 打开的页面，
+    // 只要调用到同一段代码， 变量 a 的元素顺序都会变成 3, 2, 1
+    // 所以这里不用 reverse 方法
+    if (escape === false) {
+      ar.reverse();
+    }*/
+    var arReverse = ['&#39;', '\'', '&quot;', '"', '&nbsp;', ' ', '&gt;', '>', '&lt;', '<', '&amp;', '&'];
+    var target;
+    if (escape === false) {
+      target = arReverse;
+    } else {
+      target = ar;
+    }
+    var r = str;
+    for (var i = 0; i < target.length; i += 2) {
+      r = r.replace(new RegExp(target[i], 'g'), target[1 + i]);
+    }
+    return r;
+  };
+
+  window.wx.commonData = {
+    version: "5.0.0",
+    uin: "", // 兼容wx.uin
+    data: {
+      t: "" || "",
+      ticket: "",
+      lang: 'zh_CN',
+      param: ["&token=", '&lang=zh_CN'].join(""),
+      uin: "",
+      uin_base64: "",
+      user_name: "",
+      nick_name: "",  // encode一次
+      nick_name_decode: handlerNickname("", false),  // encode一次 decode一次,因为空格需要特殊转义处理
+      real_nick_name: "",  // 真实nick_name，后台无兜底逻辑，未设置则返回空
+      real_nick_name_decode: handlerNickname("", false),  // encode一次 decode一次,因为空格需要特殊转义处理
+      time: "" || new Date().getTime() / 1000,
+      disable_head_box: "" * 1,
+      open_app_type: '' * 1,
+      serviceType: '' * 1,
+      realnameType: '' * 1, // 主体类型
+      isPersonVerify: '' * 1, // 是否个人认证
+      isWxVerify: '' * 1,
+      is_qverify: '' * 1,
+      sp_login: '' * 1,
+      sp_user_name: '',
+      sp_nick_name: '',
+      head_img: ''.replace('http://', 'https://'),
+      head_url: '',
+      alias: '',
+      verify_status : '' * 1,
+    },
+    path: {
+      video: '', // "https://res.wx.qq.com/mpres/zh_CN/htmledition/plprecorder/biz_web/video-js.swf",
+      audio: "https://res.wx.qq.com/mpres/zh_CN/htmledition/plprecorder/biz_web/audiojs79ef65.swf",
+      uploadify: "https://res.wx.qq.com/mpres/zh_CN/htmledition/plprecorder/biz_web/uploadify79ef65.swf",
+      webuploader: "https://res.wx.qq.com/mpres/zh_CN/htmledition/plprecorder/biz_web/webuploader79ef65.swf",
+      zoom: "https://res.wx.qq.com/mpres/zh_CN/htmledition/plprecorder/biz_web/zoom79ef65.swf",
+      zeroClipboard_new: "https://res.wx.qq.com/mpres/zh_CN/htmledition/plprecorder/biz_web/ZeroClipboard_new79ef65.swf",
+      rimgcrop: "https://res.wx.qq.com/mpres/htmledition/images/cut-round79ef65.gif",
+      icon: {
+        account_user: 'https://res.wx.qq.com/mpres/zh_CN/htmledition/weui-desktopSkin-common/svg/default/account-user79ef64.svg',
+        account_wxverify: 'https://res.wx.qq.com/mpres/zh_CN/htmledition/weui-desktopSkin-common/svg/default/account-wxverify79ef64.svg',
+        account_setting: 'https://res.wx.qq.com/mpres/zh_CN/htmledition/weui-desktopSkin-common/svg/default/account-setting79ef64.svg',
+        account_logout: 'https://res.wx.qq.com/mpres/zh_CN/htmledition/weui-desktopSkin-common/svg/default/account-logout79ef64.svg',
+        account_switch: 'https://res.wx.qq.com/mpres/zh_CN/htmledition/weui-desktopSkin-common/svg/default/common-switch79ef64.svg'
+      }
+    },
+    user_info: {
+          },
+    mplog: {
+          },
+    acl: {
+
+            "ad_system": {
+        "can_use_sp": "" * 1,
+                  "can_use_new_ad": "" * 1
+              }
+    },
+    ban_func_list: [
+                        ],
+    events: {}, // 全局的事件绑定
+    canUseVuest: "",
+    load_done: "",
+    load_done_detail: [
+        ],
+  };
+
+  window.wx.getSeq = function() { // 全局生成唯一时间戳seq,用于和svr_time确定文件上传顺序
+    return new Date().getTime();
+  };
+
+  delete window.handlerNickname;
+</script><script crossorigin type="text/javascript" src="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/modules/common/badjs79ef64.js"></script><script crossorigin type="text/javascript" src="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/modules/base/jserr79ef64.js"></script><script type="text/javascript">
+  (function () {
+    function _addScript(uri, cb) {
+      var node = document.createElement('SCRIPT');
+      node.type = 'text/javascript';
+      node.src = uri;
+      if (cb) {
+        node.onload = cb;
+      }
+      document.getElementsByTagName('head')[0].appendChild(node);
+    }
+    if (document.cookie && document.cookie.indexOf('__xweb_remote_debug_device_token__') > -1) {
+      _addScript('https://mp.weixin.qq.com/mmbizappmsg/zh_CN/htmledition/js/scripts/mprdev-0.2.5.js', function () {
+        _addScript('https://mp.weixin.qq.com/mmbizappmsg/zh_CN/htmledition/js/scripts/xwebrd-0.0.2.js');
+      });
+    }
+  })();
+  // console.log('','=================================verify_status')
+</script>  <link rel="stylesheet" href="https://res.wx.qq.com/mpres/zh_CN/htmledition/js/homepage/page_login_forcss79ef65.css">    <link href="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/pages/vendors~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~album/list/list~b~vendors.67537829.css" rel="stylesheet"><link href="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/pages/modules~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~album/list/list~b~modules.67537829.css" rel="stylesheet"><link href="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/pages/modules~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~city/service_edit~modules.67537829.css" rel="stylesheet"><link href="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/pages/default~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~album/list/list~b~default.67537829.css" rel="stylesheet"><link href="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/login/loginpage/loginpage.67537829.css" rel="stylesheet">  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  <meta name="renderer" content="webkit">  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">  <!-- <meta name="referrer" content="origin-when-crossorigin"> -->  <meta charset="utf-8">  <link rel="shortcut icon" type="image/x-icon" href="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">  <link rel="mask-icon" href="https://res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg" color="#4C4C4C">  <link rel="apple-touch-icon-precomposed" href="https://res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png">  <meta name="baidu-site-verification" content="code-3r8LPtTwZC" />  <meta name="msvalidate.01" content="FF6EE86AAF4EBBEFCB5FFF7A2ED6CF6C" />  <meta name="google-site-verification" content="Lfue77RLSBGsSNJU7BOdDwTC7lDru1Oug60qmVBNbT4" />  <meta name="keywords" content="微信公众平台,微信公众平台官方网站,公众号注册,微信公众号注册,微信订阅号注册,微信公众号申请,微信服务号申请,微信订阅号申请,微信企业号申请,微信服务号注册,微信企业号注册,订阅号注册,公众号申请,服务号申请,订阅号申请,企业号申请,服务号注册,企业号注册,微信">  <meta name="description" content="微信公众平台，给个人、企业和组织提供业务服务与用户管理能力的全新服务平台。">  <script type="text/javascript">
+  //上报测速 --初始点
+  window._points = [+new Date()];
+
+  //上报测速 --js加载完成点
+  function wx_main(mod) {
+    window._points && (window._points[3] = +new Date());
+  };
+  window.wx.uin = "" || "0";
+
+  //如果cdn挂了资源拉不到 触发此上报
+  window.wx_loaderror = function(ele) {
+    var _img = new Image();
+    var key = 63;
+    if (ele && ele.tagName && ele.tagName.toLowerCase() == "script") {
+      key = 64;
+      //js资源挂了页面报到特殊地方
+      if (typeof BJ_REPORT != "undefined") {
+        BJ_REPORT.destory && BJ_REPORT.destory();
+      }
+    }
+    if (typeof BJ_REPORT != "undefined") {
+      _img.src = "https://badjs.weixinbridge.com/badjs?id=" + BJ_REPORT.IDS.LINK + "&uin=" + (wx && wx.uin) + "&msg=" + encodeURIComponent("link_error:" + (ele && (ele.href || ele.src))) + "|link&from=" + encodeURIComponent(location.href) + "&level=4&_t=" + (+new Date);
+    }
+    var key_img = new Image();
+    key_img.src = "/misc/jslog?id=" + key + "&content=" + encodeURIComponent(ele && (ele.href || ele.src)) + "&level=error";
+
+    if (typeof WX_BJ_REPORT != "undefined" && WX_BJ_REPORT.BadJs && typeof WX_BJ_REPORT.BadJs.report == "function") {
+      if (ele && ele.tagName && ele.tagName.toLowerCase() == "script") {
+        WX_BJ_REPORT.BadJs.report("jsLoadedError", ele.href || ele.src, { mid: "mpResourceMonitor" })
+      } else {
+        WX_BJ_REPORT.BadJs.report("cssLoadedError", ele.href || ele.src, { mid: "mpResourceMonitor" })
+      }
+    }
+  };
+  </script>  <title>微信公众平台</title></head><body class="zh_CN">  <div id="app" style="visibility:hidden;">    <mp-toptips :type="baseVueToptipsData.type" :msg="baseVueToptipsData.msg" v-model="baseVueToptipsData.isShow"></mp-toptips>        <div class="mp-head" id="header">      <div class="weui-desktop-head">        <div class="weui-desktop-head__inner">          <div class="weui-desktop-layout">            <div class="weui-desktop-layout__side">              <h1 class="weui-desktop-logo"><a href="/" title="微信公众平台">微信公众平台</a></h1>            </div>            <div class="weui-desktop-layout__extra">              <div class="weui-desktop-head-helper">                <a                  class="weui-desktop-regist-access"                  @click="goRegistImmediately"                  href="javascript:;"                  data-href="/cgi-bin/registermidpage?action=index&weblogo=1&lang=zh_CN"                >立即注册</a>                <div class="weui-desktop-lang">                  <div class="weui-desktop-lang__switch">                    {{ currentLangDesc }}                  </div>                  <ul class="weui-desktop-lang__list">                    <li class="weui-desktop-lang__item">                      <mp-radio-group v-model="currentLang">                        <mp-radio name="user-lang" v-for="lang in supportLang" :key="lang.value" v-bind:value="lang.value">{{ lang.name }}</mp-radio>                      </mp-radio-group>                    </li>                  </ul>                </div>              </div>            </div>          </div>        </div>      </div>      <div class="banner">        <div class="inner wrp">          <!-- login frame -->          <div v-show="step === 0" class="login_frame input_login">            <!-- 验密登录 -->            <div v-show="mode === 0" class="login__type__container login__type__container__account">              <a href="javascript:;" class="login__type__container__select-type login__type__container__select-type__scan" @click="switchMode(1)"></a>              <div class="weui-desktop-global-mod">                <div class="weui-desktop-global__info">                  <h4>登录</h4>                </div>              </div>              <div class="login_err_panel" v-if="err"><i class="icon18_common error"></i><span class="err_tips" v-html="err"></span></div>              <form class="login_form" autocomplete="on">                <div class="login_input_panel">                  <div class="login_input">                    <mp-input ref="accountInput" placeholder="邮箱/微信号" v-model="account" filter="trim" type="text" :auto-focus="true" @keypress.enter="login" name="account" autocomplete="on"></mp-input>                  </div>                  <div class="login_input">                    <!-- 安全输入框 -->                    <div v-if="supportSafeInput" class="weui-desktop-form__input-area">                      <span class="weui-desktop-form__input-wrp">                        <mp-safe-input                          style="display: table-cell;"                          input-style="height: 3em; border: 0; outline: 0; padding: 11px 0; vertical-align: middle; width: 100%; box-sizing: border-box; background: #FFFFFF; border-radius: 3px; color: #1A1B1C; font-family: inherit; font-size: 100%; margin: 0;"                          placeholder-style="color: rgb(53, 53, 53, 0.5);"                          placeholder="密码"                          type="password"                          name="password"                          autocomplete="on"                        ></mp-safe-input>                        <!-- 用于检测插件自动填写密码，进行上报 -->                        <input ref="fakePwdInput" name="password" class="weui-desktop-form__input" style="display: none; height: 0; width: 0;">                      </span>                    </div>                    <!-- 普通输入框 -->                    <mp-input v-else ref="pwdInput" placeholder="密码" v-model="pwd" filter="trim" type="password" @keypress.enter="login" name="password" autocomplete="on"></mp-input>                  </div>                </div>                <!-- <div class="verifycode" v-show="isNeedVerify">                  <mp-input ref="verifyInput" v-model="verify" filter="trim" type="text" wrapper-class="" @keypress.enter="login" autocomplete="off"></mp-input>                  <img :src="verifyImg" />                  <a href="javascript:;" @click="verifyImgRefresh">换一张</a>                </div> -->                <div class="login_help_panel">                  <label :class="'frm_checkbox_label' + (rememberCheck ? ' selected' : '')">                    <i class="icon_checkbox"></i>                    <input type="checkbox" class="frm_checkbox" @click="changeRemember" :value="rememberCheck">记住账号                  </label>                  <a class="login_forget_pwd" href="/cgi-bin/readtemplate?t=forgetpwd/index_tmpl">找回账号或密码</a>                </div>                <div class="login_btn_panel">                  <a @click="login" class="btn_login" title="点击登录" href="javascript:">登录</a>                </div>              </form>            </div>            <!-- 扫码登录 -->            <div v-show="mode === 1" class="login__type__container login__type__container__scan">              <a href="javascript:;" class="login__type__container__select-type" @click="switchMode(0)">使用账号登录</a>              <div class="weui-desktop-global-mod">                  <div class="weui-desktop-global__info">                    <h4>登录</h4>                  </div>                </div>              <img :style="{visibility: (scanLoginType === 6 || qrcodeSrc) ? 'visible' : 'hidden'}" :src="scanLoginType !== 6 ? qrcodeSrc : 'https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/login/loginpage/images/default_qrcode_2x79ef64.png'" class="login__type__container__scan__qrcode" @error="qrcodeError" />              <div class="login__type__container__scan__info">                <!-- 等待扫码 -->                <div class="login__type__container__scan__info__inner" v-if="scanLoginType === 0">                  <template v-if="loginAppid">                    <p class="login__type__container__scan__info__desc">微信扫一扫，登录AppID为{{ loginAppid }}的</p>                    <p class="login__type__container__scan__info__desc">公众平台账号</p>                  </template>                  <template v-else>                    <p class="login__type__container__scan__info__desc">微信扫一扫，选择该微信下的</p>                    <p class="login__type__container__scan__info__desc">公众平台账号登录</p>                  </template>                </div>                <!-- 扫码成功，可登录账号=1 -->                <div class="login__type__container__scan__info__inner" v-else-if="scanLoginType === 1">                  <div class="login__type__container__scan_mask">                    <div class="login__type__container__scan_mask__inner">                      <mp-icon size="large" icon="success"></mp-icon>                      <h2 class="login__type__container__scan__info__title">扫码成功</h2>                    </div>                  </div>                  <p class="login__type__container__scan__info__desc">请在微信中确认账号登录</p>                  <a href="javascript:;" @click="refreshQrcode">重新扫码</a>                </div>                <!-- 扫码成功，可登录账号>1 -->                <div class="login__type__container__scan__info__inner" v-else-if="scanLoginType === 2">                  <div class="login__type__container__scan_mask">                    <div class="login__type__container__scan_mask__inner">                      <mp-icon size="large" icon="success"></mp-icon>                      <h2 class="login__type__container__scan__info__title">扫码成功</h2>                    </div>                  </div>                  <p class="login__type__container__scan__info__desc">请在微信中选择账号登录</p>                  <a href="javascript:;" @click="refreshQrcode">重新扫码</a>                </div>                <!-- 没有可登录账号 -->                <div class="login__type__container__scan__info__inner login__type__container__scan__noaccount" v-else-if="scanLoginType === 3">                  <div class="login__type__container__scan_mask">                    <div class="login__type__container__scan_mask__inner">                      <mp-icon size="large" icon="warnning"></mp-icon>                      <h2 class="login__type__container__scan__info__title">没有可登录账号</h2>                    </div>                  </div>                  <p class="login__type__container__scan__info__desc">该微信还未注册公众平台账号，<a @click="goRegist" href="javascript:;" data-href="/cgi-bin/registermidpage?action=index&lang=zh_CN">现在去注册</a></p>                  <a href="javascript:;" @click="refreshQrcode">重新扫码</a>                </div>                <!-- 登录失败 -->                <div class="login__type__container__scan__info__inner" v-else-if="scanLoginType === 4">                  <div class="login__type__container__scan_mask">                    <div class="login__type__container__scan_mask__inner">                      <mp-icon size="large" icon="warnning"></mp-icon>                      <h2 class="login__type__container__scan__info__title">登录失败</h2>                    </div>                  </div>                  <p class="login__type__container__scan__info__desc">你可以<a href="javascript:;" @click="refreshQrcode">重新扫码</a>登录</p>                  <p class="login__type__container__scan__info__desc">或使用账号密码登录</p>                </div>                <!-- 二维码已过期 -->                <div class="login__type__container__scan__info__inner" v-else-if="scanLoginType === 5">                  <div class="login__type__container__scan_mask">                    <div class="login__type__container__scan_mask__inner">                      <p class="login__type__container__scan_mask__info">二维码已过期</p>                      <p class="login__type__container__scan_mask__info">                        <a href="javascript:;" @click="refreshQrcode">点击刷新</a>                      </p>                    </div>                  </div>                  <p class="login__type__container__scan__info__desc">微信扫一扫，选择该微信下的</p>                  <p class="login__type__container__scan__info__desc">公众平台账号登录</p>                </div>                <!-- 二维码加载失败 -->                <div class="login__type__container__scan__info__inner" v-else-if="scanLoginType === 6">                  <div class="login__type__container__scan_mask">                    <div class="login__type__container__scan_mask__inner">                      <p class="login__type__container__scan_mask__info">二维码加载失败</p>                      <p class="login__type__container__scan_mask__info">                        <a href="javascript:;" @click="refreshQrcode">点击刷新</a>                      </p>                    </div>                  </div>                  <p class="login__type__container__scan__info__desc">微信扫一扫，选择该微信下的</p>                  <p class="login__type__container__scan__info__desc">公众平台账号登录</p>                </div>                <!-- qq号需要绑定邮箱 -->                <div class="login__type__container__scan__info__inner" v-else-if="scanLoginType === 7">                  <div class="login__type__container__scan_mask">                    <div class="login__type__container__scan_mask__inner">                      <mp-icon size="large" icon="success"></mp-icon>                      <h2 class="login__type__container__scan__info__title">扫码成功</h2>                    </div>                  </div>                  <p class="login__type__container__scan__info__desc">该账号尚未绑定邮箱，<a :href='qqBindMailUrl'>前往绑定邮箱</a></p>                  <a href="javascript:;" @click="refreshQrcode">重新扫码</a>                </div>              </div>            </div>          </div>          <!--quick login frame -->          <div v-if="step !== 0" class="login_frame quick_login">            <!-- 快速登陆的登录框 -->            <!-- 快速登陆第一步：选择要登陆的账号（可选择最近登陆过的三个其中一个） -->            <div v-show="step === 1" class="quick_login_step step_one">              <div class="quick_login_hd">                <a class="help_opr" title="说明与帮助" target="_blank" href="/cgi-bin/announce?action=getannouncement&key=1480927113&version=1&lang=zh_CN&platform=2"></a>              </div>              <div class="quick_login_bd">                <div class="account_list_box">                  <ul class="account_list" :style="'margin-left: ' + (-activeBizIndex * 160) + 'px;'">                    <!-- 这里需要控制一下显示第一个账号margin-left: 0;显示第二个账号margin-left: -80px;显示第三个账号margin-left: -160px; -->                    <li v-for="item in bizList" class="account_item">                      <img class="account_avatar" :src="item.bizimg" />                      <p class="account_name">{{ item.bizname }}</p>                    </li>                    <!-- 循环这个item显示最近登陆过的账号（最多三个） -->                  </ul>                  <ul class="account_list_controls">                    <li @click="selectBiz(index)" v-if="bizList.length > 1" v-for="(item, index) in bizList" :class="'account_list_controls_dot' + (index === activeBizIndex ? ' current' : '')"></li>                    <!-- 循环这个item显示切换账号的控制点，高亮态添加class：current。(从两个点才开始显示) -->                  </ul>                </div>              </div>              <div class="quick_login_ft">                <div class="quick_login_opr">                  <a @click="quickLogin1" class="btn btn_primary">登录</a>                </div>                <a @click="changeToInputLogin" class="back_to_input_login" href="javascript:">切换账号</a>              </div>            </div>            <div v-show="step !== 1" :class="'quick_login_step step_two ' + state">              <!-- 快速登陆第二步：选择验证的微信号并登陆。                  这里对应七个状态：                    1.state_waiting:待选择；                    2.state_chosen:已选择，待发送；                    3.state_login:已发送，待确认；                    4.state_confirmed:已确认，正在登陆；                    5.state_failed:登录失败，重新选择微信号；                    6.state_timeout:登录超时，重新选择微信号；                    7.state_reject:拒绝登录，置灰该微信号；                    8.state_cancel:用户在模板消息上取消登录；                 -->              <div class="quick_login_hd">                <div class="quick_login_hd_opr">                  <a @click="backToQuickLogin" class="login_opr_back" href="javascript:">返回</a>                  <a class="help_opr" title="说明与帮助" target="_blank" href="/cgi-bin/announce?action=getannouncement&key=1480927113&version=1&lang=zh_CN&platform=2"></a>                </div>                <h3 class="quick_login_hd_tips waiting">请选择验证身份的微信</h3>                <h3 class="quick_login_hd_tips chosen" v-if="wxList.length > 1">已选择验证身份的微信</h3>                <h3 class="quick_login_hd_tips chosen" v-if="wxList.length === 1">验证身份的微信</h3>                <h3 class="quick_login_hd_tips confirmed">验证成功，正在登陆...</h3>                <h3 class="quick_login_hd_tips failed">验证失败，请重新选择</h3>                <h3 class="quick_login_hd_tips timeout">验证已过期，请重新选择验证的微信</h3>                <h3 class="quick_login_hd_tips reject">已被多次拒绝，请选择其他微信号或输入账号登录</h3>                <h3 class="quick_login_hd_tips cancel">验证申请已被拒绝，请重新选择</h3>              </div>              <div class="quick_login_bd">                <div class="user_list_box">                  <ul class="user_list">                    <li @click="selectWx(index)" v-for="(item, index) in wxList" :class="'user_item' + ((index === activeWxIndex && !rejectWxList[activeBizIndex][index]) ? ' selected' : '') + (rejectWxList[activeBizIndex][index] ? ' disabled' : '')">                      <div class="user_avatar_box">                        <img class="user_avatar" :src="item.userimg" />                      </div>                      <p class="user_name">{{ item.username }}</p>                    </li>                    <!-- 循环这个item显示微信号（最多三个），选中的高亮态添加class:selected -->                  </ul>                </div>                <div class="confirm_box">                  <div class="confirm_img"></div>                  <div class="confirm_desc">请在手机上确认登录</div>                </div>              </div>              <div class="quick_login_ft">                <div class="quick_login_opr">                  <a @click="quickLogin2" :class="'btn btn_primary' + ((activeWxIndex === -1 || rejectWxList[activeBizIndex][activeWxIndex]) ? ' disabled' : '')">发送验证</a>                  <!-- 通过往btn后面追加或移除class:disabled控制不可点击态样式 -->                </div>                <p class="desc">如无法登录，请切换至<a @click="changeToInputLogin" class="back_to_input_login" href="javascript:">密码登录</a></p>              </div>            </div>          </div>        </div>      </div>    </div>    <div id="body" class="mp-body page_login">      <div class="page_login_inner">        <!-- qrcode -->        <div class="qrcode_panel" :class="{'qrcode_panel_open': isShowQrcode}">          <dl class="qrcode_panel_main" v-show="isShowQrcode" @mouseenter="toggleQrcodeShow" @mouseleave="toggleQrcodeHide">            <dt>              <img src="https://res.wx.qq.com/mpres/htmledition/images/mp_qrcode79ef65.gif">            </dt>            <dd>扫描并关注<br>微信公众平台</dd>          </dl>          <div v-if="newKf" class="question_qrcode">            <p class="qrcode_panel_extend_info new_qrcode" @mouseenter="toggleQrcodeShow" @mouseleave="toggleQrcodeHide">微信公众平台</p>            <div class="weui-desktop-online-faq__switch_content" style="line-height: 0;">              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">                <path fill="#4C4D4E" fill-rule="evenodd" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-1.2a8.8 8.8 0 1 0 0-17.6 8.8 8.8 0 0 0 0 17.6zM9 9.707C9.077 8.2 10.081 7 12.042 7 13.8 7 15 8.088 15 9.526c0 1.095-.565 1.87-1.458 2.407-.886.523-1.137.914-1.137 1.646v.454h-1.221v-.642c-.007-.921.44-1.55 1.395-2.121.81-.496 1.123-.935 1.123-1.682 0-.865-.67-1.5-1.709-1.5-1.053 0-1.723.621-1.8 1.619H9zm2.798 7.507a.786.786 0 0 1-.796-.795c0-.454.35-.796.796-.796.453 0 .795.342.795.796a.782.782 0 0 1-.795.795z"/>              </svg>              <div class="text">遇到问题</div>              <mp-faq-hover new-kf :qa-src="'https://mp.weixin.qq.com/webpoc/customerService?type=15'" />            </div>          </div>          <p v-else class="qrcode_panel_extend_info" @mouseenter="toggleQrcodeShow" @mouseleave="toggleQrcodeHide">微信公众平台</p>        </div>        <!-- 系统公告 -->        <dl class="notices_box">          <dt>            <i class="icon_login speaker"></i>系统公告          </dt>                                                  <dd class="extra">            <a href="/cgi-bin/announce?action=getannouncementlist&lang=zh_CN" target="_blank">              查看更多              <i class="icon_arrow"></i>            </a>          </dd>        </dl>        <!-- 账号分类 -->        <div class="mp_kind_mod">          <div class="mp_kind_mod_hd">            <h3>账号分类</h3>          </div>                    <div class="mp_kind_mod_bd group">            <div class="mp_kind_wrp">              <div class="mp_kind_box">                <dl class="mp_kind">                  <dt class="name"><span class="icon_mp_kind service"></span>服务号</dt>                  <dd>给企业和组织提供更强大的业务服务与用户管理能力，帮助企业在微信内快速实现全新的服务平台。</dd>                </dl>                <div class="mp_option_box">                  <a href="https://kf.qq.com/touch/scene_faq.html?scene_id=kf3386" target="_blank" class="btn btn_primary">查看详情</a>                  <div class="mp_option_links">                                        <a href="https://developers.weixin.qq.com/doc/service/" target="_blank">开发文档</a> |                                        <a href="https://mp.weixin.qq.com/mp/opshowpage?action=newoplaw&lang=zh_CN#t3-1" target="_blank">运营规范</a> |                    <a href="https://fuwu.weixin.qq.com/search?tab=2&type=&page=1&kw=公众号&channel_v2=mp&channel_scence=3" target="_blank">服务市场</a>                  </div>                </div>              </div>            </div>            <div class="mp_kind_wrp">              <div class="mp_kind_box">                <dl class="mp_kind">                  <dt class="name"><span class="icon_mp_kind subscribe"></span>公众号</dt>                  <dd>为媒体和个人提供一种新的信息传播方式，构建与读者之间更好的沟通与管理模式。</dd>                </dl>                <div class="mp_option_box">                  <a href="https://kf.qq.com/faq/120911VrYVrA15091832Qzqq.html?scene_id=kf3384" target="_blank" class="btn btn_primary">查看详情</a>                  <div class="mp_option_links">                                        <a href="https://developers.weixin.qq.com/doc/subscription/guide/" target="_blank">开发文档</a> |                                        <a href="https://mp.weixin.qq.com/mp/opshowpage?action=newoplaw&lang=zh_CN#t3-1" target="_blank">运营规范</a> |                    <a href="https://fuwu.weixin.qq.com/search?tab=2&type=&page=1&kw=公众号&channel_v2=mp&channel_scence=3" target="_blank">服务市场</a>                  </div>                </div>              </div>            </div>            <div class="mp_kind_wrp">              <div class="mp_kind_box">                <dl class="mp_kind">                  <dt class="name"><span class="icon_mp_kind app"></span>小程序</dt>                  <dd>一种新的开放能力，可以在微信内被便捷地获取和传播，同时具有出色的使用体验。</dd>                </dl>                <div class="mp_option_box">                  <a href="/cgi-bin/wx" target="_blank" class="btn btn_primary">查看详情</a>                  <div class="mp_option_links">                                        <a href="https://developers.weixin.qq.com/miniprogram/design/index.html" target="_blank">设计</a> |                    <a href="https://developers.weixin.qq.com/miniprogram/product/index.html" target="_blank">运营</a> |                                        <a href="http://developers.weixin.qq.com/" target="_blank">社区</a> |                    <a href="https://fuwu.weixin.qq.com/search?tab=1&serviceType=&industry=&type=&page=1&channel_v2=mp&channel_scence=2" target="_blank">服务市场</a>                  </div>                  <div class="mp_option_links" style="margin-top: 10px;">                                        <a href="https://developers.weixin.qq.com/miniprogram/dev/framework" target="_blank">小程序开发文档</a> |                    <a href="https://developers.weixin.qq.com/minigame/dev/guide/" target="_blank">小游戏开发文档</a>                                      </div>                </div>              </div>            </div>          </div>                  </div>                <div class="full_width_mod enterprise">          <a class="mp_kind_btn_block weui-desktop-layout" href="https://work.weixin.qq.com/?from=mp_home" target="_blank">            <span class="weui-desktop-vm_default">              <span class="icon_mp_kind enterprise"></span>            </span>            <span class="weui-desktop-vm_primary">              <p class="name enterprise">                企业微信                <span class="weui-desktop-tips">原企业号</span>              </p>              <p class="weui-desktop-tips">企业的专业办公管理工具。与微信一致的沟通体验，提供丰富免费的办公应用，并与微信消息、小程序、微信支付等互通，助力企业高效办公和管理。</p>            </span>          </a>        </div>              </div>    </div>    <!-- 登录页公众号助手 APP 下载引导 start -->    <div class="mp-app_bd" v-if="showMpAppGuide">      <i class="mp-app_logo"></i>      <div class="mp-app_info">        <p class="mp-app_title">“公众号助手”官方App</p>        <p class="mp-app_desc">用手机进行公众号发表、互动、管理</p>      </div>      <!-- 注：在 iOS 系统的移动设备中，需要在按钮元素或 body/html 上绑定一个 touchstart 事件才能激活 :active状态，所以这里直接绑了一个空函数 -->      <div class="mp-app_download-btn" @click="jump2DownloadMpApp" @touchstart="function() {}">下载应用</div>    </div>    <!-- 登录页公众号助手 APP 下载引导 end -->  </div>  <div class="mp-foot" id="footer" style="display: none;">    <div class="weui-desktop-foot">      <div class="weui-desktop-foot__info">        <p class="weui-desktop-links weui-desktop-link-group weui-desktop-link-group_split">                <a class="weui-desktop-link" href="http://www.tencent.com/zh-cn/index.shtml" target="_blank">关于腾讯</a>        <a class="weui-desktop-link" href="/cgi-bin/announce?action=getannouncement&key=1503979103&version=1&lang=zh_CN&platform=2" target="_blank">服务协议</a>        <a class="weui-desktop-link" href="/webpoc/ruleCenter?type=oa " target="_blank">规则中心</a>        <!-- <a class="weui-desktop-link" href="/cgi-bin/opshowpage?action=dispelinfo&lang=zh_CN&begin=1&count=9" target="_blank">辟谣中心</a> -->        <a class="weui-desktop-link" href="http://kf.qq.com/product/weixinmp.html" target="_blank">腾讯客服</a>                        <!-- <a class="weui-desktop-link" href="mailto:weixinmp@qq.com" target="_blank">联系邮箱</a> -->                <a class="weui-desktop-link" href="/acct/infringementlogin?action=getkey_brand&lang=zh_CN" target="_blank">侵权投诉</a>                        <a class="weui-desktop-link" href="/advanced/mplog?action=index" target="_blank">上传日志</a>        </p>      </div>      <div class="weui-desktop-foot__extra">        <!--#00002#-->        <p class="weui-desktop-link" class="copyright">Copyright &copy; 2012-2025 Tencent. All Rights Reserved.</p>        <!--%00002%-->      </div>    </div></div><script type="text/javascript">
+    //上报测速 --dom加载完成点
+    window._points&&(window._points[2]=+new Date());
+    // 初始化未读数
+    (function() {
+      // 初始化消息未读
+      var eleHeadBoxAccountNum = document.getElementById('headBoxAccountNum')
+      if (eleHeadBoxAccountNum) {
+        var headBoxAccountNum = parseInt(document.getElementById('headBoxAccountNum').dataset.notify)
+        if (headBoxAccountNum) {
+          eleHeadBoxAccountNum.style.display = 'block'
+          eleHeadBoxAccountNum.innerHTML = headBoxAccountNum > 99 ? '99+' : headBoxAccountNum
+        }
+      }
+
+      function setFootBlock() {
+        const foot = document.getElementById('footer')
+        if (foot) {
+          foot.style.display = 'block'
+        }
+      }
+
+      try {
+        //判断是否需要在login页面抬高footer
+        const ua = navigator.userAgent;
+        if (/(iPhone|iPod|iOS)/i.test(ua) || /(Android)/i.test(ua)) {
+          const footer = document.querySelector('#footer')
+          footer.classList.add('login-lift-footer')
+        }
+
+        const is_mpapp = /MPAPP\/([\d\.]+)/i.test(ua);
+
+        if (!is_mpapp) {
+          setFootBlock()
+        }
+      } catch (e) {
+        setFootBlock()
+        console.error(e);
+      }
+    })();
+</script>  <div id="_faq"></div>  <script type="text/javascript">
+    window.PAGE_MID = "mmbizweb2:login/loginpage/loginpage.html"; //首页比较特殊 手工维护mid
+  </script>  <script src="https://captcha.gtimg.com/TCaptcha.js"></script>  <script type="text/javascript">
+if (typeof WX_BJ_REPORT != "undefined" && WX_BJ_REPORT.BadJs) {
+  if (typeof PAGE_MID == "undefined") {
+    window.PAGE_MID = "";
+  }
+  WX_BJ_REPORT.BadJs.init(wx.uin, PAGE_MID, 'mmbizweb').hook(function (data) {
+    if (data.view !== 'mmbizweb') { // 返回码上报
+      return true;
+    } else { // 错误上报
+      data.cmdb_module = 'mmbizweb'; //添加cmdb_module
+      if (data.file && /^https\:\/\/(mp\.weixin\.qq\.com|res\.wx\.qq\.com)/.test(data.file) == false) {
+        return false;
+      }
+      // 兜底错误 没有file
+      if(data.name==="BadjsWindowError"&&!data.file){
+        return false;
+      }
+      // 非资源类错误（.html结尾 或者  没有monitor关键字 ）
+      if (/\.html$/i.test(data.mid) || !/monitor/i.test(data.mid)) {
+        BJ_REPORT.report(data); //保留badjs上报
+      }
+    }
+  });
+  if (typeof seajs == "undefined") {
+    WX_BJ_REPORT.BadJs.mark({ seaLoaded: 0 });
+  } else {
+    WX_BJ_REPORT.BadJs.mark({ seaLoaded: 1 }); //seajs加载成功
+  }
+  WX_BJ_REPORT.TryJs.run();
+  WX_BJ_REPORT.BadJs.mark({ tryjs: 1 }); //tryjs执行完
+  /*Vue.config.errorHandler = function(err, vm, info) {
+    console.error(err);
+    if (info) {
+      err._info = "[vue:" + JSON.stringify(info) + "]" + (err._info || "");
+    }
+    WX_BJ_REPORT.BadJs.onError(err);
+  };*/
+}
+
+function getico(i) {
+  var _img = new Image(1, 1);
+  _img.src = location.protocol + "//" + location.host + "/misc/getico" + "?location=" + (i || -1) + "&rand=" + Math.random() + window.wx.commonData.data.param;
+};
+window._points && (window._points[4] = +new Date()); // DOMContentLoaded dom树解析完成
+getico('');
+
+// todo: 将request的上报改造成别的形式
+// seajs.on('request', function(reqData) {
+//   setTimeout((function(data) {
+//     return function() {
+//       if (location.host.indexOf('dev') === 0 || location.host.indexOf('localhost') === 0) {
+//         return;
+//       }
+//       if (/[a-f0-9]{6}\.(js|css)$/.test(data.requestUri)) {
+//         return;
+//       }
+
+//       var opts = {
+//         res: data.requestUri,
+//         page: location.pathname + '?' + location.search
+//       };
+//       BJ_REPORT && BJ_REPORT.monitor(59, 'res[' + opts.page + ']; page[' + opts.res + ']', 121);
+//       if (typeof WX_BJ_REPORT != "undefined" && WX_BJ_REPORT.BadJs && typeof WX_BJ_REPORT.BadJs.report === 'function') {
+//         WX_BJ_REPORT.BadJs.report('ResoucenoVersion', data.requestUri, { mid: "mpResourceMonitor" });
+//       }
+//     };
+//   })(reqData), 3000);
+// });
+
+(function() {
+  /**
+   * 获取a标签对象的search参数和hash参数，会自动补全公共参数
+   *
+   * @param  {HTMLElement} target a链接元素
+   * @param  {Object} params 附加参数
+   * @return {Object}        含hash和search参数的对象
+   */
+  function getLinkInfo(target, params) {
+    var query = {};
+    var search = target.search;
+    var hash = target.hash;
+    var baseQuery = {
+      token: '',
+      lang: 'zh_CN'
+    };
+
+    if (search) {
+      search = search.slice(1);
+      search = search.split('&');
+
+      if (search.length) {
+        for (var i = 0; i < search.length; i++) {
+          var idx = search[i].indexOf('=');
+          query[search[i].slice(0, idx)] = search[i].slice(idx + 1);
+        }
+      }
+
+    }
+
+    // 把附加参数对象中的参数补上
+    if (params) {
+      for (var key in params) {
+        if (!query[key] && params.hasOwnProperty(key)) {
+          query[key] = params[key];
+        }
+      }
+    }
+
+    // 补上公共参数
+    for (var key in baseQuery) {
+      if (!query[key] && baseQuery.hasOwnProperty(key)) {
+        query[key] = baseQuery[key];
+      }
+    }
+
+    var newSearch = [];
+    for (var queryKey in query) {
+      if (query.hasOwnProperty(queryKey)) {
+        newSearch.push(queryKey + '=' + query[queryKey]);
+      }
+    }
+    newSearch = '?' + newSearch.join('&');
+    return {
+      hash: hash,
+      search: newSearch
+    };
+  }
+
+  /**
+   * 全局函数，重载页面，用于自动化测试，会将url存入store
+   */
+  window.reloadPage = function(force) {
+    window.location.reload(force);
+  }
+
+  /**
+   * 全局函数，打开一个链接，将自动补全公共参数
+   *
+   * @param  {string} link   要打开的链接，可以是https://mp.weixin.qq.com/cgi-bin/home形式的，也可以是/cgi-bin/home形式的，也可以带参数比如/cgi-bin/home?key=value
+   * @param  {Object} params 链接search参数
+   * @param  {boolean} newTab 是否使用新的窗口打开
+   */
+  window.openUrl = function(link, params, newTab) {
+    var target = document.createElement('a');
+    target.href = link;
+    var linkInfo = getLinkInfo(target, params);
+    var idx = link.indexOf('?') !== -1 ? link.indexOf('?') : (link.indexOf('#') !== -1 ? link.indexOf('#') : link.length);
+    var url = link.slice(0, idx);
+    url += linkInfo.search + linkInfo.hash;
+    if (!newTab) {
+      location.href = url;
+    } else {
+      window.open(url);
+    }
+  };
+
+  // 全局代理，处理a链接参数
+  document.body.addEventListener('click', function(e) {
+
+    var target = e.target;
+    // 到了body也结束，兜底
+    while (target && target.tagName !== 'A' && target.tagName !== 'BODY') {
+      target = target.parentNode;
+    }
+
+    // 只有本站的链接才处理
+    if (
+      !target ||
+      !target.href ||
+      target.href.indexOf('javascript') === 0 
+      || (target.host !== location.host && target.getAttribute('href').indexOf('/') !== 0)
+      || (target.host === location.host && target.getAttribute('href').indexOf('/s/') >= 0) // 图文 c 端链接也不用
+    ) {
+      return;
+    }
+
+    var linkInfo = getLinkInfo(target);
+    var idx = target.href.indexOf('?') !== -1 ? target.href.indexOf('?') : (target.href.indexOf('#') !== -1 ? target.href.indexOf('#') : target.href.length);
+    var url = target.href.slice(0, idx);
+
+    target.href = url + linkInfo.search + linkInfo.hash;
+  });
+  // 针对a链接右键在新标签打开处理参数
+  document.body.addEventListener('contextmenu', function(e) {
+
+    var target = e.target;
+    // 到了body也结束，兜底
+    while (target && target.tagName !== 'A' && target.tagName !== 'BODY') {
+      target = target.parentNode;
+    }
+
+    // 只有本站的链接才处理
+    if (
+      !target ||
+      !target.href ||
+      target.href.indexOf('javascript') === 0 ||
+      (target.host !== location.host && target.getAttribute('href').indexOf('/') !== 0)
+    ) {
+      return;
+    }
+
+    var linkInfo = getLinkInfo(target);
+    var idx = target.href.indexOf('?') !== -1 ? target.href.indexOf('?') : (target.href.indexOf('#') !== -1 ? target.href.indexOf('#') : target.href.length);
+    var url = target.href.slice(0, idx);
+
+    target.href = url + linkInfo.search + linkInfo.hash;
+  });
+
+})();
+
+if (document.querySelectorAll) {
+  var jsNavItems = document.querySelectorAll('.js_nav_item');
+
+  for (var i = 0; i < jsNavItems.length; i++) {
+    jsNavItems[i].addEventListener('click', function(e) {
+      try {
+        var itemId = e.currentTarget.getAttribute('data-id');
+        var itemNew = e.currentTarget.getAttribute('data-new');
+        var itemHref = e.currentTarget.getAttribute('href');
+
+        if (!itemHref) { // 没有href则找父节点A标签
+          var tmpNode = e.currentTarget.parentNode;
+          while (tmpNode && !/^BODY$/i.test(tmpNode.nodeName)) { // 存在节点且非body
+            if (/^A$/i.test(tmpNode.nodeName)) { // A标签
+              itemHref = tmpNode.getAttribute('href');
+              break;
+            }
+            tmpNode = tmpNode.parentNode;
+          }
+          if (!itemHref) { // 还是找不到href就放弃
+            return;
+          }
+        }
+
+        if (parseInt(itemNew) == 1) {
+          nativeAjax.post('/misc/navoperation', {
+            action: 'click',
+            id: itemId,
+            token: ''
+          }, function(resp) {
+            console.log(resp);
+
+            //这里真正去做跳转
+            window.location.href = itemHref;
+          })
+        }
+
+        //阻止跳转 一定要消了红点才能跳转
+        if (itemHref != null && parseInt(itemNew) == 1) {
+          e.preventDefault();
+          return false;
+        }
+
+      } catch (e) {
+        //消红点报错就算了
+        console.log('cannot remove red dot');
+      }
+
+    }, true);
+  }
+}
+
+var nativeAjax = {};
+nativeAjax.x = function() {
+  if (typeof XMLHttpRequest !== 'undefined') {
+    return new XMLHttpRequest();
+  }
+  var versions = [
+    "MSXML2.XmlHttp.6.0",
+    "MSXML2.XmlHttp.5.0",
+    "MSXML2.XmlHttp.4.0",
+    "MSXML2.XmlHttp.3.0",
+    "MSXML2.XmlHttp.2.0",
+    "Microsoft.XmlHttp"
+  ];
+
+  var xhr;
+  for (var i = 0; i < versions.length; i++) {
+    try {
+      xhr = new ActiveXObject(versions[i]);
+      break;
+    } catch (e) {}
+  }
+  return xhr;
+};
+
+nativeAjax.send = function(url, callback, method, data, async) {
+  if (async ===undefined) {
+    async = true;
+  }
+  var x = nativeAjax.x();
+  x.open(method, url, async);
+  x.onreadystatechange = function() {
+    if (x.readyState == 4) {
+      callback(x.responseText)
+    }
+  };
+  if (method == 'POST') {
+    x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  }
+  x.send(data)
+};
+
+nativeAjax.get = function(url, data, callback, async) {
+  var query = [];
+  for (var key in data) {
+    query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+  }
+  nativeAjax.send(url + (query.length ? '?' + query.join('&') : ''), callback, 'GET', null, async)
+};
+
+nativeAjax.post = function(url, data, callback, async) {
+  var query = [];
+  for (var key in data) {
+    query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+  }
+  nativeAjax.send(url, callback, 'POST', query.join('&'), async)
+};
+</script><!-- <script onerror="wx_loaderror(this)" type="text/javascript" src="https://res.wx.qq.com/mpres/zh_CN/htmledition/js/vuest.js"></script>-->  <script type="text/javascript">
+if (!window.CGI_DATA) {
+window.CGI_DATA = {};
+}
+
+window.CGI_DATA['pages/login/loginpage'] = {
+currentLang: 'zh_CN',
+aSource: '',
+toUrl: '',
+redirectUrl: '' || '',
+}
+</script>  <script main type="text/javascript">
+    var aSource = '',
+      toUrl = '';
+
+    // if (location.host.indexOf('dev') < 0) {
+    //     if (location.protocol.indexOf('https') < 0) {
+    //         location.href = location.href.replace(/http/i, 'https');
+    //     }
+    // }
+
+    window.wx.cgiData.currentLang = "zh_CN";
+    window.wx.cgiData.redirectUrl = '' || '';
+    window.wx.cgiData.defaultScanlogin = '1' * 1;
+  </script><script src="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/vendors~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~album/list/list~b~vendors.23d27b54.js" onerror="wx_loaderror(this)" crossorigin="anonymous"></script><script src="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/modules~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~album/list/list~b~modules.74f91eaf.js" onerror="wx_loaderror(this)" crossorigin="anonymous"></script><script src="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/threerd~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~album/list/list~b~threerd.a0b8e414.js" onerror="wx_loaderror(this)" crossorigin="anonymous"></script><script src="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/modules~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~city/service_edit~modules.3e092d06.js" onerror="wx_loaderror(this)" crossorigin="anonymous"></script><script src="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/default~advanced/menusetting/menusetting~advanced/menusetting4Web1~album/edit/edit~album/list/list~b~default.bc9c7dd7.js" onerror="wx_loaderror(this)" crossorigin="anonymous"></script><script src="https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/login/loginpage/loginpage.5b162ff4.js" onerror="wx_loaderror(this)" crossorigin="anonymous"></script></body></html>

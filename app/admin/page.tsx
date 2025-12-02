@@ -2,7 +2,8 @@
 export const runtime = 'edge'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { LayoutDashboard, Settings, Menu, Database, Folders, FolderTree, Globe } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Settings, Menu, Database, Folders, FolderTree, Globe, RefreshCw } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
@@ -14,22 +15,38 @@ export default function AdminDashboard() {
     totalCategories: 0,
     totalSites: 0,
   })
+  const [isRefreshing, setIsRefreshing] = useState(false)
 
   // 获取统计数据
+  const fetchStats = async (showLoading = false) => {
+    try {
+      if (showLoading) setIsRefreshing(true)
+      console.log('Fetching stats...')
+      const response = await fetch('/api/admin/stats')
+      const data = await response.json()
+      console.log('Received stats:', data)
+      setStats(data)
+    } catch (error) {
+      console.error('Failed to fetch stats:', error)
+    } finally {
+      if (showLoading) setIsRefreshing(false)
+    }
+  }
+
   useEffect(() => {
-    const fetchStats = async () => {
-      try {
-        console.log('Fetching stats...')
-        const response = await fetch('/api/admin/stats')
-        const data = await response.json()
-        console.log('Received stats:', data)
-        setStats(data)
-      } catch (error) {
-        console.error('Failed to fetch stats:', error)
-      }
+    fetchStats()
+  }, [])
+
+  // 页面获得焦点时刷新统计数据
+  useEffect(() => {
+    const handleFocus = () => {
+      fetchStats()
     }
 
-    fetchStats()
+    window.addEventListener('focus', handleFocus)
+    return () => {
+      window.removeEventListener('focus', handleFocus)
+    }
   }, [])
 
   // 统计卡片数据
@@ -83,7 +100,18 @@ export default function AdminDashboard() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold">控制台</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold">控制台</h1>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => fetchStats(true)}
+          disabled={isRefreshing}
+        >
+          <RefreshCw className={`h-4 w-4 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
+          刷新统计
+        </Button>
+      </div>
       
       {/* 统计卡片 */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
