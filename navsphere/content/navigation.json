@@ -32,14 +32,6 @@
           "enabled": true
         },
         {
-          "id": "1757404866335",
-          "title": "闪击工作台",
-          "href": "https://nav.sankki.com",
-          "description": "网址导航",
-          "icon": "/assets/favicon_1757404881784.ico",
-          "enabled": true
-        },
-        {
           "id": "site_1764658965908_izsr5a8m9",
           "title": "Todoist",
           "href": "https://app.todoist.com/",
