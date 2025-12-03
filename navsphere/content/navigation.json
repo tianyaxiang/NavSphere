@@ -500,6 +500,14 @@
           "description": "",
           "icon": "/assets/favicon_1764770027909.ico",
           "enabled": true
+        },
+        {
+          "id": "1764770040779",
+          "title": "轨迹的航海日志",
+          "href": "https://guijige.com/",
+          "description": "",
+          "icon": "/assets/favicon_1764770062562.png",
+          "enabled": true
         }
       ],
       "subCategories": []
