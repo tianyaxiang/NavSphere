@@ -40,14 +40,6 @@
           "enabled": true
         },
         {
-          "id": "site_1762400790763_iuxtp40ox",
-          "title": "DocMost Wiki",
-          "href": "https://wiki.guijige.com/home",
-          "description": "轨迹的Wiki",
-          "icon": "/assets/favicon_1762400756986.png",
-          "enabled": true
-        },
-        {
           "id": "site_1764658965908_izsr5a8m9",
           "title": "Todoist",
           "href": "https://app.todoist.com/",
@@ -507,6 +499,14 @@
           "href": "https://analytics.guijige.com/",
           "description": "",
           "icon": "/assets/favicon_1764770027909.ico",
+          "enabled": true
+        },
+        {
+          "id": "site_1762400790763_iuxtp40ox",
+          "title": "DocMost Wiki",
+          "href": "https://wiki.guijige.com/home",
+          "description": "轨迹的Wiki",
+          "icon": "/assets/favicon_1762400756986.png",
           "enabled": true
         }
       ],
