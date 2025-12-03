@@ -492,7 +492,16 @@
       "icon": "Star",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "1764769960475",
+          "title": "Umami分析台",
+          "href": "https://analytics.guijige.com/",
+          "description": "",
+          "icon": "/assets/favicon_1764770027909.ico",
+          "enabled": true
+        }
+      ],
       "subCategories": []
     }
   ]
