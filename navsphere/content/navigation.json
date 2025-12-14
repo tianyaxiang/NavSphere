@@ -1323,7 +1323,7 @@
               "title": "域名监控",
               "href": "https://domain-autocheck.e.9.2.0.8.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa/",
               "description": "域名监控",
-              "icon": "/assets/favicon_1765700673736.png",
+              "icon": "https://cdn.jsdelivr.net/gh/jy02739244/Domain-AutoCheck@main/img/logo.png",
               "enabled": true
             }
           ]
