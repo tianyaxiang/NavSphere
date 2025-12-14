@@ -524,6 +524,14 @@
               "description": "ClouDNS provides Free DNS, Cloud DNS, Managed DNS, GeoDNS and DDoS Protected DNS hosting with included web redirects, mail forwards and Round-Robin load balancing. Instant updates in Europe, North and South America, Asia and Australia.",
               "icon": "https://www.cloudns.net/images/logo/social.png",
               "enabled": true
+            },
+            {
+              "id": "1765702726801",
+              "title": "Aliyun",
+              "href": "https://www.aliyun.com",
+              "description": "访问 www.aliyun.com",
+              "icon": "/assets/favicon_1765702732530.png",
+              "enabled": true
             }
           ]
         },
