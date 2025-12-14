@@ -516,6 +516,14 @@
               "description": "Tencent EdgeOne，亚洲领先的CDN，利用腾讯先进的边缘节点提供卓越的边缘解决方案，用于加速、安全、无服务器和视频。",
               "icon": "/assets/favicon_1755225933031.ico",
               "enabled": true
+            },
+            {
+              "id": "site_1765702098032_eob5mwjl1",
+              "title": "Free DNS hosting, Cloud DNS hosting and Domain names | ClouDNS",
+              "href": "https://www.cloudns.net/",
+              "description": "ClouDNS provides Free DNS, Cloud DNS, Managed DNS, GeoDNS and DDoS Protected DNS hosting with included web redirects, mail forwards and Round-Robin load balancing. Instant updates in Europe, North and South America, Asia and Australia.",
+              "icon": "/assets/favicon_1765702067772.gif",
+              "enabled": true
             }
           ]
         },
