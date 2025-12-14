@@ -520,9 +520,9 @@
             {
               "id": "site_1765702098032_eob5mwjl1",
               "title": "Free DNS hosting, Cloud DNS hosting and Domain names | ClouDNS",
-              "href": "https://www.cloudns.net/",
+              "href": "https://www.cloudns.net",
               "description": "ClouDNS provides Free DNS, Cloud DNS, Managed DNS, GeoDNS and DDoS Protected DNS hosting with included web redirects, mail forwards and Round-Robin load balancing. Instant updates in Europe, North and South America, Asia and Australia.",
-              "icon": "/assets/favicon_1765702067772.gif",
+              "icon": "/assets/favicon_1765702349372.gif",
               "enabled": true
             }
           ]
