@@ -108,6 +108,54 @@
           "description": "",
           "icon": "/assets/favicon_1761724837449.svg",
           "enabled": true
+        },
+        {
+          "id": "1764304637626",
+          "title": "Google 云端硬盘",
+          "href": "https://drive.google.com/",
+          "description": "使用 Google 账号（个人用途）或 Google Workspace 账号（企业用途）访问 Google 云端硬盘。",
+          "icon": "/assets/favicon_1764304640963.png",
+          "enabled": true
+        },
+        {
+          "id": "1765256323947",
+          "title": "Chrome Webstore Devconsole",
+          "href": "https://chrome.google.com/webstore/devconsole",
+          "description": "Chrome 开发者",
+          "icon": "/assets/favicon_1765256327613.png",
+          "enabled": true
+        },
+        {
+          "id": "1765279305478",
+          "title": "NewKit - 在线效率工具箱",
+          "href": "https://www.newkit.site/",
+          "description": "NewKit 提供精选的在线实用工具，JSON格式化、SQL美化、加密解密等，简洁高效，数据本地处理",
+          "icon": "/assets/favicon_1765279307988.svg",
+          "enabled": true
+        },
+        {
+          "id": "item-1765355064106",
+          "enabled": true,
+          "title": "NavSphere导航",
+          "href": "https://dh.leti.ltd/",
+          "description": "收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、素材资源网站，定时更新分享优质产品设计书签。",
+          "icon": "/assets/favicon_1765355057814.png"
+        },
+        {
+          "id": "item-1765686645674",
+          "enabled": true,
+          "title": "Google 趋势",
+          "href": "https://trends.google.com/trends/",
+          "description": "",
+          "icon": "/assets/favicon_1765686636721.ico"
+        },
+        {
+          "id": "item-1765687115114",
+          "enabled": true,
+          "title": "PageSpeed Insights",
+          "href": "https://pagespeed.web.dev/",
+          "description": "",
+          "icon": "/assets/favicon_1765687105275.png"
         }
       ],
       "subCategories": [],
@@ -208,6 +256,14 @@
               "description": "Grok is a free AI assistant designed by xAI to maximize truth and objectivity. Grok offers real-time search, image generation, trend analysis, and more.",
               "icon": "/assets/favicon_1759046289851.png",
               "enabled": true
+            },
+            {
+              "id": "item-1764762513556",
+              "enabled": true,
+              "title": "Google AI Studio",
+              "href": "https://aistudio.google.com/prompts/new_chat",
+              "description": "Google AI Studio",
+              "icon": "/assets/favicon_1764762488719.png"
             }
           ]
         },
@@ -232,6 +288,14 @@
               "href": "https://gamma.app/",
               "description": "AI生成PPT工具",
               "icon": "/assets/img_1736911490095.png",
+              "enabled": true
+            },
+            {
+              "id": "1764162262399",
+              "title": "Google NotebookLM | AI 研究工具与思考伙伴",
+              "href": "https://notebooklm.google/",
+              "description": "认识 NotebookLM：给力的 AI 研究工具与思考伙伴，可以帮助您分析来源、理清复杂的资料及转换内容。",
+              "icon": "/assets/favicon_1764162265139.svg",
               "enabled": true
             }
           ]
@@ -310,6 +374,23 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "8f5e0374-2ee9-4012-acac-baecb515d826",
+          "title": "提示词助手",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1765285549189",
+              "title": "Share and Discover anything to do with AI | Snack Prompt",
+              "href": "https://snackprompt.com/",
+              "description": "A platform to share and discover amazing AI prompts and resources.",
+              "icon": "/assets/favicon_1765285552557.ico",
+              "enabled": true
+            }
+          ]
         }
       ],
       "description": "",
@@ -378,6 +459,22 @@
               "description": "IndieHub is a community for Indie Makers to discover tools, launch products, and ship applications faster and better.",
               "icon": "/assets/favicon_1763380043621.ico",
               "enabled": true
+            },
+            {
+              "id": "1765416694684",
+              "title": "Find your Template",
+              "href": "https://vercel.com/templates",
+              "description": "Jumpstart your app development process with pre-built solutions from Vercel and our community.",
+              "icon": "/assets/favicon_1765416698840.png",
+              "enabled": true
+            },
+            {
+              "id": "item-1765594481103",
+              "enabled": true,
+              "title": "Multi-Platform Theme Generator & Converter",
+              "href": "https://www.tinte.dev/",
+              "description": "Create, convert, and export beautiful themes for VS Code, shadcn/ui, Rayso, TweakCN, terminals, and more. Generate semantic color palettes using OKLCH color space with live previews.",
+              "icon": "/assets/favicon_1765594470605.png"
             }
           ]
         },
@@ -707,6 +804,23 @@
               "href": "https://coolify.io/",
               "description": "Self-hosting platform with superpowers. Deploy apps, databases &#38; 280+ services to your server. Open-source alternative to Heroku.",
               "icon": "/assets/favicon_1761279686786.png",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "baf3db58-404b-4385-80cb-c2ddcf5747fc",
+          "title": "经验技巧",
+          "icon": "Files",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "1765453428896",
+              "title": "AGENTS.md",
+              "href": "https://agents.md/",
+              "description": "AGENTS.md is a simple, open format for guiding coding agents, used by over 60k open-source projects. Think of it as a README for agents.",
+              "icon": "/assets/favicon_1765453432472.png",
               "enabled": true
             }
           ]
@@ -1409,6 +1523,14 @@
               "href": "https://vuepress.vuejs.org/",
               "description": "Vue 驱动的静态网站生成器",
               "icon": "/assets/favicon_1760512644195.png",
+              "enabled": true
+            },
+            {
+              "id": "1765310098728",
+              "title": "mdBook Documentation",
+              "href": "https://rust-lang.github.io/mdBook/index.html",
+              "description": "Create book from markdown files. Like Gitbook but implemented in Rust",
+              "icon": "/assets/img_1765686772245.png",
               "enabled": true
             }
           ]
