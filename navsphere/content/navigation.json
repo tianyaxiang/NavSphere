@@ -1314,7 +1314,7 @@
         {
           "id": "b9e2f799-db13-4cff-9d98-c1d974459180",
           "title": "域名监控",
-          "icon": "Folder",
+          "icon": "Book",
           "description": "域名到期监控",
           "enabled": true,
           "items": []
