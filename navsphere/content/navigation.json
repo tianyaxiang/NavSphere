@@ -1259,6 +1259,14 @@
               "href": "https://1024tools.com/",
               "description": "1024Tools - 免费在线工具箱 - 1024tools.com ©2015-2025 版权所有\n\t\t\t\t\t京ICP备15003178号-1",
               "icon": "/assets/favicon_1765783244272.ico"
+            },
+            {
+              "id": "item-1765783315932",
+              "enabled": true,
+              "title": "JSON在线解析格式化验证 - JSON.cn",
+              "href": "https://www.json.cn/",
+              "description": "访问 www.json.cn",
+              "icon": "/assets/favicon_1765783309851.png"
             }
           ],
           "enabled": true
