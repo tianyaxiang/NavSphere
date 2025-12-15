@@ -663,6 +663,14 @@
               "description": "Register domain names at Namecheap. Buy cheap domain names and enjoy 24/7 support. With over 18 million domains under management, you know you’re in good hands.",
               "icon": "/assets/favicon_1754295511938.ico",
               "enabled": true
+            },
+            {
+              "id": "item-1765781810200",
+              "enabled": true,
+              "title": "Launch into the future - Spaceship",
+              "href": "https://www.spaceship.com/",
+              "description": "访问 www.spaceship.com",
+              "icon": "/assets/favicon_1765781800235.png"
             }
           ]
         },
