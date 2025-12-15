@@ -1251,6 +1251,14 @@
               "description": "App Screenshot Generator for App Store&Google Play,Create panoramic screenshots for iOS and Android apps. No account needed.",
               "icon": "/assets/img_1735258064656.png",
               "enabled": true
+            },
+            {
+              "id": "item-1765783271138",
+              "enabled": true,
+              "title": "1024工具箱 - 1024Tools - 免费在线工具箱",
+              "href": "https://1024tools.com/",
+              "description": "1024Tools - 免费在线工具箱 - 1024tools.com ©2015-2025 版权所有\n\t\t\t\t\t京ICP备15003178号-1",
+              "icon": "/assets/favicon_1765783244272.ico"
             }
           ],
           "enabled": true
