@@ -1275,6 +1275,14 @@
               "href": "https://www.itdog.cn/",
               "description": "本站为IT运维人员提供实用的工具，多地ping测试、多地tcping测试、网站测速、HTTP测速、API测速、路由追踪、在线MTR 、DNS查询等。",
               "icon": "https://www.itdog.cn/favicon.ico"
+            },
+            {
+              "id": "item-1765783362348",
+              "enabled": true,
+              "title": "美国地址生成器 - 美国身份生成器 - 美国信用卡生成器",
+              "href": "https://www.meiguodizhi.com/",
+              "description": "随机生成美国地址, 身份信息，信用卡信息，手机号码和其他基本信息。还会随机生成工作信息，财务信息，兴趣爱好等信息。",
+              "icon": "https://static11.meiguodizhi.com/favicon.ico"
             }
           ],
           "enabled": true
