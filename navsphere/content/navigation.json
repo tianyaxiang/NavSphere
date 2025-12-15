@@ -1366,23 +1366,6 @@
             }
           ],
           "enabled": true
-        },
-        {
-          "id": "b9e2f799-db13-4cff-9d98-c1d974459180",
-          "title": "域名监控",
-          "icon": "Book",
-          "description": "域名到期监控",
-          "enabled": true,
-          "items": [
-            {
-              "id": "site_1765700704972_c1hqc67v1",
-              "title": "域名监控",
-              "href": "https://domain-autocheck.e.9.2.0.8.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa/",
-              "description": "域名监控",
-              "icon": "https://cdn.jsdelivr.net/gh/jy02739244/Domain-AutoCheck@main/img/logo.png",
-              "enabled": true
-            }
-          ]
         }
       ],
       "description": "",
