@@ -695,6 +695,14 @@
               "href": "https://digitalplat.org/",
               "description": "We value your privacy",
               "icon": "https://digitalplat.org/wp-content/uploads/2023/04/digitalplat-white-150x150.png"
+            },
+            {
+              "id": "item-1765782916712",
+              "enabled": true,
+              "title": "域名到期监控",
+              "href": "https://domain-autocheck.e.9.2.0.8.0.0.0.0.7.4.0.1.0.0.2.ip6.arpa/",
+              "description": "",
+              "icon": "/assets/favicon_1765782897329.png"
             }
           ]
         },
