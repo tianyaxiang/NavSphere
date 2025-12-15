@@ -687,6 +687,14 @@
               "href": "https://nic.ua/en",
               "description": "NIC.UA  — The Main Registrar of Ukraine. Buy your .UA, .COM, or .ORG domain with Ukrainian support ☎ +380 44 593-32-22.",
               "icon": "https://nic.ua/favicon.ico?version=v350"
+            },
+            {
+              "id": "item-1765782510461",
+              "enabled": true,
+              "title": "DigitalPlat",
+              "href": "https://digitalplat.org/",
+              "description": "We value your privacy",
+              "icon": "https://digitalplat.org/wp-content/uploads/2023/04/digitalplat-white-150x150.png"
             }
           ]
         },
