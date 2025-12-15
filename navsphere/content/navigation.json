@@ -1283,6 +1283,14 @@
               "href": "https://www.meiguodizhi.com/",
               "description": "随机生成美国地址, 身份信息，信用卡信息，手机号码和其他基本信息。还会随机生成工作信息，财务信息，兴趣爱好等信息。",
               "icon": "https://static11.meiguodizhi.com/favicon.ico"
+            },
+            {
+              "id": "item-1765783387222",
+              "enabled": true,
+              "title": "JavaScript Obfuscator - A powerful JavaScript Obfuscator with VM obfuscation",
+              "href": "https://obfuscator.io/",
+              "description": "A powerful obfuscator for JavaScript. Make your code harder to copy and prevent people from stealing your work.",
+              "icon": "https://obfuscator.io/favicon.ico"
             }
           ],
           "enabled": true
