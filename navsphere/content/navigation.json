@@ -1267,6 +1267,14 @@
               "href": "https://www.json.cn/",
               "description": "访问 www.json.cn",
               "icon": "/assets/favicon_1765783309851.png"
+            },
+            {
+              "id": "item-1765783343868",
+              "enabled": true,
+              "title": "ITDOG - 在线ping_在线tcping_网站测速_HTTP测速_API测速_路由追踪_在线MTR_DNS查询_ITDOG-云邦畅想",
+              "href": "https://www.itdog.cn/",
+              "description": "本站为IT运维人员提供实用的工具，多地ping测试、多地tcping测试、网站测速、HTTP测速、API测速、路由追踪、在线MTR 、DNS查询等。",
+              "icon": "https://www.itdog.cn/favicon.ico"
             }
           ],
           "enabled": true
