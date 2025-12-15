@@ -1291,6 +1291,14 @@
               "href": "https://obfuscator.io/",
               "description": "A powerful obfuscator for JavaScript. Make your code harder to copy and prevent people from stealing your work.",
               "icon": "https://obfuscator.io/favicon.ico"
+            },
+            {
+              "id": "item-1765783407218",
+              "enabled": true,
+              "title": "Ctool",
+              "href": "https://ctool.dev/",
+              "description": "Commonly Used Software Development Tools: Hash/Encrypt/Decrypt/Code Convert/Timestamp/Qrcode/IP Query/Code Formatter/Unicode/Regex/...",
+              "icon": "https://ctool.dev/favicon.ico"
             }
           ],
           "enabled": true
