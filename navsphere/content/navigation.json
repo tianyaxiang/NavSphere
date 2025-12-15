@@ -679,6 +679,14 @@
               "href": "https://www.dnshe.com/",
               "description": "DNSHE 提供永久免费的域名注册服务。支持 A, CNAME, MX, TXT, NS 等全类型 DNS 记录解析，即时生效，API 驱动，专为开发者、学生和开源项目打造。",
               "icon": "https://www.dnshe.com/favicon.ico"
+            },
+            {
+              "id": "item-1765782474032",
+              "enabled": true,
+              "title": "Register Domains in Ukraine | Get Your .UA Domain — NIC.UA",
+              "href": "https://nic.ua/en",
+              "description": "NIC.UA  — The Main Registrar of Ukraine. Buy your .UA, .COM, or .ORG domain with Ukrainian support ☎ +380 44 593-32-22.",
+              "icon": "https://nic.ua/favicon.ico?version=v350"
             }
           ]
         },
