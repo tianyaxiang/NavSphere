@@ -88,14 +88,6 @@
           "enabled": true
         },
         {
-          "id": "1764304637626",
-          "title": "Google 云端硬盘",
-          "href": "https://drive.google.com/",
-          "description": "使用 Google 账号（个人用途）或 Google Workspace 账号（企业用途）访问 Google 云端硬盘。",
-          "icon": "/assets/favicon_1764304640963.png",
-          "enabled": true
-        },
-        {
           "id": "1765279305478",
           "title": "NewKit - 在线效率工具箱",
           "href": "https://www.newkit.site/",
