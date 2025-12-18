@@ -40,6 +40,14 @@
           "enabled": true
         },
         {
+          "id": "item-1766043475899",
+          "enabled": true,
+          "title": "飞书云文档",
+          "href": "https://ai.feishu.cn/drive/me/",
+          "description": "",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=ai.feishu.cn"
+        },
+        {
           "id": "1756265870207",
           "title": "Random Street Address",
           "href": "https://www.bestrandoms.com/random-address-in-us",
@@ -102,14 +110,6 @@
           "href": "https://trends.google.com/trends/",
           "description": "",
           "icon": "/assets/favicon_1765686636721.ico"
-        },
-        {
-          "id": "item-1766043475899",
-          "enabled": true,
-          "title": "飞书云文档",
-          "href": "https://ai.feishu.cn/drive/me/",
-          "description": "",
-          "icon": "https://www.google.com/s2/favicons?sz=128&domain=ai.feishu.cn"
         }
       ],
       "subCategories": []
