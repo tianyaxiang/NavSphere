@@ -150,6 +150,14 @@
           "href": "https://pagespeed.web.dev/",
           "description": "",
           "icon": "/assets/favicon_1765687105275.png"
+        },
+        {
+          "id": "item-1766043475899",
+          "enabled": true,
+          "title": "飞书云文档",
+          "href": "https://ai.feishu.cn/drive/me/",
+          "description": "",
+          "icon": "https://www.google.com/s2/favicons?sz=128&domain=ai.feishu.cn"
         }
       ],
       "subCategories": []
