@@ -96,14 +96,6 @@
           "enabled": true
         },
         {
-          "id": "1765256323947",
-          "title": "Chrome Webstore Devconsole",
-          "href": "https://chrome.google.com/webstore/devconsole",
-          "description": "Chrome 开发者",
-          "icon": "/assets/favicon_1765256327613.png",
-          "enabled": true
-        },
-        {
           "id": "1765279305478",
           "title": "NewKit - 在线效率工具箱",
           "href": "https://www.newkit.site/",
