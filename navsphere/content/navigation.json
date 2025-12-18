@@ -96,14 +96,6 @@
           "enabled": true
         },
         {
-          "id": "1761724833829",
-          "title": "Hacker News",
-          "href": "https://news.ycombinator.com/",
-          "description": "",
-          "icon": "/assets/favicon_1761724837449.svg",
-          "enabled": true
-        },
-        {
           "id": "1764304637626",
           "title": "Google 云端硬盘",
           "href": "https://drive.google.com/",
