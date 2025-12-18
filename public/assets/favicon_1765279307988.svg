@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 渐变定义 -->
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80"/>
+      <stop offset="100%" style="stop-color:#3ecf8e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 圆角背景 -->
+  <rect width="32" height="32" rx="8" fill="#171717"/>
+
+  <!-- N 字母造型 - 代表 NewKit -->
+  <path d="M9 25V7L16 19V7" stroke="url(#brandGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19 7V25" stroke="url(#brandGradient)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- K 字母简化 -->
+  <path d="M23 7V25M23 16L27 10M23 16L27 22" stroke="url(#brandGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+</svg>

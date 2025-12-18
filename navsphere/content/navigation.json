@@ -86,6 +86,70 @@
           "description": "Rubbish",
           "icon": "/assets/favicon_1758181055080.png",
           "enabled": true
+        },
+        {
+          "id": "1760507233911",
+          "title": "Free for Developers",
+          "href": "https://free-for.dev/#/",
+          "description": "Developers and Open Source authors now have a massive amount of services offering free tiers, but it can be hard to find them all to make informed decisions.",
+          "icon": "/assets/favicon_1760507241370.png",
+          "enabled": true
+        },
+        {
+          "id": "1761724833829",
+          "title": "Hacker News",
+          "href": "https://news.ycombinator.com/",
+          "description": "",
+          "icon": "/assets/favicon_1761724837449.svg",
+          "enabled": true
+        },
+        {
+          "id": "1764304637626",
+          "title": "Google 云端硬盘",
+          "href": "https://drive.google.com/",
+          "description": "使用 Google 账号（个人用途）或 Google Workspace 账号（企业用途）访问 Google 云端硬盘。",
+          "icon": "/assets/favicon_1764304640963.png",
+          "enabled": true
+        },
+        {
+          "id": "1765256323947",
+          "title": "Chrome Webstore Devconsole",
+          "href": "https://chrome.google.com/webstore/devconsole",
+          "description": "Chrome 开发者",
+          "icon": "/assets/favicon_1765256327613.png",
+          "enabled": true
+        },
+        {
+          "id": "1765279305478",
+          "title": "NewKit - 在线效率工具箱",
+          "href": "https://www.newkit.site/",
+          "description": "NewKit 提供精选的在线实用工具，JSON格式化、SQL美化、加密解密等，简洁高效，数据本地处理",
+          "icon": "/assets/favicon_1765279307988.svg",
+          "enabled": true
+        },
+        {
+          "id": "item-1765355064106",
+          "enabled": true,
+          "title": "NavSphere导航",
+          "href": "https://dh.leti.ltd/",
+          "description": "收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、素材资源网站，定时更新分享优质产品设计书签。",
+          "icon": "/assets/favicon_1765355057814.png"
+        },
+        {
+          "id": "item-1765686645674",
+          "enabled": true,
+          "title": "Google 趋势",
+          "href": "https://trends.google.com/trends/",
+          "description": "",
+          "icon": "/assets/favicon_1765686636721.ico"
+        },
+        {
+          "id": "item-1765687115114",
+          "enabled": true,
+          "title": "PageSpeed Insights",
+          "href": "https://pagespeed.web.dev/",
+          "description": "",
+          "icon": "/assets/favicon_1765687105275.png"
         }
       ],
       "subCategories": []
