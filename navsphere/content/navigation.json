@@ -152,6 +152,14 @@
           "description": "灵光AI",
           "icon": "https://www.google.com/s2/favicons?sz=128&domain=www.lingguang.com",
           "enabled": true
+        },
+        {
+          "id": "1766037948487",
+          "title": "Google NotebookLLM",
+          "href": "https://notebooklm.google.com/",
+          "description": "",
+          "icon": "/assets/favicon_1766037962679.png",
+          "enabled": true
         }
       ],
       "subCategories": []
