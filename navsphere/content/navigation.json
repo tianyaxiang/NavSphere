@@ -106,6 +106,14 @@
           "enabled": true
         },
         {
+          "id": "1766037948487",
+          "title": "Google NotebookLLM",
+          "href": "https://notebooklm.google.com/",
+          "description": "",
+          "icon": "/assets/favicon_1766037962679.png",
+          "enabled": true
+        },
+        {
           "id": "1756265046826",
           "title": "ChatGPT",
           "href": "https://chatgpt.com/",
@@ -151,14 +159,6 @@
           "href": "https://www.lingguang.com/",
           "description": "灵光AI",
           "icon": "https://www.google.com/s2/favicons?sz=128&domain=www.lingguang.com",
-          "enabled": true
-        },
-        {
-          "id": "1766037948487",
-          "title": "Google NotebookLLM",
-          "href": "https://notebooklm.google.com/",
-          "description": "",
-          "icon": "/assets/favicon_1766037962679.png",
           "enabled": true
         }
       ],
