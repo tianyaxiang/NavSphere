@@ -494,14 +494,6 @@
           "enabled": true
         },
         {
-          "id": "1764769960475",
-          "title": "Umami分析台",
-          "href": "https://analytics.guijige.com/",
-          "description": "",
-          "icon": "/assets/favicon_1764770027909.ico",
-          "enabled": true
-        },
-        {
           "id": "site_1762400790763_iuxtp40ox",
           "title": "DocMost Wiki",
           "href": "https://wiki.guijige.com/home",
