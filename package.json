@@ -72,7 +72,7 @@
     "iron-session": "^8.0.4",
     "lucide-react": "^0.462.0",
     "monaco-editor": "^0.52.2",
-    "next": "15.4.6",
+    "next": "^15.4.6",
     "next-auth": "5.0.0-beta.25",
     "next-themes": "^0.2.1",
     "os-browserify": "^0.3.0",
