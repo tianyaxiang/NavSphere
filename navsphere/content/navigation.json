@@ -88,14 +88,6 @@
           "enabled": true
         },
         {
-          "id": "1760507233911",
-          "title": "Free for Developers",
-          "href": "https://free-for.dev/#/",
-          "description": "Developers and Open Source authors now have a massive amount of services offering free tiers, but it can be hard to find them all to make informed decisions.",
-          "icon": "/assets/favicon_1760507241370.png",
-          "enabled": true
-        },
-        {
           "id": "1764304637626",
           "title": "Google 云端硬盘",
           "href": "https://drive.google.com/",
