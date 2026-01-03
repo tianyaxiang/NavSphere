@@ -6,6 +6,13 @@ import { ThemeToggle } from '@/components/theme-toggle'
 import { Providers } from '@/components/providers'
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import localFont from 'next/font/local'
+
+const inter = localFont({
+  src: './fonts/inter-var-latin.woff2',
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -24,8 +31,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh-CN" suppressHydrationWarning>
+    <html lang="zh-CN" suppressHydrationWarning className={inter.variable}>
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         {/* Google Analytics */}
         <Script
           strategy="afterInteractive"

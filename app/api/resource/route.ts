@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { commitFile, getFileContent } from '@/lib/github'
 import type { ResourceMetadata } from '@/types/resource-metadata'
+import { uint8ArrayToBase64 } from '@/lib/buffer-utils'
 
 export const runtime = 'edge'
 
@@ -36,10 +37,10 @@ export async function POST(request: Request) {
 
         // Handle metadata
         const metadata = await getFileContent('navsphere/content/resource-metadata.json') as ResourceMetadata;
-        metadata.metadata.unshift({ 
+        metadata.metadata.unshift({
             commit: commitHash,  // 使用实际的 commit hash
             hash: commitHash,    // 使用相同的 hash 作为资源标识
-            path: imageUrl 
+            path: imageUrl
         });
 
         await commitFile(
@@ -65,10 +66,10 @@ async function uploadImageToGitHub(binaryData: Uint8Array, token: string): Promi
     const repo = process.env.GITHUB_REPO!;
     const branch = process.env.GITHUB_BRANCH || 'main'
     const path = `/assets/img_${Date.now()}.png`; // Generate a unique path for the image
-    const githubPath = 'public'+path;
+    const githubPath = 'public' + path;
 
     // Convert Uint8Array to Base64
-    const base64String = Buffer.from(binaryData).toString('base64'); // Use Buffer to convert to Base64
+    const base64String = uint8ArrayToBase64(binaryData); // Use Buffer to convert to Base64
     const currentFileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${githubPath}?ref=${branch}`
     // Use fetch to upload the file to GitHub
     const response = await fetch(currentFileUrl, {
@@ -103,14 +104,14 @@ export async function DELETE(request: Request) {
         }
 
         const { resourceHashes } = await request.json();
-        
+
         if (!Array.isArray(resourceHashes) || resourceHashes.length === 0) {
             return NextResponse.json({ error: 'Invalid resource hashes' }, { status: 400 });
         }
 
         // 获取当前的资源元数据
         const metadata = await getFileContent('navsphere/content/resource-metadata.json') as ResourceMetadata;
-        
+
         // 过滤掉要删除的资源
         const originalCount = metadata.metadata.length;
         metadata.metadata = metadata.metadata.filter(item => !resourceHashes.includes(item.hash));
@@ -127,10 +128,10 @@ export async function DELETE(request: Request) {
         // 注意：这里只是从元数据中删除了引用，实际的图片文件仍然存在于GitHub仓库中
         // 如果需要删除实际文件，需要额外的GitHub API调用
 
-        return NextResponse.json({ 
-            success: true, 
+        return NextResponse.json({
+            success: true,
             deletedCount,
-            message: `成功删除 ${deletedCount} 个资源` 
+            message: `成功删除 ${deletedCount} 个资源`
         });
     } catch (error) {
         console.error('Failed to delete resources:', error);

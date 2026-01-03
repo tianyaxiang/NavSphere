@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
+import { uint8ArrayToBase64 } from '@/lib/buffer-utils'
 
 export const runtime = 'edge'
 
@@ -34,7 +35,7 @@ export async function POST(request: Request) {
             try {
                 const iconUrl = await downloadAndUploadIcon(metadata.icon, session.user.accessToken)
                 metadata.icon = iconUrl
-               
+
             } catch (error) {
                 console.warn('Failed to download icon:', error)
                 // 如果图标下载失败，尝试使用 Google favicon 服务
@@ -320,7 +321,7 @@ async function uploadImageToGitHub(binaryData: Uint8Array, token: string, extens
     const githubPath = 'public' + path
 
     // Convert Uint8Array to Base64
-    const base64String = Buffer.from(binaryData).toString('base64')
+    const base64String = uint8ArrayToBase64(binaryData)
     const currentFileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${githubPath}?ref=${branch}`
 
     const response = await fetch(currentFileUrl, {

@@ -40,8 +40,8 @@ function SignInContent() {
         <div className="relative z-20 flex items-center text-lg font-medium">
           <div className="flex items-center gap-2">
             <div className="relative w-8 h-8 overflow-hidden rounded-md">
-              <img 
-                src="/assets/images/alogo.png" 
+              <img
+                src="/assets/images/alogo.webp"
                 alt="Logo"
                 className="object-cover"
               />

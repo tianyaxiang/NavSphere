@@ -7,8 +7,8 @@ export const siteConfig: SiteConfig = {
     keywords: 'navigation, platform, web, management'
   },
   appearance: {
-    logo: '/logo.png',
-    favicon: '/favicon.ico',
+    logo: '/logo.webp',
+    favicon: '/favicon.webp',
     theme: 'system'
   },
   navigation: {

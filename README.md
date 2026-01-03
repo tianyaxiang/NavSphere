@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere&env=GITHUB_CLIENT_ID,GITHUB_SECRET,GITHUB_OWNER,GITHUB_REPO,GITHUB_BRANCH,NEXTAUTH_URL,NEXT_PUBLIC_API_URL&envDescription=GitHub%20OAuth%20%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE&envLink=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere%23%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE&project-name=navsphere&repository-name=navsphere">
+  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere&env=GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET,GITHUB_OWNER,GITHUB_REPO,GITHUB_BRANCH,NEXTAUTH_URL,NEXT_PUBLIC_API_URL&envDescription=GitHub%20OAuth%20%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE&envLink=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere%23%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE&project-name=navsphere&repository-name=navsphere">
     <img src="https://vercel.com/button" alt="Deploy with Vercel"/>
   </a>
 </p>
@@ -21,7 +21,7 @@
 ## 📖 项目简介
 
 NavSphere 是一个基于 Next.js 15 构建的现代化导航管理平台，专为个人和团队打造的书签管理和导航门户解决方案。通过 GitHub 作为数据存储后端，提供安全、可靠的导航数据管理体验。<a href="https://mp.weixin.qq.com/s/90LUmKilfLZfc5L63Ej3Sg" target="_blank">[手把手快速部署教程]</a>
-
+，更多工具请访问[NewKit](https://www.newkit.site/)
 <p align="center">
   <img src="doc/n.png" alt="NavSphere Logo" />
 </p>
@@ -47,7 +47,7 @@ NavSphere 是一个基于 Next.js 15 构建的现代化导航管理平台，专�
 
 | 技术栈              | 版本          | 用途                  |
 | ------------------- | ------------- | --------------------- |
-| **Next.js**         | 15.4.6        | React 全栈框架        |
+| **Next.js**         | 15.5.7       | React 全栈框架        |
 | **React**           | 18.2.0        | 用户界面库            |
 | **TypeScript**      | 5.1.6         | 类型安全的 JavaScript |
 | **Tailwind CSS**    | 4.1.12        | 原子化 CSS 框架       |
@@ -73,8 +73,8 @@ NavSphere 是一个基于 Next.js 15 构建的现代化导航管理平台，专�
 ### 安装使用
 
 1. **获取插件**
-   - 访问 [NavSphere Extension](https://github.com/tianyaxiang/navsphere-extension)
-   - 下载最新版本或从应用商店安装（暂时未上架）
+   - Chrome 商店安装: [NavSphere Extension](https://chromewebstore.google.com/detail/navsphere-extension/kjabmfljebjaglniegpjfldgolffcoea?hl=en-US&utm_source=ext_sidebar)
+   - 源码仓库: [GitHub](https://github.com/tianyaxiang/navsphere-extension)
 
 2. **配置连接**
    - 在插件设置中配置你的 NavSphere 站点地址
@@ -88,7 +88,7 @@ NavSphere 是一个基于 Next.js 15 构建的现代化导航管理平台，专�
 
 ### 一键部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere&env=GITHUB_CLIENT_ID,GITHUB_SECRET,GITHUB_OWNER,GITHUB_REPO,GITHUB_BRANCH,NEXTAUTH_URL,NEXT_PUBLIC_API_URL&envDescription=GitHub%20OAuth%20%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE&envLink=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere%23%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE&project-name=navsphere&repository-name=navsphere)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere&env=GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET,GITHUB_OWNER,GITHUB_REPO,GITHUB_BRANCH,NEXTAUTH_URL,NEXT_PUBLIC_API_URL&envDescription=GitHub%20OAuth%20%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE&envLink=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere%23%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE&project-name=navsphere&repository-name=navsphere)
 
 点击上方按钮即可一键部署到 Vercel，部署完成后需要配置环境变量。
 
@@ -134,7 +134,7 @@ pnpm dev
 ```env
 # GitHub OAuth App 配置
 GITHUB_CLIENT_ID=your-github-client-id
-GITHUB_SECRET=your-github-client-secret
+GITHUB_CLIENT_SECRET=your-github-client-secret
 
 # GitHub 仓库配置  
 GITHUB_OWNER=your-github-username
@@ -193,14 +193,14 @@ NEXT_PUBLIC_API_URL=http://localhost:3000
 
 1. **点击部署按钮**
    
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere&env=GITHUB_CLIENT_ID,GITHUB_SECRET,GITHUB_OWNER,GITHUB_REPO,GITHUB_BRANCH,NEXTAUTH_URL,NEXT_PUBLIC_API_URL&envDescription=GitHub%20OAuth%20%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE&envLink=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere%23%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE&project-name=navsphere&repository-name=navsphere)
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere&env=GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET,GITHUB_OWNER,GITHUB_REPO,GITHUB_BRANCH,NEXTAUTH_URL,NEXT_PUBLIC_API_URL&envDescription=GitHub%20OAuth%20%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE&envLink=https%3A%2F%2Fgithub.com%2Ftianyaxiang%2FNavSphere%23%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE&project-name=navsphere&repository-name=navsphere)
 
 2. **配置环境变量**
    
    在部署过程中，Vercel 会要求你配置以下环境变量：
    ```env
    GITHUB_CLIENT_ID=your-github-client-id
-   GITHUB_SECRET=your-github-client-secret
+   GITHUB_CLIENT_SECRET=your-github-client-secret
    GITHUB_OWNER=your-github-username
    GITHUB_REPO=your-data-repo-name
    GITHUB_BRANCH=main
@@ -257,7 +257,7 @@ NEXT_PUBLIC_API_URL=http://localhost:3000
    在 Cloudflare Pages 环境变量中添加：
    ```env
    GITHUB_CLIENT_ID=your-github-client-id
-   GITHUB_SECRET=your-github-client-secret
+   GITHUB_CLIENT_SECRET=your-github-client-secret
    GITHUB_OWNER=your-github-username
    GITHUB_REPO=your-repo-name
    GITHUB_BRANCH=main
@@ -439,7 +439,7 @@ NavSphere/
 **问题**: GitHub OAuth 登录失败
 
 **解决方案**:
-1. 检查 `GITHUB_CLIENT_ID` 和 `GITHUB_SECRET` 是否正确
+1. 检查 `GITHUB_CLIENT_ID` 和 `GITHUB_CLIENT_SECRET` 是否正确
 2. 确认回调 URL 配置正确
 3. 检查 OAuth App 权限设置
 </details>

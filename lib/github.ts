@@ -1,4 +1,5 @@
 import { auth } from '@/lib/auth'
+import { stringToBase64 } from '@/lib/buffer-utils'
 
 export async function getFileContent(path: string) {
   const owner = process.env.GITHUB_OWNER!
@@ -85,7 +86,7 @@ export async function commitFile(
         },
         body: JSON.stringify({
           message,
-          content: Buffer.from(content).toString('base64'),
+          content: stringToBase64(content),
           sha,
           branch,
         }),

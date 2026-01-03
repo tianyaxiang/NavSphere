@@ -5,8 +5,8 @@
     "keywords": "自己的书签"
   },
   "appearance": {
-    "logo": "/assets/images/alogo.png",
-    "favicon": "/assets/images/favicon.png",
+    "logo": "/assets/images/alogo.webp",
+    "favicon": "/assets/images/favicon.webp",
     "theme": "system"
   },
   "navigation": {

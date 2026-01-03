@@ -10,4 +10,3 @@ GITHUB_REPO = "NavSphere"
 GITHUB_BRANCH = "main"
 NEXTAUTH_URL = "https://dh.xiaoxiao19.dpdns.org/api/auth"
 NEXT_PUBLIC_API_URL="dh.xiaoxiao19.dpdns.org"
-

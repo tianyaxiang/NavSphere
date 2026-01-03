@@ -2,7 +2,7 @@
 const nextConfig = {
   // Docker 部署支持
   output: 'standalone',
-  
+
   images: {
     domains: [
       'dash.cloudflare.com',
@@ -32,8 +32,9 @@ const nextConfig = {
   // Cloudflare Pages configuration
   experimental: {
     serverActions: {
-      allowedOrigins: ['localhost', 'navsphere.com']
-    }
+      allowedOrigins: ['localhost', 'newkit.site']
+    },
+    optimizePackageImports: ['lucide-react', 'date-fns', 'lodash']
   }
 }
 

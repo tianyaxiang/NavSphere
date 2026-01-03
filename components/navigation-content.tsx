@@ -38,14 +38,15 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
     }> = []
 
     navigationData.navigationItems.forEach(category => {
-      // 搜索主分类下的项目
+      // 搜索主分类下的项目（只搜索启用的）
       const items = (category.items || []).filter(item => {
+        if (item.enabled === false) return false
         const titleMatch = item.title.toLowerCase().includes(query)
         const descMatch = item.description?.toLowerCase().includes(query)
         return titleMatch || descMatch
       })
 
-      // 搜索子分类下的项目
+      // 搜索子分类下的项目（只搜索启用的）
       const subResults: Array<{
         title: string
         items: (NavigationItem | NavigationSubItem)[]
@@ -53,12 +54,14 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
 
       if (category.subCategories) {
         category.subCategories.forEach(sub => {
+          if (sub.enabled === false) return
           const subItems = (sub.items || []).filter(item => {
+            if (item.enabled === false) return false
             const titleMatch = item.title.toLowerCase().includes(query)
             const descMatch = item.description?.toLowerCase().includes(query)
             return titleMatch || descMatch
           })
-          
+
           if (subItems.length > 0) {
             subResults.push({
               title: sub.title,

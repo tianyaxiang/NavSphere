@@ -69,7 +69,7 @@ const menuItems = [
       {
         title: "资源管理",
         href: "/admin/resources"
-      },{
+      }, {
         title: "网站图标下载",
         href: "/admin/resources/download"
       }
@@ -144,7 +144,7 @@ export function AdminLayoutClient({ children, user }: AdminLayoutClientProps) {
                         )}>
                           <div className="relative w-8 h-8 overflow-hidden rounded-md">
                             <img
-                              src="/assets/images/alogo.png"
+                              src="/assets/images/alogo.webp"
                               alt="Logo"
                               className="object-cover"
                             />

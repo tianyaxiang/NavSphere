@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   title: 'NavSphere Admin',
   description: 'NavSphere Admin Dashboard',
   icons: {
-    icon: '/assets/images/favicon.png',
-    shortcut: '/assets/images/favicon.png',
-    apple: '/assets/images/favicon.png',
+    icon: '/assets/images/favicon.webp',
+    shortcut: '/assets/images/favicon.webp',
+    apple: '/assets/images/favicon.webp',
   }
 }
 
@@ -27,7 +27,7 @@ export default async function AdminLayout({
 
   return (
     <>
-      <AdminLayoutClient 
+      <AdminLayoutClient
         user={{
           name: session.user.name,
           email: session.user.email,
