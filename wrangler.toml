@@ -4,10 +4,10 @@ compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
 
 [env.production.vars]
-GITHUB_CLIENT_ID = "Ov23lig3bTXpZHrPO1c8"
-GITHUB_OWNER = "tianyaxiang"
-GITHUB_REPO = "NavSphere"
+GITHUB_CLIENT_ID = "Ov23liigCkradQpV9Uzi"
+GITHUB_OWNER = "CHINA-520"
+GITHUB_REPO = "Nav"
 GITHUB_BRANCH = "main"
-NEXTAUTH_URL = "https://nav.newkit.site/api/auth"
-NEXT_PUBLIC_API_URL="https://nav.newkit.site"
+NEXTAUTH_URL = "https://nav-8yo.pages.dev/api/auth"
+NEXT_PUBLIC_API_URL="https://nav-8yo.pages.dev"
 
