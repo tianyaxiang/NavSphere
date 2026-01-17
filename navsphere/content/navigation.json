@@ -1570,6 +1570,15 @@
         }
       ],
       "subCategories": []
+    },
+    {
+      "id": "1768635923298",
+      "title": "服务器",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
     }
   ]
 }
