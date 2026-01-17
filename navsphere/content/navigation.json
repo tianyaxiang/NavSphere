@@ -163,6 +163,15 @@
       "enabled": true
     },
     {
+      "id": "1768635923298",
+      "title": "服务器",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
       "id": "1761724945457",
       "title": "媒体资讯",
       "icon": "Coffee",
@@ -1569,15 +1578,6 @@
           "enabled": true
         }
       ],
-      "subCategories": []
-    },
-    {
-      "id": "1768635923298",
-      "title": "服务器",
-      "icon": "FolderKanban",
-      "description": "",
-      "enabled": true,
-      "items": [],
       "subCategories": []
     },
     {
