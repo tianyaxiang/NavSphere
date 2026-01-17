@@ -181,6 +181,15 @@
       "subCategories": []
     },
     {
+      "id": "1768635985657",
+      "title": "软件下载",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
       "id": "1761724945457",
       "title": "媒体资讯",
       "icon": "Coffee",
@@ -1592,15 +1601,6 @@
     {
       "id": "1768635947202",
       "title": "域名注册",
-      "icon": "FolderKanban",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": []
-    },
-    {
-      "id": "1768635985657",
-      "title": "软件下载",
       "icon": "FolderKanban",
       "description": "",
       "enabled": true,
