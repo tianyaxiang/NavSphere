@@ -1581,8 +1581,8 @@
       "subCategories": []
     },
     {
-      "id": "1768635947202",
-      "title": "域名注册",
+      "id": "1768635954650",
+      "title": "邮箱",
       "icon": "FolderKanban",
       "description": "",
       "enabled": true,
@@ -1590,8 +1590,8 @@
       "subCategories": []
     },
     {
-      "id": "1768635954650",
-      "title": "邮箱",
+      "id": "1768635947202",
+      "title": "域名注册",
       "icon": "FolderKanban",
       "description": "",
       "enabled": true,
