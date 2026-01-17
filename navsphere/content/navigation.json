@@ -163,76 +163,6 @@
       "enabled": true
     },
     {
-      "id": "1768635923298",
-      "title": "服务器",
-      "icon": "FolderKanban",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": []
-    },
-    {
-      "id": "1768635947202",
-      "title": "域名注册",
-      "icon": "FolderKanban",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": []
-    },
-    {
-      "id": "1768635954650",
-      "title": "邮箱",
-      "icon": "FolderKanban",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": []
-    },
-    {
-      "id": "1768635985657",
-      "title": "软件下载",
-      "icon": "FolderKanban",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": []
-    },
-    {
-      "id": "1761724945457",
-      "title": "媒体资讯",
-      "icon": "Coffee",
-      "description": "",
-      "enabled": true,
-      "items": [
-        {
-          "id": "1761724973240",
-          "title": "Hacker News",
-          "href": "https://news.ycombinator.com/",
-          "description": "Hacker News 是一家关于计算机黑客和创业公司的社会化新闻网站，由保罗·格雷厄姆的创业孵化器 Y Combinator 创建。与其它社会化新闻网站不同的是 Hacker News 未登录访客没有赞成或反对一条提交新闻的选项，不过还是可以被有足够 Karma 的用户投赞成或反对票。简而言之，Hacker News 允许提交任何可以被理解为“任何满足人们求知欲”的新闻",
-          "icon": "/assets/favicon_1761724976680.svg",
-          "enabled": true
-        },
-        {
-          "id": "1761725040240",
-          "title": "Product Hunt",
-          "href": "https://www.producthunt.com/",
-          "description": "Product Hunt is a curation of the best new products, every day. Discover the latest mobile apps, websites, and technology products that everyone&#x27;s talking about.",
-          "icon": "/assets/favicon_1761725042705.webp",
-          "enabled": true
-        },
-        {
-          "id": "1761725058490",
-          "title": "Reddit",
-          "href": "https://www.reddit.com/",
-          "description": "Reddit 拥有超过 100,000 个 subreddit 社区，数百万用户在此聚集，讨论各自关心的话题。",
-          "icon": "/assets/favicon_1761725100238.webp",
-          "enabled": true
-        }
-      ],
-      "subCategories": []
-    },
-    {
       "id": "9",
       "title": "AI工具包",
       "icon": "Brain",
@@ -439,6 +369,76 @@
       ],
       "description": "",
       "enabled": true
+    },
+    {
+      "id": "1768635923298",
+      "title": "服务器",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
+      "id": "1768635947202",
+      "title": "域名注册",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
+      "id": "1768635954650",
+      "title": "邮箱",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
+      "id": "1768635985657",
+      "title": "软件下载",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
+      "id": "1761724945457",
+      "title": "媒体资讯",
+      "icon": "Coffee",
+      "description": "",
+      "enabled": true,
+      "items": [
+        {
+          "id": "1761724973240",
+          "title": "Hacker News",
+          "href": "https://news.ycombinator.com/",
+          "description": "Hacker News 是一家关于计算机黑客和创业公司的社会化新闻网站，由保罗·格雷厄姆的创业孵化器 Y Combinator 创建。与其它社会化新闻网站不同的是 Hacker News 未登录访客没有赞成或反对一条提交新闻的选项，不过还是可以被有足够 Karma 的用户投赞成或反对票。简而言之，Hacker News 允许提交任何可以被理解为“任何满足人们求知欲”的新闻",
+          "icon": "/assets/favicon_1761724976680.svg",
+          "enabled": true
+        },
+        {
+          "id": "1761725040240",
+          "title": "Product Hunt",
+          "href": "https://www.producthunt.com/",
+          "description": "Product Hunt is a curation of the best new products, every day. Discover the latest mobile apps, websites, and technology products that everyone&#x27;s talking about.",
+          "icon": "/assets/favicon_1761725042705.webp",
+          "enabled": true
+        },
+        {
+          "id": "1761725058490",
+          "title": "Reddit",
+          "href": "https://www.reddit.com/",
+          "description": "Reddit 拥有超过 100,000 个 subreddit 社区，数百万用户在此聚集，讨论各自关心的话题。",
+          "icon": "/assets/favicon_1761725100238.webp",
+          "enabled": true
+        }
+      ],
+      "subCategories": []
     },
     {
       "id": "1735265493940",
