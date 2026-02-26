@@ -148,6 +148,14 @@
           "description": "edge 插件上传地址",
           "icon": "/assets/favicon_1768145646425.png",
           "enabled": true
+        },
+        {
+          "id": "site_1772100632861_tispxny6g",
+          "title": "Vercel: Build and deploy the best web experiences with the AI Cloud",
+          "href": "https://vercel.com",
+          "description": "Vercel 为开发者提供框架、工作流程和基础架构，以构建更快、更个性化的网络。",
+          "icon": "/assets/favicon_1772100597736.png",
+          "enabled": true
         }
       ],
       "subCategories": [],
