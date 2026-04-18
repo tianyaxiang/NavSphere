@@ -1,5 +1,5 @@
 {
-  "name": "financial-table",
+  "name": "navsphere",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -16,7 +16,9 @@
     "docker:prod": "docker-compose -f docker/docker-compose.prod.yml up -d",
     "docker:stop": "docker-compose -f docker/docker-compose.yml down",
     "docker:logs": "docker-compose -f docker/docker-compose.yml logs -f",
-    "docker:deploy": "./scripts/docker-deploy.sh"
+    "docker:deploy": "./scripts/docker-deploy.sh",
+    "cf:build": "next build",
+    "cf:deploy": "wrangler pages deploy .next --project-name navsphere"
   },
   "dependencies": {
     "@hello-pangea/dnd": "^17.0.0",
@@ -93,7 +95,8 @@
     "shadcn": "^2.10.0",
     "sharp": "^0.34.5",
     "tailwindcss": "4.1.12",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "wrangler": "^4.61.0"
   },
   "browser": {
     "crypto": false

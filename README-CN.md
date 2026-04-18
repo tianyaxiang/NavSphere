@@ -99,7 +99,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ```env
 # GitHub OAuth App 配置
 GITHUB_CLIENT_ID=从 OAuth App 获取的 Client ID
-GITHUB_SECRET=从 OAuth App 获取的 Client Secret
+GITHUB_CLIENT_SECRET=从 OAuth App 获取的 Client Secret
 
 # GitHub 组织和仓库配置
 GITHUB_ORG=你的组织名称（如果使用组织）
@@ -141,7 +141,7 @@ NEXTAUTH_SECRET=使用以下命令生成:
    ```
 4. 设置环境变量：
    - GITHUB_CLIENT_ID
-   - GITHUB_SECRET
+   - GITHUB_CLIENT_SECRET
    - GITHUB_OWNER
    - GITHUB_REPO
    - GITHUB_BRANCH
@@ -157,7 +157,7 @@ NEXTAUTH_SECRET=使用以下命令生成:
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=your-secret-here
 GITHUB_CLIENT_ID=your-github-id
-GITHUB_SECRET=your-github-secret
+GITHUB_CLIENT_SECRET=your-github-secret
 GITHUB_OWNER=your-github-username
 GITHUB_REPO=your-repo-name
 GITHUB_BRANCH=main
