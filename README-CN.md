@@ -109,7 +109,7 @@ GITHUB_BRANCH=main
 
 # NextAuth 配置
 NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=使用以下命令生成:
+AUTH_SECRET=使用以下命令生成:
 # openssl rand -base64 32
 ```
 
@@ -146,7 +146,8 @@ NEXTAUTH_SECRET=使用以下命令生成:
    - GITHUB_REPO
    - GITHUB_BRANCH
    - NEXTAUTH_URL (设置为你的域名)
-   - NEXTAUTH_SECRET
+   - AUTH_SECRET
+   - GA_ID (可选，Google Analytics ID)
 5. 部署项目
 
 ## 环境变量
@@ -155,12 +156,13 @@ NEXTAUTH_SECRET=使用以下命令生成:
 
 ```env
 NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your-secret-here
+AUTH_SECRET=your-secret-here
 GITHUB_CLIENT_ID=your-github-id
 GITHUB_CLIENT_SECRET=your-github-secret
 GITHUB_OWNER=your-github-username
 GITHUB_REPO=your-repo-name
 GITHUB_BRANCH=main
+GA_ID=your-google-analytics-id
 ```
 
 ## 开发

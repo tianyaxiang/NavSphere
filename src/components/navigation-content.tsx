@@ -197,7 +197,7 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
                 </Button>
               </Link>
               <Link
-                href="https://mp.weixin.qq.com/s/90LUmKilfLZfc5L63Ej3Sg"
+                href="https://mp.weixin.qq.com/s/XBeedyqHGJtaAa_v9EXz4A"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="查看帮助文档"

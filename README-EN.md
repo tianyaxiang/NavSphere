@@ -159,8 +159,12 @@ GITHUB_BRANCH=main
 GITHUB_PAT=your-github-personal-access-token
 
 # NextAuth Configuration
-NEXTAUTH_URL=http://localhost:3000/api/auth
+NEXTAUTH_URL=http://localhost:3000
+AUTH_SECRET=your-random-auth-secret
 NEXT_PUBLIC_API_URL=http://localhost:3000
+
+# Google Analytics Configuration (Optional)
+GA_ID=your-google-analytics-id
 ```
 
 ### GitHub OAuth App Setup
