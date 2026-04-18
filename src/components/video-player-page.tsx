@@ -15,7 +15,7 @@ interface VideoPlayerPageProps {
     siteData: SiteConfig
 }
 
-export function VideoPlayerPage({ navigationData, siteData }: VideoPlayerPageProps) {
+export function VideoPlayerPage({ navigationData }: VideoPlayerPageProps) {
     const [selectedVideo, setSelectedVideo] = useState<NavigationSubItem | null>(null)
     const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set())
     const [expandedSubCategories, setExpandedSubCategories] = useState<Set<string>>(new Set())
@@ -150,7 +150,7 @@ export function VideoPlayerPage({ navigationData, siteData }: VideoPlayerPagePro
         )
     }
 
-    const renderSubCategory = (sub: NavigationCategory, categoryId: string) => {
+    const renderSubCategory = (sub: NavigationCategory) => {
         const isExpanded = expandedSubCategories.has(sub.id)
         const videoItems = (sub.items || []).filter(item => item.enabled !== false)
 
@@ -208,7 +208,7 @@ export function VideoPlayerPage({ navigationData, siteData }: VideoPlayerPagePro
                 {isExpanded && (
                     <div className="mt-1 space-y-1">
                         {hasSubCategories ? (
-                            category.subCategories!.map(sub => renderSubCategory(sub, category.id))
+                            category.subCategories!.map(sub => renderSubCategory(sub))
                         ) : (
                             <div className="ml-4 space-y-0.5">
                                 {directItems.map(item => renderVideoItem(item))}

@@ -6,10 +6,10 @@ import { ThemeToggle } from '@/components/theme-toggle'
 import { Providers } from '@/components/providers'
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import localFont from 'next/font/local'
+import { Inter } from 'next/font/google'
 
-const inter = localFont({
-  src: './fonts/inter-var-latin.woff2',
+const inter = Inter({
+  subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
 })

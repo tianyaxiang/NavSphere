@@ -2,16 +2,17 @@
 
 import { useState } from 'react'
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog'
-import { PlayCircle, Clock, Eye } from 'lucide-react'
+import { PlayCircle } from 'lucide-react'
 import type { NavigationSubItem } from '@/types/navigation'
 import type { SiteConfig } from '@/types/site'
+import Image from 'next/image'
 
 interface VideoCardProps {
     item: NavigationSubItem
     siteConfig?: SiteConfig
 }
 
-export function VideoCard({ item, siteConfig }: VideoCardProps) {
+export function VideoCard({ item }: VideoCardProps) {
     const [isOpen, setIsOpen] = useState(false)
     const [imageLoaded, setImageLoaded] = useState(false)
     const [imageError, setImageError] = useState(false)
@@ -115,10 +116,12 @@ export function VideoCard({ item, siteConfig }: VideoCardProps) {
                             {!imageLoaded && (
                                 <div className="absolute inset-0 bg-gradient-to-r from-muted via-muted-foreground/10 to-muted animate-pulse" />
                             )}
-                            <img
+                            <Image
                                 src={normalizedCoverPath}
                                 alt={item.title}
-                                className={`w-full h-full object-cover transition-all duration-500 
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className={`object-cover transition-all duration-500 
                                            group-hover:scale-105 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                                 onLoad={() => setImageLoaded(true)}
                                 onError={() => setImageError(true)}
