@@ -1,4 +1,4 @@
-# NavSphere - 视频导航站
+# NavSphere - 内容导航管理平台 
 
 <p align="center">
   <strong>现代化的内容导航管理平台 | 视频导航 + 网址导航</strong>
