@@ -402,7 +402,16 @@
       "icon": "Box",
       "description": "开发者工具，工具包",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "1779239298632",
+          "title": "GIthub",
+          "href": "https://www.github.com",
+          "description": "Github",
+          "icon": "/assets/images/default-website-icon.png",
+          "enabled": true
+        }
+      ],
       "subCategories": [
         {
           "id": "85e2f8e6-8b32-4452-9022-2ff45065ecf9",
