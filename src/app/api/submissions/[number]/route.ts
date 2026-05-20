@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { SUBMISSION_LABELS, parseSubmissionFromIssueBody } from '@/types/submission'
+import { stringToBase64 } from '@/lib/buffer-utils'
 
 export const runtime = 'edge'
 
@@ -91,7 +92,13 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
             }
 
             const fileData = await fileResponse.json()
-            const content = atob(fileData.content) // Base64 decode
+            // Base64 decode with proper UTF-8 support
+            const binaryString = atob(fileData.content.replace(/\n/g, ''))
+            const bytes = new Uint8Array(binaryString.length)
+            for (let i = 0; i < binaryString.length; i++) {
+                bytes[i] = binaryString.charCodeAt(i)
+            }
+            const content = new TextDecoder('utf-8').decode(bytes)
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const navigationData: any = JSON.parse(content)
 
@@ -141,7 +148,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
             }
 
             // 3. 将更新后的数据提交回 GitHub
-            const updatedContent = btoa(JSON.stringify(navigationData, null, 2)) // Base64 encode
+            const updatedContent = stringToBase64(JSON.stringify(navigationData, null, 2))
 
             const updateResponse = await fetch(
                 `${GITHUB_API}/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filePath}`,
