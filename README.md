@@ -1,4 +1,4 @@
-# NavSphere - 视频导航站
+# NavSphere - 内容导航管理平台 
 
 <p align="center">
   <strong>现代化的内容导航管理平台 | 视频导航 + 网址导航</strong>
@@ -561,3 +561,7 @@ NavSphere/
 <p align="center">
   <strong>⭐ 如果这个项目对你有帮助，请给我们一个 Star！</strong>
 </p>
+
+## 友情链接
+
+[![LINUXDO](https://img.shields.io/badge/%E7%A4%BE%E5%8C%BA-LINUXDO-0086c9?style=for-the-badge&labelColor=555555)](https://linux.do)
