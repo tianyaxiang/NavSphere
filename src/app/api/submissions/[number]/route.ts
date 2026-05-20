@@ -173,7 +173,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
                 const error = await updateResponse.json()
                 console.error('GitHub file update error:', error)
                 return NextResponse.json(
-                    { success: false, message: '更新导航文件失败' },
+                    { success: false, message: `更新导航文件失败: ${error.message || JSON.stringify(error)}` },
                     { status: 500 }
                 )
             }
@@ -215,8 +215,9 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
 
     } catch (error) {
         console.error('Review submission error:', error)
+        const errorMsg = error instanceof Error ? error.message : String(error)
         return NextResponse.json(
-            { success: false, message: '审核失败，请稍后重试' },
+            { success: false, message: `审核失败: ${errorMsg}` },
             { status: 500 }
         )
     }
