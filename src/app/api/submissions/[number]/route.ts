@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { SUBMISSION_LABELS, parseSubmissionFromIssueBody } from '@/types/submission'
-import { stringToBase64 } from '@/lib/buffer-utils'
+import { getFileContent, commitFile } from '@/lib/github'
 
 export const runtime = 'edge'
 
@@ -69,38 +69,26 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
         }
 
         if (action === 'approve') {
-            // 使用 GitHub API 读取和更新导航文件
+            // 验证管理员有 accessToken
+            if (!session.user.accessToken) {
+                return NextResponse.json(
+                    { success: false, message: '缺少访问令牌，请重新登录' },
+                    { status: 401 }
+                )
+            }
+
             const filePath = 'src/navsphere/content/navigation.json'
 
-            // 1. 获取当前文件内容
-            const fileResponse = await fetch(
-                `${GITHUB_API}/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filePath}?ref=${process.env.GITHUB_BRANCH || 'main'}`,
-                {
-                    headers: {
-                        'Authorization': `Bearer ${GITHUB_PAT}`,
-                        'Accept': 'application/vnd.github+json',
-                        'X-GitHub-Api-Version': '2022-11-28'
-                    }
-                }
-            )
+            // 1. 使用 getFileContent 获取当前导航数据
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const navigationData: any = await getFileContent(filePath)
 
-            if (!fileResponse.ok) {
+            if (!navigationData || !navigationData.navigationItems) {
                 return NextResponse.json(
                     { success: false, message: '无法读取导航数据文件' },
                     { status: 500 }
                 )
             }
-
-            const fileData = await fileResponse.json()
-            // Base64 decode with proper UTF-8 support
-            const binaryString = atob(fileData.content.replace(/\n/g, ''))
-            const bytes = new Uint8Array(binaryString.length)
-            for (let i = 0; i < binaryString.length; i++) {
-                bytes[i] = binaryString.charCodeAt(i)
-            }
-            const content = new TextDecoder('utf-8').decode(bytes)
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const navigationData: any = JSON.parse(content)
 
             // 2. 查找目标分类并添加新项
             const categoryId = submissionData.category
@@ -147,37 +135,22 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
                 targetCategory.items.push(newItem)
             }
 
-            // 3. 将更新后的数据提交回 GitHub
-            const updatedContent = stringToBase64(JSON.stringify(navigationData, null, 2))
-
-            const updateResponse = await fetch(
-                `${GITHUB_API}/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${filePath}`,
-                {
-                    method: 'PUT',
-                    headers: {
-                        'Authorization': `Bearer ${GITHUB_PAT}`,
-                        'Accept': 'application/vnd.github+json',
-                        'Content-Type': 'application/json',
-                        'X-GitHub-Api-Version': '2022-11-28'
-                    },
-                    body: JSON.stringify({
-                        message: `✅ Add submission: ${submissionData.title}`,
-                        content: updatedContent,
-                        sha: fileData.sha,
-                        branch: process.env.GITHUB_BRANCH || 'main'
-                    })
-                }
-            )
-
-            if (!updateResponse.ok) {
-                const error = await updateResponse.json()
-                console.error('GitHub file update error:', error)
+            // 3. 使用 commitFile 将更新后的数据提交回 GitHub（使用管理员的 OAuth token）
+            try {
+                await commitFile(
+                    filePath,
+                    JSON.stringify(navigationData, null, 2),
+                    `✅ Add submission: ${submissionData.title}`,
+                    session.user.accessToken
+                )
+            } catch (commitError) {
+                console.error('GitHub file commit error:', commitError)
+                const errMsg = commitError instanceof Error ? commitError.message : String(commitError)
                 return NextResponse.json(
-                    { success: false, message: `更新导航文件失败: ${error.message || JSON.stringify(error)}` },
+                    { success: false, message: `更新导航文件失败: ${errMsg}` },
                     { status: 500 }
                 )
             }
-
 
             // 更新 Issue 标签
             await updateIssueLabels(issueNumber, SUBMISSION_LABELS.APPROVED, SUBMISSION_LABELS.PENDING)
