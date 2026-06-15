@@ -848,7 +848,16 @@
           "icon": "Book",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "1781510610796",
+              "title": "Resend · Email for developers",
+              "href": "https://resend.com/",
+              "description": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.",
+              "icon": "/assets/favicon_1781510616253.ico",
+              "enabled": true
+            }
+          ]
         }
       ]
     },
