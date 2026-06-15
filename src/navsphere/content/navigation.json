@@ -841,6 +841,14 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "f5ee5617-a118-4035-ba3a-cf969f9b3528",
+          "title": "基础设施平台",
+          "icon": "Book",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
