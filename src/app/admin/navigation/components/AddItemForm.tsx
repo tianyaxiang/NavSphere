@@ -28,6 +28,7 @@ const formSchema = z.object({
   icon: z.string().optional(),
   description: z.string().optional(),
   enabled: z.boolean().default(true),
+  useDefaultIcon: z.boolean().default(false),
 })
 
 interface AddItemFormProps {
@@ -40,14 +41,17 @@ export function AddItemForm({ onSubmit, onCancel, defaultValues }: AddItemFormPr
   const { toast } = useToast()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: defaultValues || {
-      id: String(Date.now()),
-      title: "",
-      href: "",
-      icon: "",
-      description: "",
-      enabled: true,
-    }
+    defaultValues: defaultValues
+      ? { ...defaultValues, useDefaultIcon: defaultValues.useDefaultIcon ?? false }
+      : {
+          id: String(Date.now()),
+          title: "",
+          href: "",
+          icon: "",
+          description: "",
+          enabled: true,
+          useDefaultIcon: false,
+        }
   })
 
   const isSubmitting = form.formState.isSubmitting
@@ -132,6 +136,7 @@ export function AddItemForm({ onSubmit, onCancel, defaultValues }: AddItemFormPr
             href: data.href,
             description: data.description,
             icon: data.icon,
+            useDefaultIcon: data.useDefaultIcon,
             enabled: data.enabled
           }
           await onSubmit(values)
@@ -300,6 +305,28 @@ export function AddItemForm({ onSubmit, onCancel, defaultValues }: AddItemFormPr
                 系统会自动获取网站图标，也可手动输入URL或上传本地图片
               </FormDescription>
               <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="useDefaultIcon"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-center justify-between rounded-lg p-4">
+              <div className="space-y-0.5">
+                <FormLabel className="text-base">
+                  使用默认图标
+                </FormLabel>
+                <FormDescription>
+                  忽略图标URL，使用首字母色块作为图标
+                </FormDescription>
+              </div>
+              <FormControl>
+                <Switch
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
             </FormItem>
           )}
         />
