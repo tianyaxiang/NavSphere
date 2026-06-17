@@ -142,23 +142,25 @@ export function Sidebar({ className, navigationData, siteInfo, onClose }: Sideba
               {category.subCategories && category.subCategories.length > 0 && (
                 <div
                   className={cn(
-                    "mt-1 ml-4 space-y-1 overflow-hidden transition-all duration-200 ease-in-out",
-                    expandedCategories[category.id] ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    "grid transition-all duration-200 ease-in-out",
+                    expandedCategories[category.id] ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                   )}
                 >
-                  {category.subCategories.map((subCategory) => (
-                    <Button
-                      key={subCategory.id}
-                      variant="ghost"
-                      className="w-full justify-start pl-6 text-sm text-muted-foreground/80 hover:text-foreground cursor-pointer"
-                      onClick={() => {
-                        scrollToSection(subCategory.id)
-                        onClose?.()
-                      }}
-                    >
-                      <span>{subCategory.title}</span>
-                    </Button>
-                  ))}
+                  <div className="mt-1 ml-4 space-y-1 overflow-hidden">
+                    {category.subCategories.map((subCategory) => (
+                      <Button
+                        key={subCategory.id}
+                        variant="ghost"
+                        className="w-full justify-start pl-6 text-sm text-muted-foreground/80 hover:text-foreground cursor-pointer"
+                        onClick={() => {
+                          scrollToSection(subCategory.id)
+                          onClose?.()
+                        }}
+                      >
+                        <span>{subCategory.title}</span>
+                      </Button>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
