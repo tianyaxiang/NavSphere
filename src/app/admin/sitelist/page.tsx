@@ -45,6 +45,7 @@ import {
   SelectValue,
 } from "@/registry/new-york/ui/select"
 import { Label } from "@/registry/new-york/ui/label"
+import { Switch } from "@/registry/new-york/ui/switch"
 import { Textarea } from "@/registry/new-york/ui/textarea"
 import {
   Tooltip,
@@ -112,6 +113,7 @@ export default function SiteListPage() {
     url: '',
     description: '',
     icon: '',
+    useDefaultIcon: false,
     categoryId: '',
     subCategoryId: ''
   })
@@ -120,6 +122,7 @@ export default function SiteListPage() {
     url: '',
     description: '',
     icon: '',
+    useDefaultIcon: false,
     categoryId: '',
     subCategoryId: ''
   })
@@ -484,6 +487,7 @@ export default function SiteListPage() {
         href: newSite.url,
         description: newSite.description,
         icon: newSite.icon,
+        useDefaultIcon: newSite.useDefaultIcon,
         enabled: true
       }
 
@@ -529,6 +533,7 @@ export default function SiteListPage() {
         url: '',
         description: '',
         icon: '',
+        useDefaultIcon: false,
         categoryId: '',
         subCategoryId: ''
       })
@@ -575,6 +580,7 @@ export default function SiteListPage() {
         href: editSite.url,
         description: editSite.description,
         icon: editSite.icon,
+        useDefaultIcon: editSite.useDefaultIcon,
         enabled: true
       }
 
@@ -690,6 +696,7 @@ export default function SiteListPage() {
         url: '',
         description: '',
         icon: '',
+        useDefaultIcon: false,
         categoryId: '',
         subCategoryId: ''
       })
@@ -717,6 +724,7 @@ export default function SiteListPage() {
     let categoryId = ''
     let subCategoryId = ''
     let icon = ''
+    let useDefaultIcon = false
 
     for (const category of navigationData) {
       // Check main category items
@@ -724,6 +732,7 @@ export default function SiteListPage() {
       if (mainItem) {
         categoryId = category.id
         icon = mainItem.icon || ''
+        useDefaultIcon = mainItem.useDefaultIcon ?? false
         break
       }
       // Check subcategory items
@@ -734,6 +743,7 @@ export default function SiteListPage() {
             categoryId = category.id
             subCategoryId = subCategory.id
             icon = subItem.icon || ''
+            useDefaultIcon = subItem.useDefaultIcon ?? false
             break
           }
         }
@@ -746,6 +756,7 @@ export default function SiteListPage() {
       url: site.url,
       description: site.description || '',
       icon: icon,
+      useDefaultIcon,
       categoryId,
       subCategoryId
     })
@@ -1100,6 +1111,7 @@ export default function SiteListPage() {
                   url: '',
                   description: '',
                   icon: '',
+                  useDefaultIcon: false,
                   categoryId: '',
                   subCategoryId: ''
                 })
@@ -1233,6 +1245,19 @@ export default function SiteListPage() {
                     <div className="text-xs text-muted-foreground">
                       系统会自动获取网站图标，也可手动输入URL或上传本地图片
                     </div>
+                  </div>
+                  <div className="flex items-center justify-between rounded-lg border p-3">
+                    <div className="space-y-0.5">
+                      <Label>使用默认图标</Label>
+                      <div className="text-xs text-muted-foreground">
+                        忽略图标URL，使用首字母色块
+                      </div>
+                    </div>
+                    <Switch
+                      checked={newSite.useDefaultIcon}
+                      onCheckedChange={(checked) => setNewSite({ ...newSite, useDefaultIcon: checked })}
+                      disabled={isAddingSubmitting}
+                    />
                   </div>
                   <div className="grid gap-2">
                     <Label htmlFor="category">分类 *</Label>
@@ -1434,6 +1459,19 @@ export default function SiteListPage() {
                     <div className="text-xs text-muted-foreground">
                       系统会自动获取网站图标，也可手动输入URL或上传本地图片
                     </div>
+                  </div>
+                  <div className="flex items-center justify-between rounded-lg border p-3">
+                    <div className="space-y-0.5">
+                      <Label>使用默认图标</Label>
+                      <div className="text-xs text-muted-foreground">
+                        忽略图标URL，使用首字母色块
+                      </div>
+                    </div>
+                    <Switch
+                      checked={editSite.useDefaultIcon}
+                      onCheckedChange={(checked) => setEditSite({ ...editSite, useDefaultIcon: checked })}
+                      disabled={isEditingSubmitting}
+                    />
                   </div>
                   <div className="grid gap-2">
                     <Label htmlFor="edit-category">分类 *</Label>
