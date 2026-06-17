@@ -45,6 +45,7 @@ export function processNavigationSubItem(item: NavigationSubItemRaw): Navigation
         href: item.href,
         description: item.description,
         icon: item.icon,
+        useDefaultIcon: item.useDefaultIcon,
         enabled: item.enabled,
         videoConfig
     }

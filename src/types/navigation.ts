@@ -14,6 +14,7 @@ export interface NavigationSubItemRaw {
   href: string
   description?: string
   icon?: string
+  useDefaultIcon?: boolean
   enabled: boolean
   videoConfig?: VideoConfigRaw
 }
@@ -25,6 +26,7 @@ export interface NavigationSubItem {
   href: string
   description?: string
   icon?: string
+  useDefaultIcon?: boolean
   enabled: boolean
   videoConfig?: VideoConfig
 }
