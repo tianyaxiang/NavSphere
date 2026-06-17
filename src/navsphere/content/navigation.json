@@ -438,14 +438,6 @@
           "enabled": true,
           "items": [
             {
-              "id": "1735265532154",
-              "title": "shadcn ",
-              "href": "https://ui.shadcn.com/",
-              "description": "Build your component library\nBeautifully designed components that you can copy and paste into your apps. Made with Tailwind CSS. Open source.",
-              "icon": "/assets/img_1735265752690.webp",
-              "enabled": true
-            },
-            {
               "id": "1751433573273",
               "title": "shadcn ui  Theme",
               "href": "https://tweakcn.com/",
@@ -484,6 +476,14 @@
               "href": "https://www.tinte.dev/",
               "description": "Create, convert, and export beautiful themes for VS Code, shadcn/ui, Rayso, TweakCN, terminals, and more. Generate semantic color palettes using OKLCH color space with live previews.",
               "icon": "/assets/favicon_1765594470605.webp"
+            },
+            {
+              "id": "1735265532154",
+              "title": "shadcn ",
+              "href": "https://ui.shadcn.com/",
+              "description": "Build your component library\nBeautifully designed components that you can copy and paste into your apps. Made with Tailwind CSS. Open source.",
+              "icon": "/assets/img_1735265752690.webp",
+              "enabled": true
             }
           ]
         },
