@@ -54,7 +54,8 @@ import {
   TooltipTrigger,
 } from "@/registry/new-york/ui/tooltip"
 
-import { NavigationSubItem } from '@/types/navigation'
+import { NavigationSubItem, NavigationItem } from '@/types/navigation'
+import { moveItem } from '@/lib/navigation-tree'
 
 interface SubCategory {
   id: string
@@ -104,6 +105,10 @@ export default function SiteListPage() {
   const [isUploadingAddIcon, setIsUploadingAddIcon] = useState(false)
   const [isUploadingEditIcon, setIsUploadingEditIcon] = useState(false)
   const [isBatchDeleting, setIsBatchDeleting] = useState(false)
+  const [isBatchMoving, setIsBatchMoving] = useState(false)
+  const [showMoveDialog, setShowMoveDialog] = useState(false)
+  const [moveTargetCategoryId, setMoveTargetCategoryId] = useState<string>('')
+  const [moveTargetSubCategoryId, setMoveTargetSubCategoryId] = useState<string>('')
   const [isFetchingAddMetadata, setIsFetchingAddMetadata] = useState(false)
   const [isFetchingEditMetadata, setIsFetchingEditMetadata] = useState(false)
   const lastFetchedAddUrl = useRef<string>('')
@@ -452,6 +457,59 @@ export default function SiteListPage() {
     } finally {
       setIsBatchDeleting(false)
       setShowDeleteDialog(false)
+    }
+  }
+
+  const handleBatchMove = async () => {
+    if (isBatchMoving) return
+
+    if (!moveTargetCategoryId) {
+      toast({
+        title: "错误",
+        description: "请选择目标分类",
+        variant: "destructive"
+      })
+      return
+    }
+
+    setIsBatchMoving(true)
+    try {
+      // navigationData(本地 Category[])结构上可赋给规范 NavigationItem[]
+      let updated: NavigationItem[] = navigationData
+      for (const siteId of selectedSites) {
+        updated = moveItem(updated, siteId, {
+          categoryId: moveTargetCategoryId,
+          subCategoryId: moveTargetSubCategoryId || undefined,
+        })
+      }
+
+      const response = await fetch('/api/navigation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ navigationItems: updated }),
+      })
+
+      if (!response.ok) throw new Error('Failed to save')
+
+      toast({
+        title: "成功",
+        description: `已移动 ${selectedSites.length} 个站点`,
+      })
+
+      setShowMoveDialog(false)
+      setMoveTargetCategoryId('')
+      setMoveTargetSubCategoryId('')
+      setSelectedSites([])
+      fetchSites()
+    } catch (error) {
+      console.error('Batch move error:', error)
+      toast({
+        title: "错误",
+        description: "批量移动失败",
+        variant: "destructive"
+      })
+    } finally {
+      setIsBatchMoving(false)
     }
   }
 
@@ -1548,6 +1606,86 @@ export default function SiteListPage() {
                 </DialogFooter>
               </DialogContent>
             </Dialog>
+
+            {/* 批量移动对话框 */}
+            <Dialog open={showMoveDialog} onOpenChange={(open) => {
+              if (!open && !isBatchMoving) {
+                setShowMoveDialog(false)
+              }
+            }}>
+              <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                  <DialogTitle>批量移动站点</DialogTitle>
+                  <DialogDescription>
+                    将选中的 {selectedSites.length} 个站点移动到指定分类
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4 py-4">
+                  <div className="grid gap-2">
+                    <Label htmlFor="move-category">目标分类 *</Label>
+                    <Select
+                      value={moveTargetCategoryId}
+                      onValueChange={(value) => {
+                        setMoveTargetCategoryId(value)
+                        setMoveTargetSubCategoryId('')
+                      }}
+                      disabled={isBatchMoving}
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="选择分类" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {navigationData.map((category) => (
+                          <SelectItem key={category.id} value={category.id}>
+                            {category.title}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  {moveTargetCategoryId && navigationData.find(cat => cat.id === moveTargetCategoryId)?.subCategories && (
+                    <div className="grid gap-2">
+                      <Label htmlFor="move-subcategory">目标子分类</Label>
+                      <Select
+                        value={moveTargetSubCategoryId || "none"}
+                        onValueChange={(value) => setMoveTargetSubCategoryId(value === "none" ? "" : value)}
+                        disabled={isBatchMoving}
+                      >
+                        <SelectTrigger>
+                          <SelectValue placeholder="选择子分类（可选）" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="none">无子分类</SelectItem>
+                          {navigationData
+                            .find(cat => cat.id === moveTargetCategoryId)
+                            ?.subCategories?.map((subCategory) => (
+                              <SelectItem key={subCategory.id} value={subCategory.id}>
+                                {subCategory.title}
+                              </SelectItem>
+                            ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  )}
+                </div>
+                <DialogFooter>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => setShowMoveDialog(false)}
+                    disabled={isBatchMoving}
+                  >
+                    取消
+                  </Button>
+                  <Button onClick={handleBatchMove} disabled={isBatchMoving || !moveTargetCategoryId}>
+                    {isBatchMoving && (
+                      <Icons.loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    )}
+                    {isBatchMoving ? "移动中..." : "确认移动"}
+                  </Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
 
@@ -1570,6 +1708,16 @@ export default function SiteListPage() {
                 className="text-blue-600 border-blue-200 hover:bg-blue-100"
               >
                 取消选择
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setShowMoveDialog(true)}
+                disabled={isBatchMoving || isBatchDeleting}
+                className="text-blue-600 border-blue-200 hover:bg-blue-100"
+              >
+                <Icons.folderOpen className="mr-2 h-4 w-4" />
+                批量移动
               </Button>
               <Button
                 variant="destructive"
