@@ -9,6 +9,7 @@ import { useToast } from "@/registry/new-york/hooks/use-toast"
 import {
   Plus,
   Folder,
+  FolderInput,
   Search,
   X,
   ArrowLeft,
@@ -41,6 +42,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/new-york/ui/select"
+import { Label } from "@/registry/new-york/ui/label"
+import { moveSubCategory } from '@/lib/navigation-tree'
 
 export default function CategoriesPage() {
   const params = useParams<{ id: string }>()
@@ -53,6 +56,10 @@ export default function CategoriesPage() {
   const [isLoading, setIsLoading] = useState(true)
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false)
   const [statusFilter, setStatusFilter] = useState<'all' | 'enabled' | 'disabled'>('all')
+  const [allNavigations, setAllNavigations] = useState<NavigationItem[]>([])
+  const [movingSubCategory, setMovingSubCategory] = useState<NavigationCategory | null>(null)
+  const [moveTargetNavId, setMoveTargetNavId] = useState<string>('')
+  const [isMovingSubCategory, setIsMovingSubCategory] = useState(false)
 
   useEffect(() => {
     if (!params?.id) {
@@ -60,6 +67,7 @@ export default function CategoriesPage() {
       return
     }
     fetchNavigation()
+    fetchAllNavigations()
   }, [params?.id])
 
   const fetchNavigation = async () => {
@@ -81,6 +89,17 @@ export default function CategoriesPage() {
       })
     } finally {
       setIsLoading(false)
+    }
+  }
+
+  const fetchAllNavigations = async () => {
+    try {
+      const response = await fetch('/api/navigation')
+      if (!response.ok) return
+      const data = await response.json()
+      setAllNavigations((data.navigationItems ?? []) as NavigationItem[])
+    } catch (error) {
+      console.error('Failed to fetch all navigations:', error)
     }
   }
 
@@ -278,6 +297,47 @@ export default function CategoriesPage() {
     }
   }
 
+  const handleMoveSubCategory = async () => {
+    if (!movingSubCategory || !moveTargetNavId || isMovingSubCategory) return
+
+    setIsMovingSubCategory(true)
+    try {
+      // 取完整树,移动后整体保存
+      const res = await fetch('/api/navigation')
+      if (!res.ok) throw new Error('Failed to fetch')
+      const data = await res.json()
+      const items = (data.navigationItems ?? []) as NavigationItem[]
+
+      const updated = moveSubCategory(items, movingSubCategory.id, moveTargetNavId)
+
+      const saveRes = await fetch('/api/navigation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ navigationItems: updated }),
+      })
+      if (!saveRes.ok) throw new Error('Failed to save')
+
+      toast({
+        title: "成功",
+        description: "子分类已移动"
+      })
+
+      setMovingSubCategory(null)
+      setMoveTargetNavId('')
+      await fetchNavigation()
+      await fetchAllNavigations()
+    } catch (error) {
+      console.error('Move subcategory error:', error)
+      toast({
+        title: "错误",
+        description: "移动失败",
+        variant: "destructive"
+      })
+    } finally {
+      setIsMovingSubCategory(false)
+    }
+  }
+
 
 
   const filteredCategories = navigation?.subCategories?.filter(category => {
@@ -466,6 +526,17 @@ export default function CategoriesPage() {
                             <Button
                               variant="ghost"
                               size="icon"
+                              onClick={() => {
+                                setMovingSubCategory(category)
+                                setMoveTargetNavId('')
+                              }}
+                              title="移动到其他导航"
+                            >
+                              <FolderInput className="h-4 w-4" />
+                            </Button>
+                            <Button
+                              variant="ghost"
+                              size="icon"
                               onClick={() => setEditingCategory({ index, category })}
                               title="编辑"
                             >
@@ -544,6 +615,61 @@ export default function CategoriesPage() {
               }}
             >
               删除
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={!!movingSubCategory} onOpenChange={(open) => {
+        if (!open && !isMovingSubCategory) {
+          setMovingSubCategory(null)
+          setMoveTargetNavId('')
+        }
+      }}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>移动子分类</DialogTitle>
+            <DialogDescription>
+              将「{movingSubCategory?.title}」移动到其他一级导航
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-2 py-4">
+            <Label>目标导航</Label>
+            <Select
+              value={moveTargetNavId}
+              onValueChange={setMoveTargetNavId}
+              disabled={isMovingSubCategory}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="选择目标导航" />
+              </SelectTrigger>
+              <SelectContent>
+                {allNavigations
+                  .filter((nav) => nav.id !== params?.id)
+                  .map((nav) => (
+                    <SelectItem key={nav.id} value={nav.id}>
+                      {nav.title}
+                    </SelectItem>
+                  ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <DialogFooter>
+            <Button
+              variant="ghost"
+              onClick={() => {
+                setMovingSubCategory(null)
+                setMoveTargetNavId('')
+              }}
+              disabled={isMovingSubCategory}
+            >
+              取消
+            </Button>
+            <Button
+              onClick={handleMoveSubCategory}
+              disabled={isMovingSubCategory || !moveTargetNavId}
+            >
+              {isMovingSubCategory ? "移动中..." : "确认移动"}
             </Button>
           </DialogFooter>
         </DialogContent>
